@@ -1,0 +1,79 @@
+# =============================================================================
+# Women Writing Architecture
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 기본 정보
+# -----------------------------------------------------------------------------
+slug: "women-writing-architecture"
+title: "Women Writing Architecture"
+title_alt: "WWA"
+url: "https://womenwritingarchitecture.org/"
+description: "An open, annotated bibliography collecting texts written by women about architecture."
+
+# -----------------------------------------------------------------------------
+# 시간 정보
+# -----------------------------------------------------------------------------
+year_started: 2021            # circa 2021, estimated from public presence
+year_started_note: "Estimated from public presence"
+year_ended: null
+
+# -----------------------------------------------------------------------------
+# 운영 주체
+# -----------------------------------------------------------------------------
+operator:
+  name: "Women Writing Architecture editorial collective"
+  type: "organization"        # 편집 공동체 (비기관)
+  country: null               # Global scope, no specific country
+
+# -----------------------------------------------------------------------------
+# 분류
+# -----------------------------------------------------------------------------
+tags: [women, architecture, writing, feminist archive, bibliography]
+category: "cultural"          # annotated bibliography / digital archive
+language: [en]
+coverage: "Global (women, architecture, writing)"  # 국가가 아닌 주제적 범위
+
+# -----------------------------------------------------------------------------
+# 기술적 특성
+# -----------------------------------------------------------------------------
+tech:
+  platform: null              # 명시 없음
+  metadata_standard: null     # custom
+  api_available: null
+  bulk_download: null
+  navigation: "Filter-based content navigation (Glossary / Type / Language)"
+
+# -----------------------------------------------------------------------------
+# 접근성
+# -----------------------------------------------------------------------------
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+# -----------------------------------------------------------------------------
+# 관찰 기록 (작성 시점 기준)
+# -----------------------------------------------------------------------------
+observation:
+  observed_at: "2026-01-04"
+  status: "active"
+  http_code: 200
+  notes: null
+
+# -----------------------------------------------------------------------------
+# 사회적 맥락
+# -----------------------------------------------------------------------------
+context:
+  social_aspect: "Feminist, collective knowledge production"
+  source: "Community-curated references"
+  hidden_source: "Academic syllabi, feminist architecture discourse"
+
+# -----------------------------------------------------------------------------
+# 메타 정보
+# -----------------------------------------------------------------------------
+meta:
+  created_at: "2026-01-04"
+  updated_at: "2026-01-04"
+  author: ""
+  note: "Selected as an example of non-institutional, interpretive web archive."
