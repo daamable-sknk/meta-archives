@@ -32,7 +32,7 @@ Women Writing Architecture는 스스로를
 각 아이템 페이지는 두 개의 축으로 구성된다.
 
 - 왼쪽에는 **컬렉션(collection)**  
-  → 예: https://womenwritingarchitecture.org/collections/
+  → https://womenwritingarchitecture.org/collections/
 - 오른쪽에는 **주석(annotation)**  
   → 개별 글 상세 페이지 내 annotation 영역
 
@@ -64,6 +64,37 @@ Women Writing Architecture는 스스로를
 사람을 **역할과 관계의 집합**으로 위치시키는 선택이다.  
 저자는 숭배되지 않고,  
 대신 누가 어떤 방식으로 개입했는지만이 구조 속에 남는다.
+
+---
+
+## 구조로서의 관계: 이 아카이브가 작동하는 방식
+
+Women Writing Architecture에서 글(item)은 중심에 놓이지만,  
+의미의 출발점은 아니다.  
+이 아카이브는 개별 글이 아니라,  
+글을 둘러싼 **사람, 역할, 분류 체계, 해석의 관계**를 통해 작동한다.
+
+이 구조를 단순화하면 다음과 같이 그릴 수 있다.
+
+```
+[ Person / Organisation ]
+↓ (taxonomy)
+[ Collection ] [ Annotation ]
+\ /
+\ /
+[ Item: Text ]
+```
+
+여기서 중요한 점은,  
+사람(Person / Organisation)이 아이템에 직접 연결되지 않는다는 것이다.  
+사람은 taxonomy를 통해 컬렉션을 만들고,  
+주석을 작성하며,  
+그 결과가 아이템을 둘러싼 맥락을 형성한다.
+
+글은 이 구조의 중심에 있지만,  
+결코 단독으로 존재하지 않는다.  
+항상 **누군가의 선택과 해석이 만들어낸 자리(position)** 속에서만  
+접근 가능하다.
 
 ---
 
