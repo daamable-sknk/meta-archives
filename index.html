@@ -52,6 +52,13 @@
     
     header {
       margin-bottom: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .site-title {
+      flex: 1;
     }
     
     h1 {
@@ -63,6 +70,21 @@
     .tagline {
       color: var(--muted);
       font-size: 1rem;
+    }
+    
+    nav {
+      font-size: 0.9rem;
+      padding-top: 0.25rem;
+    }
+    
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.25rem;
+    }
+    
+    nav a:hover {
+      color: var(--accent);
     }
     
     /* Archive List */
@@ -147,8 +169,13 @@
 </head>
 <body>
   <header>
-    <h1>meta-archives.xyz</h1>
-    <p class="tagline">아카이브를 비평하는 아카이브 · <a href="/about/" style="color: var(--muted);">About</a></p>
+    <div class="site-title">
+      <h1>meta-archives.xyz</h1>
+      <p class="tagline">아카이브를 비평하는 아카이브</p>
+    </div>
+    <nav>
+      <a href="/about/">About</a>
+    </nav>
   </header>
 
   <main>
