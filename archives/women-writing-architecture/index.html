@@ -55,7 +55,13 @@
     h1 {
       font-size: 1.75rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
     }
     
     .meta-url {
@@ -182,6 +188,27 @@
     article strong {
       font-weight: 600;
     }
+
+    article a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    article a:hover {
+      text-decoration: underline;
+    }
+
+    .ref-link {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: block;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .ref-link a {
+      color: var(--muted);
+    }
     
     /* Footer */
     footer {
@@ -203,6 +230,7 @@
       <a href="https://meta-archives.xyz">meta-archives.xyz</a>
     </div>
     <h1>Women Writing Architecture</h1>
+    <p class="subtitle">아카이브의 형식을 사용하는 커뮤니티에 대한 비평</p>
     <div class="meta-url">
       <a href="https://womenwritingarchitecture.org/" target="_blank" rel="noopener">womenwritingarchitecture.org ↗</a>
     </div>
@@ -268,45 +296,87 @@
 
   <article>
     <h2>1차 기술</h2>
-    <p>Women Writing Architecture는 스스로를 "an open, annotated bibliography collecting texts written by women about architecture"라고 정의한다. 핵심은 세 가지 단어에 있다: <strong>women</strong>, <strong>writing</strong>, <strong>architecture</strong>.</p>
-    <p>이 프로젝트는 건축에 관해 글을 쓴 여성들의 텍스트를 수집한다. 단순한 목록이 아니라 '주석이 달린 서지(annotated bibliography)'를 표방하며, 각 항목에는 텍스트에 대한 해석적 설명이 함께 제공된다. 운영 주체는 "Women Writing Architecture editorial collective"로, 특정 기관이 아닌 편집 공동체가 큐레이션을 담당한다.</p>
-    <p>웹사이트는 Glossary, Type, Language 등의 필터를 통해 콘텐츠를 탐색할 수 있도록 구성되어 있다. 이는 전통적인 데이터베이스 검색이 아니라, 개념어(glossary)를 중심으로 한 의미론적 탐색을 유도하는 구조다.</p>
+    <p>Women Writing Architecture는 스스로를 "an open, annotated bibliography collecting texts written by women about architecture"라고 정의한다. 이 자기 정의에서 핵심은 <strong>women</strong>, <strong>writing</strong>, <strong>architecture</strong>라는 세 단어의 병치다.</p>
+    <p>이 프로젝트가 수집하는 최소 단위는 '아카이브'나 '프로젝트'가 아니라, <strong>건축에 대해 쓰인 하나의 글(text)</strong>이다. 원문 텍스트는 이곳에 저장되지 않는다. 대신 각 글은 서지 정보와 함께 요약, 주석(annotation), 분류 정보로 재구성된다.</p>
+    <p>웹사이트의 기본 화면은 index에 노출된 글 목록이다.</p>
+    <p class="ref-link">→ <a href="https://womenwritingarchitecture.org/" target="_blank" rel="noopener">womenwritingarchitecture.org</a></p>
+    <p>사용자는 Glossary, Type, Language 등의 필터를 통해 이 목록을 탐색한다. 이는 전통적인 데이터베이스 검색이라기보다, 개별 글보다 <strong>개념어(glossary)</strong>를 중심으로 한 의미론적 탐색을 유도하는 구조다.</p>
+    <p class="ref-link">→ <a href="https://womenwritingarchitecture.org/glossary/" target="_blank" rel="noopener">womenwritingarchitecture.org/glossary</a></p>
 
-    <h2>비평</h2>
-    
-    <h3>왜 이 아카이브인가</h3>
-    <p>Women Writing Architecture는 <strong>비기관적(non-institutional)</strong>, <strong>해석적(interpretive)</strong> 웹 아카이브의 전형을 보여준다. meta-archives.xyz가 주목하는 것은 바로 이 지점이다: 아카이브가 어떤 제도적 권위 없이, 공동체의 해석적 실천만으로 구축될 수 있는가?</p>
-    <p>이 프로젝트는 대학, 미술관, 정부 기관이 아닌 <strong>편집 공동체(editorial collective)</strong>가 운영한다. 이는 아카이브의 권위가 제도가 아닌 큐레이션 행위 자체에서 발생함을 의미한다. 수집의 기준은 명시적인 정책이 아니라 공동체 내부의 합의와 감각에 의존한다.</p>
-
-    <h3>분류 체계가 전제하는 세계관</h3>
-    <p>이 아카이브의 분류 체계는 몇 가지 전제를 내포한다:</p>
-    <ol>
-      <li><strong>"여성"이라는 범주의 자명성</strong>: 누가 '여성'인가? 트랜스젠더 여성은 포함되는가? 논바이너리 저자는? 이 질문에 대한 명시적 답변은 웹사이트에서 찾기 어렵다. '여성'이라는 범주가 자명한 것으로 전제되어 있다.</li>
-      <li><strong>"건축에 관한 글쓰기"의 경계</strong>: 건축 이론, 건축 비평, 건축 역사는 포함될 것이다. 그러나 건축을 배경으로 한 소설은? 건축가의 자서전은? 경계는 어디에 있는가?</li>
-      <li><strong>Glossary 중심의 탐색</strong>: Type이나 Language가 아닌 Glossary(용어집)가 첫 번째 필터로 제시된다는 점은 의미심장하다. 이는 개별 텍스트보다 <strong>개념의 네트워크</strong>를 우선시하는 인식론적 선택이다.</li>
-    </ol>
-
-    <h3>형식이 만드는 기억의 방식</h3>
-    <p>annotated bibliography라는 형식은 단순 목록과 다르다. 각 항목에 주석(annotation)이 달린다는 것은, 텍스트가 '있는 그대로' 기록되는 것이 아니라 <strong>해석을 거쳐 기록된다</strong>는 것을 의미한다.</p>
-    <p>이 아카이브에서 원본 텍스트는 부재한다. 존재하는 것은 텍스트에 대한 참조(reference)와 그에 대한 해석(annotation)뿐이다. 이는 아카이브가 '자료의 저장소'가 아니라 <strong>'해석의 저장소'</strong>로 기능함을 보여준다.</p>
-
-    <h3>암묵적 참조와 숨겨진 출처</h3>
-    <p>이 아카이브의 숨겨진 출처(hidden source)는 학술 실라버스와 페미니스트 건축 담론이다. 수집된 텍스트들은 우연히 발견된 것이 아니라, 이미 특정 학술 공동체 내에서 순환하던 레퍼런스들이다. 이는 아카이브가 새로운 지식을 생산하기보다 <strong>기존 담론을 가시화하고 정당화하는</strong> 역할을 한다는 점을 시사한다.</p>
-
-    <h3>열린 질문들</h3>
+    <h2>아이템보다 중요한 것: 맥락의 구조</h2>
+    <p>이 사이트에서 중요한 것은 개별 글(item) 자체보다, <strong>글이 어떤 맥락 속에 놓이는가</strong>이다.</p>
+    <p>각 아이템 페이지는 두 개의 축으로 구성된다.</p>
     <ul>
-      <li>이 아카이브는 누구를 위한 것인가? 연구자? 학생? 일반 대중?</li>
-      <li>'여성'의 정의가 변화하면 아카이브는 어떻게 대응하는가?</li>
-      <li>편집 공동체의 구성원은 누구이며, 어떤 과정으로 항목이 추가되는가?</li>
-      <li>주석(annotation)의 저자는 누구인가? 개별 기여자인가, 집단적 목소리인가?</li>
+      <li>왼쪽에는 <strong>컬렉션(collection)</strong><br>
+        <span class="ref-link">→ <a href="https://womenwritingarchitecture.org/collections/" target="_blank" rel="noopener">womenwritingarchitecture.org/collections</a></span></li>
+      <li>오른쪽에는 <strong>주석(annotation)</strong><br>
+        <span class="ref-link">→ 개별 글 상세 페이지 내 annotation 영역</span></li>
     </ul>
+    <p>이 배치는 우연이 아니다. 글은 이 구조 안에서만 접근 가능하며, 항상 <strong>어떤 묶음에 속한 상태</strong>이자 <strong>어떤 해석을 동반한 상태</strong>로 제시된다.</p>
+    <p>이 아카이브에서 글은 독립적인 객체가 아니라, 항상 관계와 해석 속에 위치한 존재다.</p>
+
+    <h2>보이지 않는 엔티티: 사람과 역할</h2>
+    <p>아이템 페이지에는 명시적으로 드러나지 않지만, 이 구조를 가능하게 하는 중요한 엔티티가 있다. 바로 <strong>사람</strong>이다.</p>
+    <ul>
+      <li>컬렉션은 누군가가 만든 것이다.</li>
+      <li>주석은 누군가가 쓴 것이다.</li>
+      <li>glossary의 용어 역시 누군가의 선택과 합의의 결과다.</li>
+    </ul>
+    <p>그러나 이 '사람'은 아이템의 속성으로 등장하지 않는다. 대신 People and Organisations 페이지를 통해 <strong>taxonomy 형태로 관리</strong>된다.</p>
+    <p class="ref-link">→ <a href="https://womenwritingarchitecture.org/people-and-organisations/" target="_blank" rel="noopener">womenwritingarchitecture.org/people-and-organisations</a></p>
+    <p>이 설계는 개인을 전면에 드러내기보다, 사람을 <strong>역할과 관계의 집합</strong>으로 위치시키는 선택이다. 저자는 숭배되지 않고, 대신 누가 어떤 방식으로 개입했는지만이 구조 속에 남는다.</p>
+
+    <h2>taxonomy는 분류가 아니라 관계 모델이다</h2>
+    <p>People, Organisations, Glossary는 모두 taxonomy로 운영된다.</p>
+    <ul>
+      <li>People / Organisations<br>
+        <span class="ref-link">→ <a href="https://womenwritingarchitecture.org/people-and-organisations/" target="_blank" rel="noopener">womenwritingarchitecture.org/people-and-organisations</a></span></li>
+      <li>Glossary<br>
+        <span class="ref-link">→ <a href="https://womenwritingarchitecture.org/glossary/" target="_blank" rel="noopener">womenwritingarchitecture.org/glossary</a></span></li>
+    </ul>
+    <p>이는 이 사이트에서 taxonomy가 단순한 분류 체계가 아님을 보여준다.</p>
+    <p>taxonomy는 글을 설명하지 않는다. 대신 글이 놓일 수 있는 <strong>맥락의 풀(pool)</strong>을 만든다.</p>
+    <ul>
+      <li>사람은 글의 저자가 아니라 관계의 노드로 존재한다.</li>
+      <li>개념은 정의가 아니라 연결의 장치로 기능한다.</li>
+    </ul>
+    <p>이 아카이브에서 의미는 고정되지 않고, taxonomy를 통해 <strong>계속 재배치</strong>된다.</p>
+
+    <h2>forum이 드러내는 이 사이트의 성격</h2>
+    <p>/forum 페이지는 이 사이트의 정체성을 결정적으로 드러낸다.</p>
+    <p class="ref-link">→ <a href="https://womenwritingarchitecture.org/forum/" target="_blank" rel="noopener">womenwritingarchitecture.org/forum</a></p>
+    <p>이 공간은 자유 토론 게시판이 아니다. 이곳에는 이 사람들, 이 모임이 <strong>함께 작업한 결과물</strong>이 축적된다.</p>
+    <p>forum은 과정 그 자체를 기록하지 않는다. 대신 공동체의 실천이 일정한 형식으로 정리된 결과만이 남는다. 그리고 이 결과물은 다시 bibliography와 taxonomy로 흡수된다.</p>
+    <p>즉, 이 사이트는 외부에서 생산된 지식을 모으는 곳이 아니라, <strong>커뮤니티의 집단적 실천을 정제해 공개하는 플랫폼</strong>이다.</p>
+
+    <h2>아카이브처럼 보이는 이유</h2>
+    <p>Women Writing Architecture는 아카이브의 외형을 적극적으로 차용한다.</p>
+    <ul>
+      <li>목록(index) → <a href="https://womenwritingarchitecture.org/" target="_blank" rel="noopener">womenwritingarchitecture.org</a></li>
+      <li>서지 정보와 아이템 페이지</li>
+      <li>분류 체계(taxonomy)</li>
+      <li>주석(annotation)</li>
+      <li>용어집(glossary)</li>
+    </ul>
+    <p>그러나 이 모든 요소는 자료를 보존하기 위해서가 아니라, <strong>커뮤니티의 실천을 지식의 형식으로 격상시키기 위해</strong> 사용된다.</p>
+    <p>이 사이트는 커뮤니티이지만, 커뮤니티처럼 보이기를 선택하지 않는다. 대신 아카이브의 언어로 자신을 말한다.</p>
+
+    <h2>아카이브는 결과가 아니라 과정이다</h2>
+    <p>이 구조에서 아카이브는 완성될 수 없다.</p>
+    <ul>
+      <li>glossary는 계속 추가되고</li>
+      <li>taxonomy는 재배치되며</li>
+      <li>forum의 결과는 다시 글 목록으로 편입된다</li>
+    </ul>
+    <p>운영 주체는 단일하지 않고, 복수의 운영진이 서로를 참조하며 작업을 이어간다. 권위는 중앙에 있지 않고, <strong>상호 참조(reference)</strong> 속에서 생성된다.</p>
+    <p>이 아카이브는 결과물이 아니라, <strong>아카이빙이 지속되는 과정 그 자체</strong>다.</p>
 
     <h2>관찰 메모</h2>
     <ul>
-      <li>2026-01-04: 자동화된 웹 요청 시 403 응답. 브라우저에서 직접 접근 시 정상 작동(HTTP 200).</li>
-      <li>2026-01-04: 운영 주체가 "editorial collective"로 명시되어 있으나, 구성원 개별 정보는 About 페이지에서도 명확하지 않음.</li>
-      <li>2026-01-04: Glossary 필터의 용어들이 어떤 기준으로 선정되었는지 설명이 부재함. 용어 선정 자체가 해석적 행위임에도 불구하고.</li>
-      <li>후속 조사 필요: 유사한 프로젝트(예: feminist architecture bibliography)와의 비교, 학술 인용 패턴 분석.</li>
+      <li>2026-01-04: 자동화된 웹 요청 시 403 응답, 브라우저 접근 시 HTTP 200.</li>
+      <li>2026-01-04: People and Organisations는 개별 아이템과 직접 연결되지 않고 taxonomy로만 연동됨.</li>
+      <li>2026-01-04: forum은 토론 기록이 아니라 공동체 실천의 결과물 저장소에 가까움.</li>
+      <li>2026-01-04: glossary는 정의의 집합이 아니라 합의의 흔적으로 보임.</li>
     </ul>
   </article>
 
