@@ -27,32 +27,33 @@
 
 세계를 나누는 방식 자체가 비평 대상이 되는 경우.
 
-| 순서 | 아카이브 | URL | 특징 |
-|------|----------|-----|------|
-| 5 | Takachizu | takachizu.org | 커뮤니티 기반 지도 아카이브. 장소와 기억의 관계 |
-| 6 | 퀴어락 | queerarchive.org | 성소수자 아카이브의 분류 체계 |
-| 7 | The Creative Independent | thecreativeindependent.com | 인터뷰 아카이브의 구조. 창작자 연결 방식 |
-| 8 | BugGuide.Net | bugguide.net | 시민 과학 아카이브. 분류학과 참여의 교차점 |
+| 순서 | 아카이브 | URL | 특징 | 상태 |
+|------|----------|-----|------|------|
+| 5 | Women Writing Architecture | womenwritingarchitecture.org | 페미니스트 건축 서지. taxonomy가 곧 관계 모델 | ✓ 완료 |
+| 6 | Takachizu | takachizu.org | 커뮤니티 기반 지도 아카이브. 장소와 기억의 관계 | |
+| 7 | 퀴어락 | queerarchive.org | 성소수자 아카이브의 분류 체계 | |
+| 8 | The Creative Independent | thecreativeindependent.com | 인터뷰 아카이브의 구조. 창작자 연결 방식 | |
+| 9 | BugGuide.Net | bugguide.net | 시민 과학 아카이브. 분류학과 참여의 교차점 | |
 
 ### 3순위: 기관 아카이브의 형식적 선택
 
 같은 "기관 아카이브"라도 형식이 다르다.
 
-| 순서 | 아카이브 | URL | 특징 |
-|------|----------|-----|------|
-| 9 | 서울시립 미술아카이브 SeMA AA | sema.seoul.go.kr/semaaa | 한국 공공 미술아카이브의 형식 |
-| 10 | Letterform Archive | oa.letterformarchive.org | 온라인 아카이브의 모범 사례? |
-| 11 | Japan Search | jpsearch.go.jp | 국가 단위 통합 검색의 설계 |
+| 순서 | 아카이브 | URL | 특징 | 상태 |
+|------|----------|-----|------|------|
+| 10 | 서울시립 미술아카이브 SeMA AA | sema.seoul.go.kr/semaaa | 한국 공공 미술아카이브의 형식 | |
+| 11 | Letterform Archive | oa.letterformarchive.org | 온라인 아카이브의 모범 사례? | |
+| 12 | Japan Search | jpsearch.go.jp | 국가 단위 통합 검색의 설계 | |
 
 ### 4순위: 개인 아카이브의 자기 표현
 
 아카이브가 자기 세계를 드러내는 방식.
 
-| 순서 | 아카이브 | URL | 특징 |
-|------|----------|-----|------|
-| 12 | Experimental Jetset | jetset.nl | 디자인 스튜디오의 자기 아카이빙 |
-| 13 | W. Ross Ashby Digital Archive | ashby.info | 학자의 사후 아카이브 |
-| 14 | Lucy Ives | lucy-ives.com | 작가 웹사이트의 형식 |
+| 순서 | 아카이브 | URL | 특징 | 상태 |
+|------|----------|-----|------|------|
+| 13 | Experimental Jetset | jetset.nl | 디자인 스튜디오의 자기 아카이빙 | |
+| 14 | W. Ross Ashby Digital Archive | ashby.info | 학자의 사후 아카이브 | |
+| 15 | Lucy Ives | lucy-ives.com | 작가 웹사이트의 형식 | |
 
 ---
 
