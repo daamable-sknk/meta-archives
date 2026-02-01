@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <title>About — meta-archives.xyz</title>
   
   <!-- SEO -->
   <meta name="description" content="meta-archives.xyz는 아카이브를 비평하는 아카이브입니다. 아카이브의 형식적 구조와 맥락적 구성을 통해 아카이브의 사유 구조를 살펴봅니다.">
   <meta name="keywords" content="archive, meta-archive, archive criticism, 아카이브, 메타아카이브, 아카이브 비평, about">
   <meta name="author" content="meta-archives.xyz">
-  <link rel="canonical" href="https://meta-archives.xyz/about/">
+  <link rel="canonical" href="https://meta-archives.xyz/about.html">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="About — meta-archives.xyz">
   <meta property="og:description" content="meta-archives.xyz는 아카이브를 비평하는 아카이브입니다. 아카이브의 형식적 구조와 맥락적 구성을 통해 아카이브의 사유 구조를 살펴봅니다.">
-  <meta property="og:url" content="https://meta-archives.xyz/about/">
+  <meta property="og:url" content="https://meta-archives.xyz/about.html">
   <meta property="og:site_name" content="meta-archives.xyz">
   <meta property="og:locale" content="ko_KR">
   
@@ -25,187 +25,10 @@
   <meta name="twitter:title" content="About — meta-archives.xyz">
   <meta name="twitter:description" content="meta-archives.xyz는 아카이브를 비평하는 아카이브입니다.">
   
-  <style>
-    :root {
-      --bg: #fafafa;
-      --text: #222;
-      --muted: #666;
-      --border: #ddd;
-      --accent: #0066cc;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--bg);
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-    
-    header {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .site-name {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    
-    .site-name a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-    
-    .site-name a:hover {
-      color: var(--accent);
-    }
-    
-    h1 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 2.5rem 0 1rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-    }
-    
-    h2:first-of-type {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-    
-    h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 1.5rem 0 0.5rem;
-      color: var(--text);
-    }
-    
-    p {
-      margin-bottom: 1rem;
-    }
-    
-    ul, ol {
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    
-    li {
-      margin-bottom: 0.5rem;
-    }
-    
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    .highlight {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
-    
-    .highlight p:last-child {
-      margin-bottom: 0;
-    }
-    
-    .schema-section {
-      margin: 1.5rem 0;
-    }
-    
-    .schema-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .schema-group h4 {
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
-    
-    .schema-list {
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-    
-    .schema-list code {
-      background: #f0f0f0;
-      padding: 0.1rem 0.3rem;
-      border-radius: 3px;
-      font-size: 0.85rem;
-    }
-    
-    .links-section {
-      margin: 1.5rem 0;
-    }
-    
-    .link-item {
-      display: block;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .link-item:first-child {
-      border-top: 1px solid var(--border);
-    }
-    
-    .link-item a {
-      font-weight: 500;
-    }
-    
-    .link-desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 0.25rem;
-    }
-    
-    /* Footer */
-    footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    
-    footer a {
-      color: var(--muted);
-    }
-    
-    footer a:hover {
-      color: var(--accent);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
+  <header class="detail">
     <div class="site-name">
       <a href="/">meta-archives.xyz</a>
     </div>
@@ -299,8 +122,8 @@
 
   <footer>
     <p>
-      <a href="/">Archives</a> · 
-      <a href="/about/">About</a> · 
+      <a href="/">Posts</a> · 
+      <a href="/about.html">About</a> · 
       <a href="https://github.com/daamable-sknk/meta-archives">GitHub</a>
     </p>
   </footer>

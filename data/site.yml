@@ -1,0 +1,26 @@
+# =============================================================================
+# meta-archives.xyz 사이트 전역 설정
+# =============================================================================
+
+site:
+  title: "meta-archives.xyz"
+  tagline: "아카이브를 비평하는 아카이브"
+  description: "디지털 아카이브의 메타데이터, 기술 구조, 분류 방식이 어떤 세계관과 기억 방식을 전제하는지 드러냅니다."
+  url: "https://meta-archives.xyz"
+  language: "ko"
+  
+author:
+  name: ""
+  github: "daamable-sknk"
+
+social:
+  github: "https://github.com/daamable-sknk/meta-archives"
+  arena:
+    - name: "meta-archive"
+      url: "https://www.are.na/daehwan-jang/meta-archive"
+    - name: "Archive Mate"
+      url: "https://www.are.na/birdcall-community-memory/archive-mate"
+
+meta:
+  schema_version: "1.0"
+  updated_at: "2026-02-01"
