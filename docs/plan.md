@@ -4,7 +4,7 @@
 
 - 발행 주기: 월 2회 (격주)
 - 총 대상: 36개 아카이브 (Are.na meta-archive 채널 기준)
-- 비평 완료: 1개 (Women Writing Architecture)
+- 비평 완료: 2개 (Women Writing Architecture, UbuWeb)
 
 ---
 
@@ -16,12 +16,12 @@
 
 형식적 실험이 아카이브의 메시지와 긴밀하게 연결된 경우.
 
-| 순서 | 아카이브 | URL | 특징 |
-|------|----------|-----|------|
-| 1 | Low-Tech Magazine Archive | solar.lowtechmagazine.com | 태양광 서버, 디더링 이미지. 지속가능성이 형식에 체화됨 |
-| 2 | Cameron's World | cameronsworld.net | 지오시티즈 잔해로 만든 콜라주. 웹의 역사를 웹의 유물로 |
-| 3 | UbuWeb | ubu.com | 의도적으로 조악한 인터페이스. 아방가르드 정신의 형식화 |
-| 4 | 지암일기 | jiamdiary.info | 조선시대 일기를 데이터 시각화로. 고문서와 디지털의 만남 |
+| 순서 | 아카이브 | URL | 특징 | 상태 |
+|------|----------|-----|------|------|
+| 1 | UbuWeb | ubu.com | 의도적으로 조악한 인터페이스. 아방가르드 정신의 형식화 | ✓ 완료 |
+| 2 | Low-Tech Magazine Archive | solar.lowtechmagazine.com | 태양광 서버, 디더링 이미지. 지속가능성이 형식에 체화됨 | |
+| 3 | Cameron's World | cameronsworld.net | 지오시티즈 잔해로 만든 콜라주. 웹의 역사를 웹의 유물로 | |
+| 4 | 지암일기 | jiamdiary.info | 조선시대 일기를 데이터 시각화로. 고문서와 디지털의 만남 | |
 
 ### 2순위: 분류 체계가 독특한 아카이브
 
@@ -58,8 +58,9 @@
 
 ## 일정
 
-### 2026년 1분기 (완료/진행)
+### 2026년 1분기 (완료)
 - [x] Women Writing Architecture (2026.01)
+- [x] UbuWeb (2026.02)
 
 ### 2026년 2월
 - [ ] Low-Tech Magazine Archive (2월 중순)
@@ -67,12 +68,12 @@
 
 ### 2026년 3월
 - [ ] 지암일기 (3월 초)
-- [ ] UbuWeb (3월 중순)
-- [ ] Takachizu (3월 말)
+- [ ] Takachizu (3월 중순)
+- [ ] 퀴어락 (3월 말)
 
 ### 2026년 4월
-- [ ] 퀴어락 (4월 초)
-- [ ] The Creative Independent (4월 중순)
+- [ ] The Creative Independent (4월 초)
+- [ ] BugGuide.Net (4월 중순)
 
 ### 2026년 5월 이후
 - BugGuide.Net
