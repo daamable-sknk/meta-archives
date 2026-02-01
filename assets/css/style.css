@@ -380,6 +380,23 @@ footer p {
   margin-bottom: 0.5rem;
 }
 
+.footer-credit {
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  margin-right: 1rem;
+}
+
+.footer-updated {
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+}
+
 /* -----------------------------------------------------------------------------
    About Page
    ----------------------------------------------------------------------------- */
