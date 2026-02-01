@@ -89,32 +89,61 @@
 
 추후 우선순위 조정 가능.
 
-**미술/문화 기관**
-- KoRICA 한국근현대미술 아카이브
-- MACBA 바르셀로나 현대미술관
+### 미술/문화 기관
 
-**정부/공공**
-- UK Government Web Archive
-- OASIS 온라인 디지털지적문화유산
-- PROV (빅토리아주 공공기록원)
+| 아카이브 | URL | 특징 |
+|----------|-----|------|
+| KoRICA 한국근현대미술 아카이브 | korica.org | 한국 현대미술 아카이브. 기관 vs 연구자 주도의 차이 |
+| MACBA 바르셀로나 현대미술관 | macba.cat/en/archive | 유럽 미술관 아카이브의 형식. 다국어 접근 |
 
-**기타**
-- Adocs (예술가 출판물)
-- The Moving Poster
-- 생태모방지식 서비스 플랫폼
-- GCED Clearinghouse
-- Montez Press Radio
-- CMF HOW'S
-- Skeuomorphic Library / P-DPA
-- Edible Archive
-- Byte - a visual archive
-- PublicStairs.com
-- The Portal / Cori Olinghouse
-- Hyerin Kim
-- LACA Alternative Libraries and Archives
-- okeesalon.org
-- 서태지 아카이브 (403 Forbidden)
-- 냉동만두 프라이팬 챌린지
+### 정부/공공 아카이브
+
+| 아카이브 | URL | 특징 |
+|----------|-----|------|
+| UK Government Web Archive | nationalarchives.gov.uk/webarchive | 1996년부터의 정부 웹 아카이빙. 시간의 층위 |
+| OASIS 온라인 디지털지적문화유산 | nl.go.kr/oasis | 국립중앙도서관의 웹 아카이브. 한국의 웹 기억 |
+| PROV 빅토리아주 공공기록원 | prov.vic.gov.au | 호주 주정부 아카이브. 공공기록의 형식 |
+
+### 예술가 출판/독립 플랫폼
+
+| 아카이브 | URL | 특징 |
+|----------|-----|------|
+| Adocs | adocs.co | 예술가 출판물 플랫폼. 전시도록의 디지털 열람 |
+| Montez Press Radio | radio.montezpress.com | 라디오 아카이브. 음성 기록의 구조 |
+| The Portal / Cori Olinghouse | theportal.place | 아티스트/아키비스트/큐레이터의 자기 아카이빙 |
+| Byte - a visual archive | byte.tsundoku.io | 시각 아카이브. 이미지 중심 구조 |
+
+### 디자인 아카이브
+
+| 아카이브 | URL | 특징 |
+|----------|-----|------|
+| The Moving Poster | themovingposter.com | 움직이는 포스터 아카이브. 동적 미디어의 수집 |
+| CMF HOW'S | dkworks.designdb.com | CMF(색상, 소재, 마감) 아카이브. 산업 디자인의 분류 |
+| Hyerin Kim | hyerinkim.com | 그래픽 디자이너 포트폴리오. 개인 작업의 자기 구조화 |
+
+### 대안/실험적 아카이브
+
+| 아카이브 | URL | 특징 |
+|----------|-----|------|
+| Skeuomorphic Library / P-DPA | p-dpa.net | 스큐어모픽 인터페이스로 디지털 출판 아카이빙 |
+| Edible Archive | ediblearchive.com | 먹을 수 있는 아카이브? 물질성과 기록의 관계 |
+| LACA Alternative Libraries and Archives | lacarchive.com | 대안 도서관/아카이브 목록의 아카이브. 메타 구조 |
+
+### 주제 특화 아카이브
+
+| 아카이브 | URL | 특징 |
+|----------|-----|------|
+| 생태모방지식 서비스 플랫폼 | nie-ecobank.kr | 생태모방 지식의 분류. 자연과 기술의 교차 |
+| GCED Clearinghouse | gcedclearinghouse.org | 세계시민교육 자료 허브. UNESCO 기반, 7개 언어 |
+| PublicStairs.com | publicstairs.com | 공공 계단 정보. 극도로 좁은 주제의 아카이브 |
+| 냉동만두 프라이팬 챌린지 | ffa.ajinomoto.com/enjoy/frypan | 기업의 참여형 아카이브. 프라이팬 사진 수집 |
+
+### 접근 불가/미확인
+
+| 아카이브 | URL | 특징 |
+|----------|-----|------|
+| 서태지 아카이브 | seotaiji-archive.com | 403 Forbidden. 팬 아카이브의 폐쇄성? |
+| okeesalon.org | okeesalon.org | 접근 확인 필요 |
 
 ---
 
