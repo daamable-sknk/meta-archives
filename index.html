@@ -39,9 +39,33 @@
   </header>
 
   <main>
+    <nav class="category-filter">
+      <a href="#" class="active" data-category="all">전체</a>
+      <a href="#" data-category="critique">비평</a>
+      <a href="#" data-category="essay">에세이</a>
+    </nav>
+
     <ul class="post-list">
-      <li class="post-item">
-        <a href="/posts/women-writing-architecture/">
+      <li class="post-item" data-category="essay">
+        <a href="posts/against-interpretation-for-archives/">
+          <div class="post-title">
+            해석에 반대한다, 아카이브에 대해서도
+          </div>
+          <div class="post-meta">
+            2026.02 · 에세이
+          </div>
+          <div class="post-desc">
+            아카이브를 내용이 아니라 형식으로 읽는다는 것. 수잔 손택의 「해석에 반대한다」를 아카이브 비평에 적용해본다.
+          </div>
+          <div class="post-tags">
+            <span class="tag">수잔 손택</span>
+            <span class="tag">형식</span>
+            <span class="tag">방법론</span>
+          </div>
+        </a>
+      </li>
+      <li class="post-item" data-category="critique">
+        <a href="posts/women-writing-architecture/">
           <div class="post-title">
             Women Writing Architecture
             <span class="status-badge">Active</span>
@@ -59,9 +83,31 @@
           </div>
         </a>
       </li>
-      <!-- 추가 글은 여기에 -->
     </ul>
   </main>
+
+  <script>
+    // Category filter
+    document.querySelectorAll('.category-filter a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const category = link.dataset.category;
+        
+        // Update active state
+        document.querySelectorAll('.category-filter a').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        
+        // Filter posts
+        document.querySelectorAll('.post-item').forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 
   <footer>
     <p>

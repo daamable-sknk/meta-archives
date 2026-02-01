@@ -232,6 +232,31 @@ nav a:hover {
 }
 
 /* -----------------------------------------------------------------------------
+   Components — Category Filter
+   ----------------------------------------------------------------------------- */
+.category-filter {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.category-filter a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-right: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.category-filter a:hover {
+  color: var(--accent);
+}
+
+.category-filter a.active {
+  color: var(--text);
+  font-weight: 500;
+  border-bottom: 2px solid var(--text);
+}
+
+/* -----------------------------------------------------------------------------
    Components — Post List
    ----------------------------------------------------------------------------- */
 .post-list {
