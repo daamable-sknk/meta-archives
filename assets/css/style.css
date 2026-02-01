@@ -1,21 +1,18 @@
 /* =============================================================================
-   meta-archives.xyz — 공통 스타일시트
+   meta-archives.xyz — Pure Index Style
+   
+   Concept: 책 뒤의 색인(index) 페이지처럼 텍스트만으로 구성된 최소한의 디자인.
+   Reference: gwern.net, 실제 학술서적 색인
    ============================================================================= */
 
 /* -----------------------------------------------------------------------------
-   CSS Variables
+   Variables
    ----------------------------------------------------------------------------- */
 :root {
-  --bg: #fafafa;
-  --text: #222;
+  --bg: #fff;
+  --text: #111;
   --muted: #666;
-  --border: #ddd;
-  --accent: #0066cc;
-  --card-bg: #fff;
-  --code-bg: #f5f5f5;
-  --tag-bg: #f0f0f0;
-  --status-active-bg: #e8f5e9;
-  --status-active-text: #2e7d32;
+  --border: #111;
 }
 
 /* -----------------------------------------------------------------------------
@@ -27,44 +24,47 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+html {
   font-size: 16px;
-  line-height: 1.7;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--text);
   background: var(--bg);
-  max-width: 720px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 3rem 1.5rem 4rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
 }
 
 /* -----------------------------------------------------------------------------
    Typography
    ----------------------------------------------------------------------------- */
-h1 {
-  font-size: 1.5rem;
+h1, h2, h3 {
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 1rem;
 }
 
 h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1rem;
   margin: 2.5rem 0 1rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-}
-
-h2:first-of-type,
-article h2:first-child {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
 }
 
 h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
   margin: 1.5rem 0 0.75rem;
 }
 
@@ -72,8 +72,9 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Links: 색상 변화 없음, 호버 시 밑줄만 */
 a {
-  color: var(--accent);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -87,361 +88,202 @@ strong {
 
 ul, ol {
   margin-bottom: 1rem;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
 }
 
 li {
   margin-bottom: 0.5rem;
 }
 
-pre {
-  background: var(--code-bg);
-  padding: 1rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  overflow-x: auto;
-  margin-bottom: 1rem;
-}
-
-code {
-  background: var(--code-bg);
-  padding: 0.1rem 0.3rem;
-  border-radius: 3px;
-  font-size: 0.9em;
-}
-
-pre code {
-  background: none;
-  padding: 0;
+/* -----------------------------------------------------------------------------
+   Divider
+   ----------------------------------------------------------------------------- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
 }
 
 /* -----------------------------------------------------------------------------
-   Layout — Header
+   Header
    ----------------------------------------------------------------------------- */
 header {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  margin-bottom: 2rem;
 }
 
-.site-title {
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header .tagline {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+header nav {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+header nav a {
+  color: var(--muted);
+  margin-right: 1rem;
+}
+
+header nav a:hover {
+  color: var(--text);
+}
+
+/* -----------------------------------------------------------------------------
+   Category Filter
+   ----------------------------------------------------------------------------- */
+.filter {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+}
+
+.filter a {
+  color: var(--muted);
+  margin-right: 1.25rem;
+}
+
+.filter a:hover {
+  color: var(--text);
+}
+
+.filter a.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* -----------------------------------------------------------------------------
+   Index List (메인 페이지 글 목록)
+   ----------------------------------------------------------------------------- */
+.index {
+  list-style: none;
+  padding: 0;
+}
+
+.index li {
+  margin-bottom: 1.5rem;
+}
+
+.index .category {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.index li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.index .title {
   flex: 1;
 }
 
-.tagline {
+.index .date {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.875rem;
+  flex-shrink: 0;
 }
 
-/* Header for detail pages */
-header.detail {
-  display: block;
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.site-name {
-  font-size: 0.85rem;
+.index .meta {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
   color: var(--muted);
-  margin-bottom: 1rem;
 }
 
-.site-name a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.site-name a:hover {
-  color: var(--accent);
-}
-
-header.detail h1 {
-  font-size: 1.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
-.meta-url {
-  margin-bottom: 1rem;
-}
-
-.meta-url a {
-  font-size: 0.95rem;
-}
-
-/* -----------------------------------------------------------------------------
-   Navigation
-   ----------------------------------------------------------------------------- */
-nav {
-  font-size: 0.9rem;
-  padding-top: 0.25rem;
-}
-
-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  margin-left: 1.25rem;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-/* -----------------------------------------------------------------------------
-   Components — Badge & Tag
-   ----------------------------------------------------------------------------- */
-.status-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  padding: 0.1rem 0.4rem;
-  background: var(--status-active-bg);
-  color: var(--status-active-text);
-  border-radius: 3px;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-}
-
-.status-badge.large {
-  font-size: 0.8rem;
-  padding: 0.2rem 0.5rem;
-  margin-left: 0;
+.index .meta .tag {
   margin-right: 0.5rem;
 }
 
-.tag {
-  display: inline-block;
+.index .meta .tag::before {
+  content: "·";
+  margin-right: 0.5rem;
+}
+
+.index .meta .tag:first-child::before {
+  content: "";
+  margin-right: 0;
+}
+
+/* Status badge */
+.status {
   font-size: 0.75rem;
-  padding: 0.1rem 0.35rem;
-  background: var(--tag-bg);
-  border-radius: 3px;
-  margin-right: 0.25rem;
-  margin-bottom: 0.3rem;
-}
-
-.observed-date {
-  font-size: 0.85rem;
   color: var(--muted);
 }
 
 /* -----------------------------------------------------------------------------
-   Components — Category Filter
+   Detail Page — Header
    ----------------------------------------------------------------------------- */
-.category-filter {
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
+.detail-header {
+  margin-bottom: 2rem;
 }
 
-.category-filter a {
+.detail-header .back {
+  font-size: 0.875rem;
   color: var(--muted);
-  text-decoration: none;
-  margin-right: 1rem;
-  padding-bottom: 0.25rem;
-}
-
-.category-filter a:hover {
-  color: var(--accent);
-}
-
-.category-filter a.active {
-  color: var(--text);
-  font-weight: 500;
-  border-bottom: 2px solid var(--text);
-}
-
-/* -----------------------------------------------------------------------------
-   Components — Post List
-   ----------------------------------------------------------------------------- */
-.post-list {
-  list-style: none;
-}
-
-.post-item {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.post-item:first-child {
-  border-top: 1px solid var(--border);
-}
-
-.post-item a {
-  text-decoration: none;
-  color: var(--text);
   display: block;
+  margin-bottom: 1.5rem;
 }
 
-.post-item a:hover .post-title {
-  color: var(--accent);
+.detail-header .back:hover {
+  color: var(--text);
 }
 
-.post-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  transition: color 0.15s;
-}
-
-.post-meta {
-  font-size: 0.85rem;
-  color: var(--muted);
+.detail-header h1 {
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-.post-desc {
-  font-size: 0.9rem;
+.detail-header .meta {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.detail-header .meta a {
+  color: var(--muted);
+}
+
+.detail-header .meta a:hover {
   color: var(--text);
 }
 
-.post-tags {
-  margin-top: 0.5rem;
-}
-
 /* -----------------------------------------------------------------------------
-   Components — Metadata Box
+   Detail Page — Metadata Box
    ----------------------------------------------------------------------------- */
 .metadata {
   margin: 2rem 0;
-  padding: 1.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-.metadata h2 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--muted);
-  margin: 0 0 1rem 0;
-  padding: 0;
-  border: none;
-}
-
-.metadata table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-
-.metadata th,
-.metadata td {
-  text-align: left;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-  vertical-align: top;
-}
-
-.metadata th {
-  width: 35%;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.metadata tr:last-child th,
-.metadata tr:last-child td {
-  border-bottom: none;
-}
-
-/* -----------------------------------------------------------------------------
-   Components — Highlight Box
-   ----------------------------------------------------------------------------- */
-.highlight {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.highlight p:last-child {
-  margin-bottom: 0;
-}
-
-/* -----------------------------------------------------------------------------
-   Components — Reference Link
-   ----------------------------------------------------------------------------- */
-.ref-link {
-  font-size: 0.9rem;
-  color: var(--muted);
-  display: block;
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
-}
-
-.ref-link a {
-  color: var(--muted);
-}
-
-.ref-link a:hover {
-  color: var(--accent);
-}
-
-/* -----------------------------------------------------------------------------
-   Components — Link List (About page)
-   ----------------------------------------------------------------------------- */
-.links-section {
-  margin: 1.5rem 0;
-}
-
-.link-item {
-  display: block;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.link-item:first-child {
+  padding: 1.5rem 0;
   border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, 
+               "Liberation Mono", monospace;
 }
 
-.link-item a {
-  font-weight: 500;
+.metadata dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1.5rem;
 }
 
-.link-desc {
-  font-size: 0.85rem;
+.metadata dt {
   color: var(--muted);
-  margin-top: 0.25rem;
 }
 
-/* -----------------------------------------------------------------------------
-   Components — Schema Section (About page)
-   ----------------------------------------------------------------------------- */
-.schema-section {
-  margin: 1.5rem 0;
+.metadata dd {
+  margin: 0;
 }
 
-.schema-group {
-  margin-bottom: 1.5rem;
-}
-
-.schema-group h4 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-}
-
-.schema-list {
-  font-size: 0.9rem;
+.metadata a {
   color: var(--text);
-}
-
-.schema-list code {
-  background: var(--tag-bg);
-  padding: 0.1rem 0.3rem;
-  border-radius: 3px;
-  font-size: 0.85rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -452,8 +294,6 @@ article {
 }
 
 article h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
   margin: 2.5rem 0 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
@@ -465,13 +305,56 @@ article h2:first-child {
   border-top: none;
 }
 
-article a {
-  color: var(--accent);
-  text-decoration: none;
+article p {
+  margin-bottom: 1rem;
 }
 
-article a:hover {
-  text-decoration: underline;
+article ul, article ol {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+
+article blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+  color: var(--muted);
+}
+
+article pre {
+  background: #f5f5f5;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+article code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, 
+               "Liberation Mono", monospace;
+  font-size: 0.9em;
+  background: #f5f5f5;
+  padding: 0.1rem 0.3rem;
+}
+
+article pre code {
+  background: none;
+  padding: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   Highlight Box (선택적)
+   ----------------------------------------------------------------------------- */
+.highlight {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.highlight p:last-child {
+  margin-bottom: 0;
 }
 
 /* -----------------------------------------------------------------------------
@@ -479,14 +362,10 @@ article a:hover {
    ----------------------------------------------------------------------------- */
 footer {
   margin-top: 3rem;
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--border);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--muted);
-}
-
-footer p {
-  margin-bottom: 0.5rem;
 }
 
 footer a {
@@ -494,13 +373,53 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--accent);
+  color: var(--text);
+}
+
+footer p {
+  margin-bottom: 0.5rem;
 }
 
 /* -----------------------------------------------------------------------------
-   Utility
+   About Page
    ----------------------------------------------------------------------------- */
-.mt-1 { margin-top: 0.5rem; }
-.mt-2 { margin-top: 1rem; }
-.mb-0 { margin-bottom: 0; }
-.mb-1 { margin-bottom: 0.5rem; }
+.about h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about h2:first-of-type {
+  margin-top: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive
+   ----------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  body {
+    padding: 2rem 1rem 3rem;
+  }
+  
+  .index li a {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .index .date {
+    font-size: 0.8125rem;
+  }
+  
+  .index .meta {
+    padding-left: 0;
+  }
+  
+  .metadata dl {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .metadata dt {
+    font-weight: 600;
+  }
+}

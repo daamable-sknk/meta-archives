@@ -28,101 +28,120 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="detail">
-    <div class="site-name">
-      <a href="/">meta-archives.xyz</a>
-    </div>
+  <header class="detail-header">
+    <a href="index.html" class="back">meta-archives.xyz</a>
     <h1>About</h1>
   </header>
 
-  <main>
-    <section>
-      <div class="highlight">
-        <p><strong>meta-archives.xyz</strong>는 아카이브를 비평하는 아카이브입니다.</p>
-        <p>디지털 아카이브의 메타데이터, 기술 구조, 분류 방식이 어떤 세계관과 기억 방식을 전제하는지 드러내는 것이 목표입니다.</p>
-      </div>
+  <hr>
+
+  <article>
+    <p><strong>meta-archives.xyz</strong>는 아카이브를 비평하는 아카이브입니다.</p>
+    <p>디지털 아카이브의 메타데이터, 기술 구조, 분류 방식이 어떤 세계관과 기억 방식을 전제하는지 드러내는 것이 목표입니다.</p>
+
+    <hr>
+
+    <h2>미션</h2>
+    <p><strong>아카이브를 통해 아카이브 자체를 다시 생각하기.</strong></p>
+    <p>우리는 아카이브가 단순한 자료 저장소가 아니라, 특정한 세계관과 기억 방식을 전제하는 구조물이라고 생각합니다. 아카이브의 메타데이터 스키마, 분류 체계, 인터페이스 설계는 모두 그 아카이브가 세상을 어떻게 이해하는지를 드러냅니다.</p>
+    <p>meta-archives.xyz는 이러한 "아카이브의 사유 구조"를 분석하고 기록합니다.</p>
+
+    <hr>
+
+    <h2>비전</h2>
+    <p><strong>아카이브의 형식적 구조와 맥락적 구성을 통해 아카이브의 사유 구조를 살펴보기.</strong></p>
+    <ul>
+      <li><strong>비평을 데이터로, 데이터를 비평으로:</strong> 각 아카이브에 대한 메타데이터(YAML)와 비평글(Markdown)을 함께 기록합니다.</li>
+      <li><strong>메타데이터는 철학적 단서:</strong> 아카이브가 어떤 필드를 수집하는지, 어떤 분류 체계를 사용하는지는 그 아카이브의 세계관을 드러냅니다.</li>
+      <li><strong>관찰 중인 아카이브들의 집합:</strong> 완결된 아카이브가 아니라, 지속적으로 관찰하고 갱신하는 과정 자체가 프로젝트입니다.</li>
+      <li><strong>Git 히스토리로 시간성 부여:</strong> 변경 이력을 통해 아카이브 관찰의 역사를 기록합니다.</li>
+    </ul>
+
+    <hr>
+
+    <h2>메타데이터 스키마</h2>
+    <p>각 아카이브를 기록할 때 사용하는 메타데이터 스키마입니다. 이 스키마 자체가 "무엇이 아카이브를 구성하는가"에 대한 우리의 가설입니다.</p>
+
+    <section class="metadata">
+      <h3>기본 정보 (Basic)</h3>
+      <dl>
+        <dt>title</dt>
+        <dd>아카이브의 이름</dd>
+        <dt>url</dt>
+        <dd>아카이브의 주소</dd>
+        <dt>creator</dt>
+        <dd>제작자/운영 주체</dd>
+        <dt>publisher</dt>
+        <dd>발행/호스팅 주체</dd>
+        <dt>description</dt>
+        <dd>아카이브 설명</dd>
+        <dt>year_started</dt>
+        <dd>시작 연도</dd>
+        <dt>status</dt>
+        <dd>운영 상태</dd>
+      </dl>
     </section>
 
-    <section>
-      <h2>미션</h2>
-      <p><strong>아카이브를 통해 아카이브 자체를 다시 생각하기.</strong></p>
-      <p>우리는 아카이브가 단순한 자료 저장소가 아니라, 특정한 세계관과 기억 방식을 전제하는 구조물이라고 생각합니다. 아카이브의 메타데이터 스키마, 분류 체계, 인터페이스 설계는 모두 그 아카이브가 세상을 어떻게 이해하는지를 드러냅니다.</p>
-      <p>meta-archives.xyz는 이러한 "아카이브의 사유 구조"를 분석하고 기록합니다.</p>
+    <section class="metadata">
+      <h3>기술적 구조 (Technical)</h3>
+      <dl>
+        <dt>platform</dt>
+        <dd>기술 플랫폼</dd>
+        <dt>format</dt>
+        <dd>자료 형식</dd>
+        <dt>structure</dt>
+        <dd>구조적 특성</dd>
+        <dt>tech_notes</dt>
+        <dd>기술적 메모</dd>
+      </dl>
     </section>
 
-    <section>
-      <h2>비전</h2>
-      <p><strong>아카이브의 형식적 구조와 맥락적 구성을 통해 아카이브의 사유 구조를 살펴보기.</strong></p>
-      <ul>
-        <li><strong>비평을 데이터로, 데이터를 비평으로:</strong> 각 아카이브에 대한 메타데이터(YAML)와 비평글(Markdown)을 함께 기록합니다.</li>
-        <li><strong>메타데이터는 철학적 단서:</strong> 아카이브가 어떤 필드를 수집하는지, 어떤 분류 체계를 사용하는지는 그 아카이브의 세계관을 드러냅니다.</li>
-        <li><strong>관찰 중인 아카이브들의 집합:</strong> 완결된 아카이브가 아니라, 지속적으로 관찰하고 갱신하는 과정 자체가 프로젝트입니다.</li>
-        <li><strong>Git 히스토리로 시간성 부여:</strong> 변경 이력을 통해 아카이브 관찰의 역사를 기록합니다.</li>
-      </ul>
+    <section class="metadata">
+      <h3>사회적 맥락 (Social)</h3>
+      <dl>
+        <dt>context</dt>
+        <dd>사회적/역사적 맥락</dd>
+        <dt>ownership</dt>
+        <dd>소유 구조</dd>
+        <dt>ethics</dt>
+        <dd>윤리적 고려사항</dd>
+        <dt>users</dt>
+        <dd>주요 사용자층</dd>
+      </dl>
     </section>
 
-    <section>
-      <h2>메타데이터 스키마</h2>
-      <p>각 아카이브를 기록할 때 사용하는 메타데이터 스키마입니다. 이 스키마 자체가 "무엇이 아카이브를 구성하는가"에 대한 우리의 가설입니다.</p>
-      
-      <div class="schema-section">
-        <div class="schema-group">
-          <h4>기본 정보 (Basic)</h4>
-          <p class="schema-list">
-            <code>title</code>, <code>url</code>, <code>creator</code>, <code>publisher</code>, <code>description</code>, <code>year_started</code>, <code>status</code>
-          </p>
-        </div>
-        
-        <div class="schema-group">
-          <h4>기술적 구조 (Technical)</h4>
-          <p class="schema-list">
-            <code>platform</code>, <code>format</code>, <code>structure</code>, <code>tech_notes</code>
-          </p>
-        </div>
-        
-        <div class="schema-group">
-          <h4>사회적 맥락 (Social)</h4>
-          <p class="schema-list">
-            <code>context</code>, <code>ownership</code>, <code>ethics</code>, <code>users</code>
-          </p>
-        </div>
-        
-        <div class="schema-group">
-          <h4>비평적 해석 (Critical)</h4>
-          <p class="schema-list">
-            <code>category</code>, <code>why_selected</code>, <code>interpretation</code>
-          </p>
-        </div>
-      </div>
+    <section class="metadata">
+      <h3>비평적 해석 (Critical)</h3>
+      <dl>
+        <dt>category</dt>
+        <dd>분류 카테고리</dd>
+        <dt>why_selected</dt>
+        <dd>선정 이유</dd>
+        <dt>interpretation</dt>
+        <dd>비평적 해석</dd>
+      </dl>
     </section>
 
-    <section>
-      <h2>관련 링크</h2>
-      <div class="links-section">
-        <div class="link-item">
-          <a href="https://www.are.na/daehwan-jang/meta-archive" target="_blank" rel="noopener">Are.na: meta-archive</a>
-          <p class="link-desc">메타아카이브 관련 레퍼런스 채널</p>
-        </div>
-        <div class="link-item">
-          <a href="https://www.are.na/birdcall-community-memory/archive-mate" target="_blank" rel="noopener">Are.na: Archive Mate</a>
-          <p class="link-desc">Archive Mate 프로젝트 채널</p>
-        </div>
-        <div class="link-item">
-          <a href="https://github.com/daamable-sknk/meta-archives" target="_blank" rel="noopener">GitHub Repository</a>
-          <p class="link-desc">소스코드, 메타데이터, 비평글 원본</p>
-        </div>
-      </div>
-    </section>
+    <hr>
 
-    <section>
-      <h2>연락처</h2>
-      <p>프로젝트에 대한 질문, 아카이브 추천, 협업 제안은 <a href="https://github.com/daamable-sknk/meta-archives/issues" target="_blank" rel="noopener">GitHub Issues</a>를 통해 연락해주세요.</p>
-    </section>
-  </main>
+    <h2>관련 링크</h2>
+    <ul>
+      <li><a href="https://www.are.na/daehwan-jang/meta-archive" target="_blank" rel="noopener">Are.na: meta-archive</a> — 메타아카이브 관련 레퍼런스 채널</li>
+      <li><a href="https://www.are.na/birdcall-community-memory/archive-mate" target="_blank" rel="noopener">Are.na: Archive Mate</a> — Archive Mate 프로젝트 채널</li>
+      <li><a href="https://github.com/daamable-sknk/meta-archives" target="_blank" rel="noopener">GitHub Repository</a> — 소스코드, 메타데이터, 비평글 원본</li>
+    </ul>
+
+    <hr>
+
+    <h2>연락처</h2>
+    <p>프로젝트에 대한 질문, 아카이브 추천, 협업 제안은 <a href="https://github.com/daamable-sknk/meta-archives/issues" target="_blank" rel="noopener">GitHub Issues</a>를 통해 연락해주세요.</p>
+  </article>
+
+  <hr>
 
   <footer>
     <p>
-      <a href="/">Posts</a> · 
+      <a href="index.html">Posts</a> · 
       <a href="/about.html">About</a> · 
       <a href="https://github.com/daamable-sknk/meta-archives">GitHub</a>
     </p>

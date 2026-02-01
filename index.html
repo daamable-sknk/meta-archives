@@ -29,76 +29,56 @@
 </head>
 <body>
   <header>
-    <div class="site-title">
-      <h1>meta-archives.xyz</h1>
-      <p class="tagline">아카이브를 비평하는 아카이브</p>
-    </div>
-    <nav>
-      <a href="/about.html">About</a>
-    </nav>
+    <h1>meta-archives.xyz</h1>
+    <p class="tagline">아카이브를 비평하는 아카이브</p>
   </header>
 
-  <main>
-    <nav class="category-filter">
-      <a href="#" class="active" data-category="all">전체</a>
-      <a href="#" data-category="critique">비평</a>
-      <a href="#" data-category="essay">에세이</a>
-    </nav>
+  <hr>
 
-    <ul class="post-list">
-      <li class="post-item" data-category="essay">
-        <a href="posts/against-interpretation-for-archives/">
-          <div class="post-title">
-            해석에 반대한다, 아카이브에 대해서도
-          </div>
-          <div class="post-meta">
-            2026.02 · 에세이
-          </div>
-          <div class="post-desc">
-            아카이브를 내용이 아니라 형식으로 읽는다는 것. 수잔 손택의 「해석에 반대한다」를 아카이브 비평에 적용해본다.
-          </div>
-          <div class="post-tags">
-            <span class="tag">수잔 손택</span>
-            <span class="tag">형식</span>
-            <span class="tag">방법론</span>
-          </div>
+  <nav class="filter">
+    <a href="#" class="active" data-category="all">전체</a>
+    <a href="#" data-category="critique">비평</a>
+    <a href="#" data-category="essay">에세이</a>
+  </nav>
+
+  <main>
+    <ul class="index">
+      <li data-category="essay">
+        <span class="category">에세이</span>
+        <a href="posts/against-interpretation-for-archives/index.html">
+          <span class="title">해석에 반대한다, 아카이브에 대해서도</span>
+          <span class="date">2026.02</span>
         </a>
       </li>
-      <li class="post-item" data-category="critique">
-        <a href="posts/women-writing-architecture/">
-          <div class="post-title">
-            Women Writing Architecture
-            <span class="status-badge">Active</span>
-          </div>
-          <div class="post-meta">
-            2021 · Editorial Collective · Global
-          </div>
-          <div class="post-desc">
-            An open, annotated bibliography collecting texts written by women about architecture.
-          </div>
-          <div class="post-tags">
-            <span class="tag">women</span>
-            <span class="tag">architecture</span>
-            <span class="tag">feminist archive</span>
-          </div>
+      <li data-category="critique">
+        <span class="category">비평</span>
+        <a href="posts/women-writing-architecture/index.html">
+          <span class="title">Women Writing Architecture</span>
+          <span class="date">2026.01</span>
         </a>
       </li>
     </ul>
   </main>
 
+  <hr>
+
+  <footer>
+    <p>
+      <a href="about.html">About</a> · 
+      <a href="https://github.com/daamable-sknk/meta-archives">GitHub</a>
+    </p>
+  </footer>
+
   <script>
-    // Category filter
-    document.querySelectorAll('.category-filter a').forEach(link => {
+    document.querySelectorAll('.filter a').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const category = link.dataset.category;
         
-        // Update active state
-        document.querySelectorAll('.category-filter a').forEach(l => l.classList.remove('active'));
+        document.querySelectorAll('.filter a').forEach(l => l.classList.remove('active'));
         link.classList.add('active');
         
-        // Filter posts
-        document.querySelectorAll('.post-item').forEach(item => {
+        document.querySelectorAll('.index li').forEach(item => {
           if (category === 'all' || item.dataset.category === category) {
             item.style.display = '';
           } else {
@@ -108,12 +88,5 @@
       });
     });
   </script>
-
-  <footer>
-    <p>
-      <a href="/about.html">About</a> · 
-      <a href="https://github.com/daamable-sknk/meta-archives">GitHub</a>
-    </p>
-  </footer>
 </body>
 </html>
