@@ -1,0 +1,79 @@
+# =============================================================================
+# UbuWeb
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 기본 정보
+# -----------------------------------------------------------------------------
+slug: "ubuweb"
+title: "UbuWeb"
+title_alt: null
+url: "https://ubu.com"
+description: "A web-based educational resource for avant-garde material. Founded 1996."
+
+# -----------------------------------------------------------------------------
+# 시간 정보
+# -----------------------------------------------------------------------------
+year_started: 1996
+year_started_note: "Founded by Kenneth Goldsmith"
+year_ended: null
+
+# -----------------------------------------------------------------------------
+# 운영 주체
+# -----------------------------------------------------------------------------
+operator:
+  name: "Kenneth Goldsmith"
+  type: "individual"
+  country: "US"
+
+# -----------------------------------------------------------------------------
+# 분류
+# -----------------------------------------------------------------------------
+tags: [avant-garde, experimental film, sound art, concrete poetry, conceptual writing, digital archive]
+category: "cultural"
+language: [en]
+coverage: "Global (avant-garde and experimental art)"
+
+# -----------------------------------------------------------------------------
+# 기술적 특성
+# -----------------------------------------------------------------------------
+tech:
+  platform: "Static HTML"
+  metadata_standard: null
+  api_available: false
+  bulk_download: false
+  navigation: "Category-based browsing (Film, Sound, Dance, Papers, etc.)"
+
+# -----------------------------------------------------------------------------
+# 접근성
+# -----------------------------------------------------------------------------
+access:
+  registration_required: false
+  paywall: false
+  license: "Non-commercial educational use (informal)"
+
+# -----------------------------------------------------------------------------
+# 관찰 기록 (작성 시점 기준)
+# -----------------------------------------------------------------------------
+observation:
+  observed_at: "2026-02-01"
+  status: "active"
+  http_code: 200
+  notes: "Interface intentionally minimal, 1990s web aesthetic preserved"
+
+# -----------------------------------------------------------------------------
+# 사회적 맥락
+# -----------------------------------------------------------------------------
+context:
+  social_aspect: "Rogue archive, anti-institutional, access-first philosophy"
+  source: "Out-of-print materials, rare recordings, experimental works"
+  hidden_source: "Alternative art history, underground culture"
+
+# -----------------------------------------------------------------------------
+# 메타 정보
+# -----------------------------------------------------------------------------
+meta:
+  created_at: "2026-02-01"
+  updated_at: "2026-02-01"
+  author: ""
+  note: "Selected as example of non-institutional archive prioritizing access over preservation."
