@@ -24,32 +24,47 @@ meta-archives.xyz 프로젝트의 작업 방식과 워크플로우를 정의합�
 
 ```
 meta-archives/
-├── index.html                    # 메인 페이지
+├── index.html                    # 메인 페이지 (글 목록 + 카테고리 필터)
 ├── about.html                    # About 페이지
 ├── CNAME
 ├── README.md
 │
 ├── assets/                       # 정적 자산
 │   ├── css/style.css            # 공통 스타일
-│   ├── images/                  # OG 이미지 등
-│   └── favicon.svg
+│   ├── favicon.ico              # 파비콘
+│   └── images/                  # OG 이미지 등
 │
 ├── posts/                        # 개별 글 HTML
-│   └── <slug>/index.html
+│   ├── women-writing-architecture/index.html      # 비평
+│   └── against-interpretation-for-archives/index.html  # 에세이
 │
 ├── content/                      # 원본 콘텐츠
-│   └── posts/*.md               # 비평 글 (Markdown)
+│   └── posts/*.md               # 비평/에세이 글 (Markdown)
 │
 ├── data/                         # 구조화된 데이터
 │   ├── posts/*.yml              # 글별 메타데이터
 │   └── site.yml                 # 사이트 전역 설정
 │
 └── docs/                         # 프로젝트 문서
-    ├── concept.md               # 컨셉 & 방향
+    ├── concept.md               # 컨셉 & 철학
     ├── guide.md                 # 작업 가이드 (이 파일)
     ├── schema.md                # 메타데이터 스키마
-    └── notes/                   # 논의, 아이디어
+    └── changelog.md             # 작업 내역
 ```
+
+---
+
+## 카테고리 체계
+
+### 비평 (critique)
+- 특정 아카이브를 대상으로 한 비평글
+- 아카이브의 구조, 메타데이터, 분류 체계 분석
+- 예: Women Writing Architecture
+
+### 에세이 (essay)
+- 비평 방법론, 관점에 대한 글
+- 아카이브 일반에 대한 사색적 글
+- 예: 해석에 반대한다, 아카이브에 대해서도
 
 ---
 
@@ -155,3 +170,12 @@ OpenCode에게 빌드 요청
 - [ ] CSV/JSON export
 - [ ] 연구용 데이터셋 공개
 - [ ] RSS 피드
+- [ ] GitHub Actions CI/CD (YAML + MD → HTML 자동 빌드)
+
+---
+
+## 관련 문서
+
+- [컨셉 문서](concept.md) — 프로젝트 철학과 방향
+- [메타데이터 스키마](schema.md) — YAML 필드 정의
+- [작업 내역](changelog.md) — 변경 이력
