@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <title>웹은 처음부터 아카이브였다 — meta-archives.xyz</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="웹과 기록학의 34년 지연. 웹은 정보 관리 시스템으로 발명되었지만, 기록학이 네트워크 구조에 도달하기까지 왜 34년이 걸렸는가.">
+  <meta name="keywords" content="web archives, archival science, Tim Berners-Lee, Records in Contexts, RiC, CERN, information management">
+  <meta name="author" content="meta-archives.xyz">
+  <link rel="canonical" href="https://meta-archives.xyz/posts/web-after-archives-01/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="웹은 처음부터 아카이브였다 — meta-archives.xyz">
+  <meta property="og:description" content="웹과 기록학의 34년 지연. 웹은 정보 관리 시스템으로 발명되었지만, 기록학이 네트워크 구조에 도달하기까지 왜 34년이 걸렸는가.">
+  <meta property="og:url" content="https://meta-archives.xyz/posts/web-after-archives-01/">
+  <meta property="og:site_name" content="meta-archives.xyz">
+  <meta property="og:locale" content="ko_KR">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="웹은 처음부터 아카이브였다 — meta-archives.xyz">
+  <meta name="twitter:description" content="웹과 기록학의 34년 지연. 웹은 정보 관리 시스템으로 발명되었지만, 기록학이 네트워크 구조에 도달하기까지 왜 34년이 걸렸는가.">
+  
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="detail-header">
+    <a href="../../index.html" class="back">meta-archives.xyz</a>
+    <h1>웹은 처음부터 아카이브였다</h1>
+    <p class="meta">연재 · 웹 이후의 기록학 #1 · 2026.02</p>
+  </header>
+
+  <hr>
+
+  <article>
+    <p>웹은 무엇인가. 대부분의 사람들은 정보를 전달하는 플랫폼이라고 답할 것이다. 홈페이지, 블로그, 소셜미디어. 그러나 웹을 발명한 사람이 처음 제출한 제안서의 제목은 "Information Management: A Proposal"—정보 관리였다.<sup><a href="#fn1" id="ref1">1</a></sup> 1989년 3월, CERN의 물리학자 Tim Berners-Lee가 해결하려던 문제는 웹 페이지를 만드는 것도, 멀티미디어를 전달하는 것도 아니었다. 그는 조직 안에서 끊임없이 사라지는 정보를, 어떻게 관리할 것인가를 묻고 있었다.</p>
+
+    <h2>1989년, 두 개의 평행 우주</h2>
+    
+    <p>CERN에서 Berners-Lee는 문제를 이렇게 정의했다. "정보는 기록되었다. 그러나 찾을 수 없다."<sup><a href="#fn1" id="ref1b">1</a></sup> 물리학 연구소에서 사람들은 평균 2년만 머물다 떠났다. 누군가 작성한 문서, 누군가 만든 소프트웨어, 누군가 수집한 데이터는 그 사람이 떠나면 함께 사라졌다. 문제는 기록의 부재가 아니라 <strong>참조의 불가능</strong>이었다. 정보는 존재하지만, 서로 연결되지 않았다. 누가 무엇을 만들었는지, 어떤 문서가 어떤 프로젝트에 의존하는지, 이 소프트웨어가 무엇을 참조하는지—이런 관계가 기록되지 않았다.</p>
+
+    <p>Berners-Lee가 제안한 것은 "a pool of information which could grow and evolve"—조직과 함께 성장하고 진화하는 정보의 풀이었다. 그는 왜 기존의 파일 시스템이나 데이터베이스를 쓰지 않았을까? 왜 트리가 아닌 웹인가? 그의 대답은 명확했다. "A tree does not allow the system to model the real world." 트리 구조는 모든 정보를 하나의 부모 아래 배치한다. 그러나 실제 세계에서 정보는 여러 맥락에 동시에 속한다. 한 문서는 여러 프로젝트에서 참조되고, 한 사람은 여러 팀에 속하고, 한 소프트웨어는 여러 의존성을 가진다.</p>
+
+    <figure style="margin: 2em 0;">
+      <img src="../../assets/images/berners-lee-1989-diagram.gif" alt="Tim Berners-Lee의 1989년 제안서에 포함된 circles and arrows 다이어그램" style="width: 100%; height: auto; border: 1px solid #ddd;">
+      <figcaption style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Tim Berners-Lee의 "Information Management: A Proposal" (1989) 다이어그램 - circles and arrows로 표현된 정보 관계</figcaption>
+    </figure>
+
+    <p>그가 그린 다이어그램은 "circles and arrows"였다. 원은 정보 노드를, 화살표는 그들 사이의 관계를 나타냈다. 중요한 것은 그 화살표가 <strong>관계의 타입</strong>을 표현했다는 점이다. "depends on"(의존한다), "is part of"(~의 부분이다), "made"(만들었다), "refers to"(참조한다), "uses"(사용한다). 링크는 단순히 "연결됨"이 아니었다. 링크는 <strong>의미의 기록</strong>이었다. 이것이 무엇을 의미하는지 이해하려면, 기록학이 같은 시기에 무엇을 하고 있었는지 봐야 한다.</p>
+
+    <p>같은 1989년, 기록학계는 전혀 다른 위기를 겪고 있었다. 종이 문서를 다루던 아키비스트들은 갑자기 전자기록을 마주했다. 워드프로세서 파일, 데이터베이스, 이메일. 어떻게 보존할 것인가? 어떻게 분류할 것인가? 어떻게 진본성을 보장할 것인가? Terry Cook은 1991년 논문을 "Easy to byte, harder to chew"(깨물기는 쉽지만, 씹기는 어렵다)라 제목 붙였다.<sup><a href="#fn2" id="ref2">2</a></sup> 전자기록은 만들기는 쉽지만, 관리하기는 어렵다는 뜻이었다.</p>
+
+    <p>기록학의 대응은 기존 체계를 전자 환경에 적용하는 것이었다. 1990년 캐나다는 RAD (Rules for Archival Description)를 발표했다. 1993년 국제기록학협회(ICA)는 ISAD(G) (General International Standard Archival Description)를 승인했다. 둘 다 엄격한 계층 구조였다. Fonds(기록군) → Series(시리즈) → File(파일) → Item(개별 문서). 하나의 기록은 하나의 부모를 가진다. 출처는 단일하다. 위에서 아래로 내려가는 트리였다.</p>
+
+    <p>웹이 공개된 1991년 8월, 기록학 문헌에서 "hypertext"나 "network structure"는 거의 언급되지 않았다. 두 세계는 같은 문제—정보 관리—를 다루고 있었지만, 서로를 알지 못했다.</p>
+
+    <h2>같은 구조, 34년의 차이</h2>
+
+    <p>2023년, 국제기록학협회(ICA)는 <strong>Records in Contexts (RiC)</strong> 온톨로지 버전 1.0을 발표했다.<sup><a href="#fn3" id="ref3">3</a></sup> RiC는 기록학의 패러다임 전환이었다. 더 이상 Fonds → Series → File → Item의 단일 계층이 아니었다. 대신 RiC는 entities(개체)와 relations(관계)의 그래프였다. Record(기록), Agent(행위자), Activity(활동), Rule(규칙), Place(장소), Date(날짜)가 복잡한 관계로 얽혀 있었다. "created by"(~에 의해 생성됨), "used by"(~에 의해 사용됨), "subject of"(~의 주제), "related to"(~와 관련됨).</p>
+
+    <figure style="margin: 2em 0;">
+      <img src="../../assets/images/diagram_RiC-CM-overview-RiC-v1-0.jpg" alt="Records in Contexts (RiC) 개념 모델 개요도" style="width: 100%; height: auto; border: 1px solid #ddd;">
+      <figcaption style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Records in Contexts (RiC) 개념 모델 개요 (ICA, 2023)</figcaption>
+    </figure>
+
+    <p>흥미로운 것은 <strong>둘이 같은 구조에 도달했다는 사실</strong>이다. Berners-Lee의 1989년 다이어그램과 비교해보라. 둘 다 circles and arrows다. 둘 다 entities와 relations의 그래프다. 둘 다 타입화된 관계를 표현한다. 차이는 <strong>34년의 시간</strong>이다.</p>
+
+    <p>왜 이렇게 오래 걸렸을까? Emily Maemura가 지적한 것처럼, 이것은 단순히 기술을 도입하는 문제가 아니었다.<sup><a href="#fn4" id="ref4">4</a></sup> RiC가 요구하는 것은 사고방식의 전환이었다. 전통 기록학은 <em>개별 객체 중심</em>이었다. 이 문서는 무엇인가, 누가 만들었는가, 언제 만들어졌는가. 그러나 웹 아카이브는 개별 문서로 환원되지 않는다. 한 웹사이트는 수천 개의 페이지, 수만 개의 링크, 여러 시점의 스냅샷으로 구성된다. 이것을 어떻게 기술할 것인가?</p>
+
+    <p>RiC의 혁신은 <strong>집합 수준(aggregate-level)</strong>에서 기술한다는 것이다. 개별 페이지가 아니라, 페이지들의 관계. 개별 문서가 아니라, 문서들이 형성하는 네트워크. 이것이 Berners-Lee가 1989년에 그렸던 "circles and arrows"였다.</p>
+
+    <h2>그 사이 무슨 일이 있었나</h2>
+
+    <p>1996년, Brewster Kahle이라는 기술자가 <strong>Internet Archive</strong>를 설립했다. 목표는 웹을 보존하는 것이었다. 그러나 Katie Hegarty의 2022년 연구가 밝힌 것처럼, Internet Archive는 역설적으로 <strong>도서관 프레임워크</strong>를 이식했다.<sup><a href="#fn5" id="ref5">5</a></sup> 웹사이트를 "출판물"로 다뤘다. 서지 메타데이터(제목, 저자, 발행일)를 붙였다. Wayback Machine은 웹페이지를 책처럼 "판본"으로 저장했다. 2001년 버전, 2005년 버전, 2010년 버전.</p>
+
+    <p>이 접근은 웹을 보존하는 데는 성공했지만, 웹의 <em>구조적 본질</em>을 놓쳤다. 웹은 출판물이 아니라 링크의 네트워크였다. 한 페이지는 다른 페이지들을 참조하고, 여러 사이트는 서로 링크하며, 그 관계가 의미를 만들었다. 그러나 Wayback Machine은 개별 페이지를 스냅샷으로 저장했다. 링크는 보존되지만, 링크가 형성하는 네트워크 구조는 분석되지 않았다.</p>
+
+    <p>웹 아카이빙은 "보존 문제"가 되었다. 크롤러를 어떻게 개선할 것인가. WARC 파일 포맷을 어떻게 표준화할 것인가. 저장 용량을 어떻게 확보할 것인가. <strong>구조적 함의</strong>—웹이 기록학에 던지는 질문—는 논의되지 않았다. 기술자와 아키비스트는 서로 다른 세계에 살았다.</p>
+
+    <h2>CERN의 아이러니</h2>
+
+    <p>아이러니는 더 깊다. 웹을 발명한 CERN조차 자신의 웹 역사를 제대로 아카이빙하지 못했다. Matteo Fomasi와 동료들의 2023년 연구가 밝힌 CERN WWW 컬렉션의 실상은 충격적이다.<sup><a href="#fn6" id="ref6">6</a></sup></p>
+
+    <p>이 컬렉션은 체계적 계획의 산물이 아니었다. 1992년, 웹의 공동 발명자 Robert Cailliau의 <strong>아내가 그에게 권유했다</strong>. "당신이 하는 일이 중요해 보이니 기록을 남겨두는 게 어때요?" Cailliau는 후에 회고한다. "나는 그저 생각하지 못했다. 역사적 측면은 무시되었다." 웹이 역사적으로 중요해질 거라고는 아무도 예상하지 못했다. 웹은 그저 CERN 내부의 정보 관리 도구였다.</p>
+
+    <p>Tim Berners-Lee의 문서 대부분은 <strong>부재</strong>한다. 1994년 그는 MIT로 옮겼고, 개인 문서들을 가져갔다. CERN 컬렉션에는 그의 초기 제안서, 코드, 이메일이 거의 없다. 1993년 CERN이 웹 기술을 공개 도메인으로 선언한 원본 문서는 <strong>사라졌다</strong>. 웹 역사에서 가장 중요한 법적 선언문의 원본을, 아무도 보존하지 않았다.</p>
+
+    <p>CERN의 공식 아카이브 정책은 <strong>1997년에야</strong> 수립되었다. 웹이 공개된 1991년으로부터 6년 후였다. 그 사이 수많은 문서가 흩어졌다. 일부는 CERN에, 일부는 MIT에, 일부는 프랑스 INRIA에, 일부는 영국 도서관에, 일부는 개인의 집에. 일부는 사라졌다.</p>
+
+    <p><strong>정보 관리 시스템을 만든 곳이 정보를 관리하지 못했다.</strong> Berners-Lee가 1989년에 진단한 문제—"정보는 기록되었다. 그러나 찾을 수 없다"—는 웹 자체의 역사에서 그대로 재현되었다.</p>
+
+    <h2>질문</h2>
+
+    <p>2013년이 되어서야 국제기록학협회(ICA)는 RiC 개발을 시작했다. 그리고 2023년, 웹 발명 34년 후, 기록학은 드디어 <strong>네트워크 기반 기술 모델</strong>에 도달했다. 이제야 기록학은 웹이 처음부터 보여준 구조—circles and arrows, entities and relations—를 이해하기 시작했다.</p>
+
+    <p>웹은 처음부터 아카이브였다. 정보를 저장하는 것이 아니라, 정보 사이의 관계를 기록하는 시스템. 링크는 단순한 연결이 아니라, 의미의 타입을 표현하는 관계였다. 문제는 우리가 그것을 읽지 못했다는 것이다.</p>
+
+    <p>질문은 이것이다. 왜 두 세계는 만나지 못했는가. 웹 발명자들은 왜 기록학을 참조하지 않았는가. 기록학자들은 왜 웹의 구조를 주목하지 않았는가. 그리고 지금, RiC가 웹의 구조를 닮아가는 이 순간, 기록학은 웹으로부터 무엇을 다시 배워야 하는가.</p>
+
+    <hr>
+
+    <section class="footnotes">
+      <h2>각주</h2>
+      <ol>
+        <li id="fn1">Berners-Lee, T. (1989). <em>Information Management: A Proposal</em>. CERN. <a href="https://www.w3.org/History/1989/proposal.html" target="_blank" rel="noopener">https://www.w3.org/History/1989/proposal.html ↬</a> <a href="#ref1">↩</a></li>
+        
+        <li id="fn2">Cook, T. (1991). Easy to byte, harder to chew: The second generation of electronic records archives. <em>Archivaria</em>, 33, 202-216. <a href="#ref2">↩</a></li>
+        
+        <li id="fn3">International Council on Archives. (2023). <em>Records in Contexts (RiC) Ontology Version 1.0</em>. <a href="https://www.ica.org/standards/RiC/" target="_blank" rel="noopener">https://www.ica.org/standards/RiC/ ↬</a> <a href="#ref3">↩</a></li>
+        
+        <li id="fn4">Maemura, E. (2025). Conceptualizing aggregate-level description in web archives. <em>Archival Science</em>, 25, 119-143. <a href="https://doi.org/10.1007/s10502-024-09441-3" target="_blank" rel="noopener">https://doi.org/10.1007/s10502-024-09441-3 ↬</a> <a href="#ref4">↩</a></li>
+        
+        <li id="fn5">Hegarty, K. (2022). The invention of the archived web: Tracing the influence of library frameworks on web archiving infrastructure. <em>Internet Histories</em>, 6(4), 432-451. <a href="https://doi.org/10.1080/24701475.2022.2103592" target="_blank" rel="noopener">https://doi.org/10.1080/24701475.2022.2103592 ↬</a> <a href="#ref5">↩</a></li>
+        
+        <li id="fn6">Fomasi, M., Barcella, D., Benecchi, E., & Balbi, G. (2023). Genealogy of an archive: The birth, construction, and development of the World Wide Web collection at CERN. <em>Internet Histories</em>, 7(3-4), 277-294. <a href="https://doi.org/10.1080/24701475.2023.2188448" target="_blank" rel="noopener">https://doi.org/10.1080/24701475.2023.2188448 ↬</a> <a href="#ref6">↩</a></li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section class="observation-notes">
+      <h2>연재 정보</h2>
+      <p>이 글은 <strong>〈웹 이후의 기록학〉</strong> 6부작 연재 시리즈 입니다.</p>
+      <ul>
+        <li><strong>#1: 웹은 처음부터 아카이브였다</strong></li>
+        <li>#2: 미멕스는 왜 아직도 실현되지 않았는가</li>
+        <li>#3: 하이퍼텍스트는 왜 기억이 되지 못했는가</li>
+        <li>#4: 우부웹은 왜 여전히 웹에 남아 있는가</li>
+        <li>#5: 웹은 왜 스스로를 보존하지 못하는가</li>
+        <li>#6: 웹 이후, 기록학은 무엇을 다시 배워야 하는가</li>
+      </ul>
+    </section>
+  </article>
+
+  <hr>
+
+  <footer>
+    <p class="footer-credit">
+      이 프로젝트는 <a href="https://birdcall.online/wiki/Archive_Mate" target="_blank" rel="noopener">Archive Mate ↬</a>에서 시작되었습니다.
+    </p>
+    <p class="footer-links">
+      <a href="../../index.html">Posts</a>
+      <a href="../../about.html">About</a>
+      <a href="https://github.com/daamable-sknk/meta-archives" target="_blank" rel="noopener">GitHub ↬</a>
+    </p>
+    <p class="footer-updated">Last updated: 2026.02.08</p>
+  </footer>
+</body>
+</html>
