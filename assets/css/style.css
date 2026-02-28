@@ -82,6 +82,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* External link indicator: ↬ symbol after links opening in new tab */
+article a[target="_blank"]::after {
+  content: " ↬";
+}
+
 strong {
   font-weight: 600;
 }
