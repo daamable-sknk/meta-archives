@@ -24,9 +24,26 @@ meta-archives/
 
 ## 문서
 
+### 핵심 문서
+
 - [docs/concept.md](docs/concept.md) — 프로젝트 컨셉
 - [docs/guide.md](docs/guide.md) — 작업 가이드
 - [docs/schema.md](docs/schema.md) — 메타데이터 스키마
+- [docs/design.md](docs/design.md) — 디자인 명세
+
+### 계획
+
+- [docs/plans/meta-archives.md](docs/plans/meta-archives.md) — meta-archives 비평 계획 (격주 발행)
+- [docs/plans/records-and-society.md](docs/plans/records-and-society.md) — 〈웹 이후의 기록학〉 연재 계획 (연 6회)
+
+### 참고자료
+
+- [docs/references/records-and-society.md](docs/references/records-and-society.md) — 〈웹 이후의 기록학〉 레퍼런스
+
+### 기타
+
+- [docs/changelog.md](docs/changelog.md) — 작업 내역
+- [docs/README.md](docs/README.md) — 문서 디렉토리 안내
 
 ## 라이선스
 

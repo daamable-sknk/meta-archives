@@ -4,6 +4,93 @@ meta-archives.xyz 프로젝트의 작업 내역을 기록합니다.
 
 ---
 
+## 2026-02-08
+
+### About 페이지 방법론 문단 개선
+
+**방법론 섹션 수정**
+- "좋다 나쁘다 평가" → "이 프로젝트의 목표는 아카이브가 어떻게 작동하는지를 드러내는 것"으로 변경
+- "형식의 감각" → "구조적 선택이 어떤 의미를 만들어내는지 감지하고"로 구체화
+- 부정문 대신 긍정적 선언으로 시작
+- 더 명확하고 직접적인 표현으로 개선
+
+---
+
+### 문서 디렉토리 구조 개선 및 기록과사회 연재 계획 수립
+
+**디렉토리 구조 재편성**
+- `docs/notes/` 삭제 (비어있음)
+- `docs/plans/` 폴더 생성
+  - `plan.md` → `plans/meta-archives.md` 이동
+  - `plan-records-and-society.md` → `plans/records-and-society.md` 이동
+- `docs/references/` 폴더 생성
+  - `references-records-and-society.md` → `references/records-and-society.md` 이동
+- `docs/README.md` 신규 작성 — 문서 디렉토리 안내
+
+**기록과사회 연재 계획**
+- `docs/plans/records-and-society.md` 신규 작성
+  - 〈웹 이후의 기록학〉 연재 기획 (연 6회)
+  - 회차별 구성: 팀 버너스리, Memex, 하이퍼텍스트, UbuWeb, Internet Archive, 종합
+- `docs/references/records-and-society.md` 신규 작성
+  - 회차별 참고자료 및 링크 정리
+  - 필수 읽기 체크리스트 추가
+
+**카테고리 계획**
+- 새 카테고리 추가 예정: "웹 이후의 기록학"
+  - 비평: 특정 아카이브 구조 분석
+  - 에세이: 웹과 아카이브를 둘러싼 자유로운 사유
+  - 웹 이후의 기록학: 기록과사회 연재 시리즈
+  - (실제 글 등록 시 카테고리 필터 추가 예정)
+
+**README 업데이트**
+- 프로젝트 루트 README.md에 새로운 문서 구조 반영
+- 계획 문서 및 참고자료 링크 추가
+
+---
+
+### 웹 이후의 기록학 1회차 초고 작성 및 리서치
+
+**리서치 수행**
+- Tim Berners-Lee "Information Management: A Proposal" (1989) 분석
+- W3C World Wide Web 역사 조사
+- 기록학 1989-1993 타임라인 연구 (전자기록 위기, Terry Cook, RAD, ISAD(G))
+- 기록학의 웹 인식 타임라인 (1996 Internet Archive → 2003 IIPC → 2013-2023 RiC)
+- Berners-Lee vs ISAD(G) vs RiC 구조 비교 분석
+
+**리서치 문서 작성**
+- `docs/research/` 폴더 생성
+- `docs/research/archival-science-1989-1993.md` 작성
+  - 웹 등장 시기 기록학계 상세 조사
+  - 한국어 작성, 필요한 곳에만 영어 병기
+  - 평행 우주 분석: 웹 커뮤니티 vs 기록학 커뮤니티
+  - 34년 지연의 원인 분석
+
+**초고 작성**
+- `docs/drafts/web-after-archives-01.md` 작성
+  - 제목: "웹은 처음부터 아카이브였다"
+  - 구조: 웹 vs 기록학 병치 (옵션 1 채택)
+    1. 도입: "Information Management"
+    2. 1989년 두 개의 평행 우주
+    3. 구조적 유사성: circles and arrows
+    4. 34년의 지연 (1989-2023)
+    5. 질문: 무엇을 다시 배워야 하는가
+  - 분량: 1,610자 (목표 1,200-1,800자 충족)
+  - 인용, 리서치 노트, 편집 노트 포함
+
+**레퍼런스 업데이트**
+- `docs/references/records-and-society.md` Episode 1 섹션 확장
+  - 기록학 타임라인 자료 추가
+  - Berners-Lee vs ISAD(G) vs RiC 구조 비교 정리
+  - 필수 읽기 체크 완료 표시
+
+**핵심 발견**
+- Berners-Lee 1989 다이어그램과 RiC 2023 모델의 구조적 유사성 ("circles and arrows")
+- 웹 발명(1989) → RiC 1.0 발표(2023): 34년의 지연
+- 기록학이 웹을 "보존 문제"로만 다룬 시기: 1996-2003
+- RiC 개발 시작: 2013 (웹 발명 24년 후)
+
+---
+
 ## 2026-02-01
 
 ### WWA 비평글 줄글 스타일로 수정 및 plan.md 보완
