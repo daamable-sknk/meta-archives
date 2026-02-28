@@ -46,10 +46,17 @@ meta-archives/
 │   └── site.yml                 # 사이트 전역 설정
 │
 └── docs/                         # 프로젝트 문서
+    ├── README.md                # 문서 디렉토리 안내
     ├── concept.md               # 컨셉 & 철학
     ├── guide.md                 # 작업 가이드 (이 파일)
     ├── schema.md                # 메타데이터 스키마
-    └── changelog.md             # 작업 내역
+    ├── design.md                # 디자인 명세
+    ├── changelog.md             # 작업 내역
+    ├── plans/                   # 계획 문서
+    │   ├── meta-archives.md     # meta-archives 비평 계획
+    │   └── records-and-society.md  # 기록과사회 연재 계획
+    └── references/              # 참고자료
+        └── records-and-society.md  # 기록과사회 레퍼런스
 ```
 
 ---
@@ -59,12 +66,21 @@ meta-archives/
 ### 비평 (critique)
 - 특정 아카이브를 대상으로 한 비평글
 - 아카이브의 구조, 메타데이터, 분류 체계 분석
-- 예: Women Writing Architecture
+- 예: Women Writing Architecture, UbuWeb
 
 ### 에세이 (essay)
+- 웹과 아카이브를 둘러싼 자유로운 사유
 - 비평 방법론, 관점에 대한 글
-- 아카이브 일반에 대한 사색적 글
+- 특정 대상 없이 개념과 사상 탐구
 - 예: 해석에 반대한다, 아카이브에 대해서도
+
+### 웹 이후의 기록학 (web-after-archives)
+- 기록과사회 뉴스레터 연재 시리즈 (연 6회)
+- 웹과 아카이브 사상의 계보 탐구
+- 외부 발행물이지만 meta-archives에도 아카이빙
+- 예정: 팀 버너스리, Memex, 하이퍼텍스트, UbuWeb, Internet Archive 등
+- 계획: [docs/plans/records-and-society.md](plans/records-and-society.md)
+- 참고자료: [docs/references/records-and-society.md](references/records-and-society.md)
 
 ---
 
@@ -98,6 +114,9 @@ description: "한두 문장 설명"
 
 ## 관찰 메모
 - YYYY-MM-DD: 메모 내용
+
+## 레퍼런스
+- 참고 자료 목록
 ```
 
 ### 4. HTML 생성 요청
@@ -126,10 +145,29 @@ OpenCode에게 빌드 요청
    - 기술적 선택의 함의
    - 한계, 모순, 특이점
 
-4. **관찰 메모**: 날짜별 기록
-   - 발견한 사실
-   - 의문점
-   - 후속 조사 필요 사항
+4. **관찰 메모**: 글의 변경 이력을 기록하는 영역
+   - 커밋 메시지처럼 간결하게 작성
+   - 형식: `YYYY-MM-DD: 한 줄 설명`
+   - 초고 작성 시 항목 하나로 기록하고, 이후 수정이 있을 때 항목을 추가
+   - 무엇을 관찰했는지보다 **무엇이 변했는지**에 초점
+   - 예시:
+     ```
+     - 2026-02-01: 1996년부터 운영, 30년 가까이 유지된 개인 주도 아카이브.
+     - 2026-03-01: 관점이 달라져 글을 재구성했다. 이 글은 그 과정의 결과물이다.
+     ```
+
+5. **레퍼런스**: 글 작성에 참고한 자료 목록
+   - 관찰 메모 아래에 별도 섹션으로 배치
+   - 웹사이트, 도서, 논문, 강연 영상 등 실제 읽거나 참고한 자료만 포함
+   - 도서는 서지정보 명시 (저자, 제목, 출판사, 연도)
+   - 한국어 번역본이 있으면 한국어판 기준으로 작성하고 원제 병기
+   - 예시:
+     ```
+     - [UbuWeb](https://ubu.com)
+     - 케네스 골드스미스, 『문예 비창작』, 워크룸프레스, 2023.
+       (원제: Uncreative Writing, 2011)
+     - Kenneth Goldsmith, "A Brief History of UbuWeb" (강연 영상)
+     ```
 
 ### 권장 사항
 - 원문 인용 시 출처 URL 명시
@@ -176,6 +214,10 @@ OpenCode에게 빌드 요청
 
 ## 관련 문서
 
+- [docs/README.md](README.md) — 문서 디렉토리 안내
 - [컨셉 문서](concept.md) — 프로젝트 철학과 방향
 - [메타데이터 스키마](schema.md) — YAML 필드 정의
+- [디자인 명세](design.md) — Pure Index 디자인 원칙
 - [작업 내역](changelog.md) — 변경 이력
+- [비평 계획](plans/meta-archives.md) — 36개 아카이브 비평 일정
+- [연재 계획](plans/records-and-society.md) — 〈웹 이후의 기록학〉 6회차 구성
