@@ -49,7 +49,7 @@
 | 아카이브 | URL | 특징 | 상태 |
 |----------|-----|------|------|
 | Japan Search | jpsearch.go.jp | 국가 단위 통합 검색의 설계 | |
-| Europeana | europeana.eu | 유럽 문화유산 통합 플랫폼. 다국어·다기관 집계 | |
+| Europeana | europeana.eu | 유럽 문화유산 통합 플랫폼. 다국어·다기관 집계 | ✅ 발행 |
 | 갈리카 (Gallica) | gallica.bnf.fr | 프랑스 국립도서관 디지털 도서관. 대규모 디지타이제이션 | |
 | INA (국립 시청각 연구소) | ina.fr | 프랑스 시청각 아카이브. 영상·음성 기록의 구조 | |
 

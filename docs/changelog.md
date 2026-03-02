@@ -4,6 +4,45 @@ meta-archives.xyz 프로젝트의 작업 내역을 기록합니다.
 
 ---
 
+## 2026-03-03
+
+### Europeana 비평글 작성 및 발행
+
+**새 콘텐츠**
+- Europeana 비평글 작성: `content/posts/europeana.md`
+- 메타데이터 작성: `data/posts/europeana.yml`
+- HTML 빌드: `posts/europeana/index.html`
+- `index.html`에 Europeana 비평 항목 추가
+
+**글 구조 (6개 섹션 + 각주 4개)**
+1. 유럽 문화의 디지털 도서관, 유로피아나 — 배경과 규모
+2. 하나의 플랫폼, 두 개의 목적 — 시민과 기관이라는 이중 청중
+3. 수집기관이 고르고, 인터페이스가 보여준다 — 검색·탭·필터 구조 분석
+4. 번역하되 해석하지 않는다 — EDM의 설계 철학, 프록시 구조, 세관 비유
+5. 검색 포털에서 데이터 공간으로 — 플랫폼 정체성 전환
+6. 통합이 만드는 질서, 개방이 여는 질문 — 품질 등급·AI 시대의 개방 문제
+
+**주요 작업 내역**
+- 필터 테이블 B안(축별 분류: 주제/매체/출처/권리/물성) 적용
+- 수집기관(aggregator)과 이관(移管)의 구분 문장 추가
+- API·프록시·All metadata 탭 연결 서술 보강
+- RDF·상호운용성 영어 병기, Linked Data 각주 추가
+- 섹션 제목 변경: "검색 포털에서 데이터 공간으로", "통합이 만드는 질서, 개방이 여는 질문"
+- impulse paper 차등적 접근 모델(differentiated access model) 내용 보강
+- 레퍼런스 정비: 전체 항목에 링크 추가 (EDM Primer, EDM 논문, Strategy 2025–2030, Business Plan 2026, impulse paper, RISS 논문 2건)
+- 박소영 논문 서지정보 수정 (영문 제목, 한국외국어대학교 국제지역대학원)
+- 테이블 스타일 추가 (`style.css`), 테이블 가이드라인 (`design.md`, `guide.md`) 반영
+
+**스타일 변경**
+- `assets/css/style.css`에 테이블 스타일 추가 (borderless, 좌측 정렬, 최소 패딩)
+
+**문서 업데이트**
+- `docs/design.md` — 테이블 디자인 가이드라인 추가
+- `docs/guide.md` — 테이블 작성 규칙 추가 (영문 필드명, 구조화된 비교·요약 용도)
+- `docs/plans/meta-archives.md` — Europeana 발행 완료 표시
+
+---
+
 ## 2026-02-08
 
 ### About 페이지 방법론 문단 개선
