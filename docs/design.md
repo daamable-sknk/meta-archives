@@ -189,6 +189,40 @@ hr, .divider {
 
 얇은 검은 선. 점선 아님.
 
+### 테이블
+
+```css
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  margin: 1rem 0 1.5rem;
+}
+
+article table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 0.4rem 0.75rem 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+article table td {
+  padding: 0.3rem 0.75rem 0.3rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+article table tr:last-child td {
+  border-bottom: none;
+}
+```
+
+- 본문보다 작은 글씨 (0.8125rem). `.metadata`와 동일 크기
+- 헤더: 뮤트 컬러, 세미볼드, 하단 경계선
+- 행 구분: 매우 연한 하단선 (`#e0e0e0`). 마지막 행은 선 없음
+- 전체 테두리 없음 — 그리드 느낌 배제
+- 필드명은 영문 사용. 한국어 번역은 본문에서 처리
 ---
 
 ## 상세 페이지

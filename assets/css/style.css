@@ -348,6 +348,31 @@ article pre code {
   padding: 0;
 }
 
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  margin: 1rem 0 1.5rem;
+}
+
+article table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 0.4rem 0.75rem 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+article table td {
+  padding: 0.3rem 0.75rem 0.3rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+article table tr:last-child td {
+  border-bottom: none;
+}
+
 /* -----------------------------------------------------------------------------
    Highlight Box (선택적)
    ----------------------------------------------------------------------------- */
