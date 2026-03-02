@@ -1,0 +1,79 @@
+# =============================================================================
+# Europeana
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 기본 정보
+# -----------------------------------------------------------------------------
+slug: "europeana"
+title: "Europeana"
+title_alt: null
+url: "https://www.europeana.eu/en"
+description: "Europe's digital cultural heritage platform. Over 61 million items from 2,000+ institutions."
+
+# -----------------------------------------------------------------------------
+# 시간 정보
+# -----------------------------------------------------------------------------
+year_started: 2008
+year_started_note: "Prototype launched November 2008"
+year_ended: null
+
+# -----------------------------------------------------------------------------
+# 운영 주체
+# -----------------------------------------------------------------------------
+operator:
+  name: "Europeana Foundation"
+  type: "organization"
+  country: "NL"
+
+# -----------------------------------------------------------------------------
+# 분류
+# -----------------------------------------------------------------------------
+tags: [cultural-heritage, GLAM, metadata, EDM, linked-data, aggregation, EU, data-space]
+category: "cultural"
+language: [multilingual]
+coverage: "Europe (2,000+ providing institutions)"
+
+# -----------------------------------------------------------------------------
+# 기술적 특성
+# -----------------------------------------------------------------------------
+tech:
+  platform: "Vue.js + Nuxt.js (portal.js)"
+  metadata_standard: "EDM (Europeana Data Model)"
+  api_available: true
+  bulk_download: true
+  navigation: "Search + faceted filters (10 filters: media type, reusability, country, language, aggregator, institution, colour, orientation, size, file format)"
+
+# -----------------------------------------------------------------------------
+# 접근성
+# -----------------------------------------------------------------------------
+access:
+  registration_required: false
+  paywall: false
+  license: "Mixed (CC0, CC BY, Public Domain Mark, Rights Reserved — varies by provider)"
+
+# -----------------------------------------------------------------------------
+# 관찰 기록 (작성 시점 기준)
+# -----------------------------------------------------------------------------
+observation:
+  observed_at: "2026-03-01"
+  status: "active"
+  http_code: 200
+  notes: "Portal rebranding to 'common European data space for cultural heritage'. Quality tier system (contentTier/metadataTier) applied to all items."
+
+# -----------------------------------------------------------------------------
+# 사회적 맥락
+# -----------------------------------------------------------------------------
+context:
+  social_aspect: "EU-funded public infrastructure, aggregator network, data space model"
+  source: "2,000+ European GLAM institutions via aggregator network"
+  hidden_source: "Quality tiers hide items 'not meeting publishing criteria' from default search"
+
+# -----------------------------------------------------------------------------
+# 메타 정보
+# -----------------------------------------------------------------------------
+meta:
+  created_at: "2026-03-01"
+  updated_at: "2026-03-03"
+  author: ""
+  note: "Large-scale aggregation platform — explores how standardization (EDM) and quality tiers shape visibility of cultural heritage."
