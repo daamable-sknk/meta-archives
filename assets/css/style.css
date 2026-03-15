@@ -388,6 +388,33 @@ article table tr:last-child td {
 }
 
 /* -----------------------------------------------------------------------------
+   Keywords / Tags
+   ----------------------------------------------------------------------------- */
+.keywords {
+  margin-bottom: 2rem;
+}
+
+.keywords h2 {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.keywords .tag {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-right: 0.5rem;
+  cursor: default;
+  transition: color 0.15s;
+}
+
+.keywords .tag:hover {
+  color: var(--text);
+}
+
+/* -----------------------------------------------------------------------------
    Footer
    ----------------------------------------------------------------------------- */
 footer {
@@ -454,7 +481,7 @@ footer p {
   }
   
   .index .date {
-    font-size: 0.8125rem;
+  font-size: 1rem;
   }
   
   .index .meta {
