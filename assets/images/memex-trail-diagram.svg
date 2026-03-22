@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" style="max-width: 100%; height: auto;">
+  <style>
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #666; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; fill: #111; font-weight: 600; }
+    .node { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #111; }
+    .line { stroke: #111; stroke-width: 1; fill: none; }
+    .arrow { fill: #111; }
+    .box { fill: none; stroke: #111; stroke-width: 1; }
+    .divider { stroke: #ccc; stroke-width: 1; stroke-dasharray: 4,4; }
+  </style>
+  
+  <!-- Divider -->
+  <line x1="320" y1="30" x2="320" y2="250" class="divider"/>
+  
+  <!-- Left side: Classification (Tree) -->
+  <text x="160" y="24" text-anchor="middle" class="title">분류: 어디에 속하는가</text>
+  
+  <!-- Tree structure -->
+  <!-- Root -->
+  <rect x="130" y="50" width="60" height="28" rx="2" class="box"/>
+  <text x="160" y="68" text-anchor="middle" class="node">지식</text>
+  
+  <!-- Level 2 -->
+  <rect x="70" y="110" width="60" height="28" rx="2" class="box"/>
+  <text x="100" y="128" text-anchor="middle" class="node">과학</text>
+  
+  <rect x="190" y="110" width="60" height="28" rx="2" class="box"/>
+  <text x="220" y="128" text-anchor="middle" class="node">역사</text>
+  
+  <!-- Level 3 -->
+  <rect x="40" y="170" width="60" height="28" rx="2" class="box"/>
+  <text x="70" y="188" text-anchor="middle" class="node">물리학</text>
+  
+  <rect x="130" y="170" width="60" height="28" rx="2" class="box"/>
+  <text x="160" y="188" text-anchor="middle" class="node">재료학</text>
+  
+  <rect x="220" y="170" width="60" height="28" rx="2" class="box"/>
+  <text x="250" y="188" text-anchor="middle" class="node">중세사</text>
+  
+  <!-- Tree lines -->
+  <line x1="160" y1="78" x2="100" y2="110" class="line"/>
+  <line x1="160" y1="78" x2="220" y2="110" class="line"/>
+  <line x1="100" y1="138" x2="70" y2="170" class="line"/>
+  <line x1="100" y1="138" x2="160" y2="170" class="line"/>
+  <line x1="220" y1="138" x2="250" y2="170" class="line"/>
+  
+  <!-- Left caption -->
+  <text x="160" y="230" text-anchor="middle" class="label">"활은 어디에 속하는가?"</text>
+  <text x="160" y="248" text-anchor="middle" class="label">→ 하나의 위치에만 존재</text>
+  
+  <!-- Right side: Association (Trail) -->
+  <text x="480" y="24" text-anchor="middle" class="title">연결: 무엇과 연결되는가</text>
+  
+  <!-- Network nodes -->
+  <rect x="380" y="50" width="70" height="28" rx="2" class="box"/>
+  <text x="415" y="68" text-anchor="middle" class="node">백과사전</text>
+  
+  <rect x="510" y="80" width="70" height="28" rx="2" class="box"/>
+  <text x="545" y="98" text-anchor="middle" class="node">터키 활</text>
+  
+  <rect x="370" y="120" width="60" height="28" rx="2" class="box"/>
+  <text x="400" y="138" text-anchor="middle" class="node">탄성학</text>
+  
+  <rect x="520" y="150" width="70" height="28" rx="2" class="box"/>
+  <text x="555" y="168" text-anchor="middle" class="node">재료과학</text>
+  
+  <rect x="400" y="185" width="60" height="28" rx="2" class="box"/>
+  <text x="430" y="203" text-anchor="middle" class="node">십자군</text>
+  
+  <!-- Trail arrows (with arrowheads) -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" class="arrow"/>
+    </marker>
+  </defs>
+  
+  <!-- Arrow: 백과사전 → 터키 활 -->
+  <path d="M 450 64 Q 480 60 510 84" class="line" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: 터키 활 → 탄성학 -->
+  <path d="M 510 98 Q 460 110 430 120" class="line" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: 탄성학 → 재료과학 -->
+  <path d="M 430 148 Q 480 155 520 160" class="line" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: 재료과학 → 십자군 -->
+  <path d="M 520 170 Q 480 185 460 193" class="line" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: 터키 활 → 십자군 (side trail) -->
+  <path d="M 530 108 Q 490 150 450 185" class="line" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Right caption -->
+  <text x="480" y="230" text-anchor="middle" class="label">"활은 무엇과 연결되는가?"</text>
+  <text x="480" y="248" text-anchor="middle" class="label">→ 여러 경로에 동시에 존재</text>
+</svg>
