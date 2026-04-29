@@ -178,6 +178,65 @@ OpenCode에게 빌드 요청
 
 ---
 
+## 주석 스타일 가이드
+
+본문 내 주석과 각주 영역의 표준 형식입니다.
+
+### 본문 내 주석 참조
+
+```html
+<sup><a href="#fn1" id="ref1">1</a></sup>
+```
+
+- `#fn1`: 각주 영역의 `<li id="fn1">`으로 연결
+- `id="ref1"`: 각주에서 본문으로 돌아오는 링크용
+- 숫자만 표시 (대괄호 없음)
+- 본문 등장 순서대로 1, 2, 3... 번호 부여
+
+### 각주 영역
+
+```html
+<section class="footnotes">
+  <h3>주석</h3>
+  <ol>
+    <li id="fn1">각주 내용. <a href="#ref1">↩</a></li>
+    <li id="fn2">각주 내용. <a href="#ref2">↩</a></li>
+  </ol>
+</section>
+```
+
+- `<section class="footnotes">`: 각주 영역 컨테이너
+- `<h3>주석</h3>`: 제목 (h2 아님)
+- `<ol>`: 순서 있는 목록
+- `<li id="fn1">`: 본문 참조와 연결
+- `<a href="#ref1">↩</a>`: 본문으로 돌아가기 링크
+
+### 각주 작성 원칙
+
+1. **번호**: 본문 등장 순서대로 1부터 순차 부여
+2. **위치**: `</article>` 직전, `<hr>` 다음에 배치
+3. **내용**: 용어 설명, 출처, 부연 설명 등
+4. **링크**: 외부 링크는 `target="_blank" rel="noopener"` 속성 추가
+
+### 예시
+
+본문:
+```html
+<p>웹은 기억하지 않는다.<sup><a href="#fn1" id="ref1">1</a></sup></p>
+```
+
+각주:
+```html
+<section class="footnotes">
+  <h3>주석</h3>
+  <ol>
+    <li id="fn1">HTTP는 stateless—요청에 응답하고 끝난다. <a href="#ref1">↩</a></li>
+  </ol>
+</section>
+```
+
+---
+
 ## 빌드 및 배포
 
 ### 현재 방식
