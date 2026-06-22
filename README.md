@@ -9,6 +9,23 @@
 
 → [meta-archives.xyz](https://meta-archives.xyz)
 
+## 로컬 미리보기 (관찰 목록)
+
+```bash
+bash scripts/serve.sh
+```
+
+inventory를 빌드한 뒤 http://localhost:8765/observe.html 을 엽니다.
+
+## Are.na 동기화
+
+```bash
+bash scripts/sync.sh           # API → meta-archive.json → inventory 빌드
+bash scripts/sync.sh --dry-run # diff만
+```
+
+신규·오수집 항목은 diff 후 `scripts/arena_overrides.py` 또는 `category`를 수동 검토합니다. 자세한 흐름은 [docs/arena-sync.md](docs/arena-sync.md).
+
 ## 구조
 
 ```

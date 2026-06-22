@@ -7,8 +7,38 @@ meta-archives.xyz에서 각 아카이브를 기술할 때 사용하는 메타데
 
 ## 스키마 버전
 
-- **현재 버전**: v1.0
-- **최종 수정**: 2026-01-04
+- **현재 버전**: v1.0 (+ **axes v1.0** 파일럿, 2026-06-22)
+- **최종 수정**: 2026-06-22
+
+관찰 YAML은 `data/archives/<slug>.yml`. 템플릿: `data/archives/_template.yml`
+
+---
+
+## 8축 매핑 (axes v1.0, 파일럿)
+
+단일 `category` 대신 `axes` 블록으로 다차원 관찰. 점검 프레임은 [meta-archive-inventory-review-2026-06-22.md](plans/meta-archive-inventory-review-2026-06-22.md) §4.
+
+| 필드 | 타입 | 값 |
+|------|------|-----|
+| `axes.operator` | enum | `institution` / `community` / `individual` / `corporate` / `hybrid` |
+| `axes.unit` | enum | `item` / `text` / `event` / `place` / `aggregate` |
+| `axes.navigation` | enum 또는 array | `taxonomy` / `search` / `chronology` / `spatial` / `associative` / `none` |
+| `axes.form_experiment` | enum | `high` / `medium` / `low` |
+| `axes.self_as_archive` | enum | `explicit` / `implicit` / `denied` |
+| `axes.access_regime` | enum | `open` / `gated` / `hidden` / `defunct` |
+| `axes.stack` | enum | `Omeka` / `custom` / `wiki` / `LibGuides` / `web-crawler` / `static` / `unknown` |
+| `axes.locale` | array | `KR` / `EN` / `JP` / `EU` / `multi` 등 |
+
+추가 인벤토리 필드:
+
+| 필드 | 설명 |
+|------|------|
+| `inventory.arena_id` | Are.na 블록 ID |
+| `inventory.group` | `meta-archives.md` 1차 그룹 |
+| `critique.status` | `none` / `planned` / `in_progress` / `published` |
+| `boundary.grade` | enum | `A`–`E` 수집·비평 경계 ([archive-boundary-criteria.md](plans/archive-boundary-criteria.md)) |
+| `boundary.reviewed_at` | date | 경계 판정일 |
+| `boundary.note` | string | 판정 근거 |
 
 ---
 
@@ -18,7 +48,8 @@ meta-archives.xyz에서 각 아카이브를 기술할 때 사용하는 메타데
 
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
-| `slug` | string | O | URL에 사용될 고유 식별자 (파일명과 동일) |
+| `inventory_id` | string | O | 영구 식별자 `MA-###` ([id-registry.json](../data/arena/id-registry.json)) |
+| `slug` | string | O | URL·파일명용 슬러그 (inventory_id와 별개) |
 | `title` | string | O | 아카이브 공식 명칭 |
 | `title_alt` | string | - | 대체 명칭 또는 약어 |
 | `url` | string | O | 아카이브 메인 URL |

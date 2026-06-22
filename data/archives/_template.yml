@@ -1,0 +1,132 @@
+# =============================================================================
+# meta-archives.xyz — 아카이브 관찰 메타데이터 (파일럿)
+# =============================================================================
+# 파일명: <slug>.yml
+# 대응 비평글(있을 경우): content/posts/<slug>.md
+# Are.na 블록: data/arena/meta-archive.json 의 arena_id
+#
+# 스키마: docs/schema.md v1.0 + axes v1.0 (8축 매핑, 파일럿)
+# 점검 프레임: docs/plans/meta-archive-inventory-review-2026-06-22.md §4
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 기본 정보
+# -----------------------------------------------------------------------------
+inventory_id: null            # MA-### 영구 ID (data/arena/id-registry.json)
+slug: ""
+title: ""
+title_alt: null
+url: ""
+description: ""
+
+# -----------------------------------------------------------------------------
+# Are.na · 인벤토리 (동기화 메타)
+# -----------------------------------------------------------------------------
+inventory:
+  arena_id: null              # Are.na 블록 ID (정수)
+  arena_connected: null       # 채널 추가일 YYYY-MM-DD
+  group: null                 # meta-archives.md 1차 그룹명
+
+# -----------------------------------------------------------------------------
+# 8축 매핑 (axes v1.0) — 단일 카테고리 대신 다차원 관찰
+# -----------------------------------------------------------------------------
+# operator:     institution | community | individual | corporate | hybrid
+# unit:         item | text | event | place | aggregate
+# navigation:   taxonomy | search | chronology | spatial | associative | none
+#               복합 탐색은 배열로 (예: [chronology, search])
+# form_experiment: high | medium | low
+# self_as_archive: explicit | implicit | denied
+# access_regime: open | gated | hidden | defunct
+# stack:        Omeka | custom | wiki | LibGuides | web-crawler | static | unknown
+# locale:       KR | EN | JP | EU | multi … (배열 가능)
+axes:
+  operator: null
+  unit: null
+  navigation: null
+  form_experiment: null
+  self_as_archive: null
+  access_regime: null
+  stack: null
+  locale: []
+
+# -----------------------------------------------------------------------------
+# 경계 판정 (archive-boundary-criteria.md)
+# -----------------------------------------------------------------------------
+boundary:
+  grade: null                 # A | B | C | D | E
+  reviewed_at: null           # YYYY-MM-DD
+  note: null
+
+# -----------------------------------------------------------------------------
+# 비평 진행 (meta-archives.xyz)
+# -----------------------------------------------------------------------------
+critique:
+  status: none                # none | planned | in_progress | published
+  post_slug: null             # content/posts/ 슬러그
+
+# -----------------------------------------------------------------------------
+# 시간 정보
+# -----------------------------------------------------------------------------
+year_started: null
+year_started_note: null
+year_ended: null
+
+# -----------------------------------------------------------------------------
+# 운영 주체 (schema v1.0)
+# -----------------------------------------------------------------------------
+operator:
+  name: ""
+  type: ""                    # institution | organization | individual | government | unknown
+  country: null
+
+# -----------------------------------------------------------------------------
+# 분류
+# -----------------------------------------------------------------------------
+tags: []
+category: ""                  # cultural | scientific | governmental | personal | commercial | experimental
+language: []
+coverage: null
+
+# -----------------------------------------------------------------------------
+# 기술적 특성
+# -----------------------------------------------------------------------------
+tech:
+  platform: null
+  metadata_standard: null
+  api_available: null
+  bulk_download: null
+  navigation: null
+
+# -----------------------------------------------------------------------------
+# 접근성
+# -----------------------------------------------------------------------------
+access:
+  registration_required: null
+  paywall: null
+  license: null
+
+# -----------------------------------------------------------------------------
+# 관찰 기록
+# -----------------------------------------------------------------------------
+observation:
+  observed_at: ""
+  status: ""                  # active | inactive | partial | defunct | unknown
+  http_code: null
+  notes: null
+
+# -----------------------------------------------------------------------------
+# 사회적 맥락
+# -----------------------------------------------------------------------------
+context:
+  social_aspect: null
+  source: null
+  hidden_source: null
+
+# -----------------------------------------------------------------------------
+# 메타 정보
+# -----------------------------------------------------------------------------
+meta:
+  created_at: ""
+  updated_at: ""
+  author: null
+  note: null

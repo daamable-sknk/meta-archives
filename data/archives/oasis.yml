@@ -1,0 +1,68 @@
+inventory_id: "MA-028"
+slug: "oasis"
+title: "OASIS"
+title_alt: "온라인 디지털지적문화유산의 아카이빙"
+url: "https://www.nl.go.kr/oasis/"
+description: "국립중앙도서관이 운영하는 한국 웹·디지털 지적문화유산 아카이브 검색 서비스."
+
+inventory:
+  arena_id: 40781879
+  arena_connected: "2025-11-02"
+  group: "정부·공공 웹 아카이브"
+
+axes:
+  operator: institution
+  unit: aggregate
+  navigation: [search, chronology]
+  form_experiment: low
+  self_as_archive: explicit
+  access_regime: open
+  stack: custom
+  locale: KR
+
+critique:
+  status: planned
+  post_slug: null
+
+year_started: null
+year_started_note: "국립중앙도서관 웹아카이빙 사업"
+year_ended: null
+
+operator:
+  name: "국립중앙도서관"
+  type: government
+  country: KR
+
+tags: [web archive, Korea, National Library, digital heritage]
+category: governmental
+language: [ko]
+coverage: "한국 온라인 디지털·지적문화유산"
+
+tech:
+  platform: custom
+  metadata_standard: null
+  api_available: null
+  bulk_download: null
+  navigation: "검색 중심. 웹 스냅샷·수집 기록 탐색"
+
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: null
+  notes: "시간층(H) 비평 후보. UK Web Archive와 대비 가능"
+
+context:
+  social_aspect: "국가 주도 웹 기억, 공공 도서관 아카이빙"
+  source: "웹 크롤·수집 대상 사이트"
+  hidden_source: "한국 웹의 제도적 기억"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "정부·웹 아카이브 축 파일럿."

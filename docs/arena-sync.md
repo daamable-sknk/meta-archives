@@ -38,7 +38,20 @@ GET https://api.are.na/v2/channels/meta-archive
 https://api.are.na/v2/channels/meta-archive?page=1&per=50
 ```
 
-`per=100`으로 설정하면 현재 규모(40여 개)에서는 단일 요청으로 전체 목록을 가져올 수 있다.
+`per=100`으로 설정하고 `page=1`, `page=2` … 를 순회한다. 2026-06-22 기준 채널 길이는 **125블록**(Link 110 / Image 8 / Text 7)이다.
+
+동기화 결과물:
+
+| 파일 | 설명 |
+|------|------|
+| [plans/meta-archives.md](plans/meta-archives.md) | 비평 계획·그룹별 전체 목록 |
+| [data/arena/meta-archive.json](../data/arena/meta-archive.json) | API 원본 기반 머신-readable 인벤토리 |
+| [data/archives/](../data/archives/) | 아카이브별 관찰 YAML (8축 파일럿) |
+| [data/arena/overrides](../data/arena/) | — |
+| [scripts/arena_overrides.py](../scripts/arena_overrides.py) | Are.na 오수집 수동 보정 |
+| [scripts/sync-arena.py](../scripts/sync-arena.py) | API → meta-archive.json |
+| [inventory-enriched.json](../data/arena/inventory-enriched.json) | 8축 추론·패싯 집계 (build-inventory.py) |
+| [id-registry.json](../data/arena/id-registry.json) | 영구 inventory ID (`MA-###`) ↔ Are.na 블록 |
 
 ### 응답 구조 (주요 필드)
 
@@ -86,20 +99,54 @@ https://api.are.na/v2/channels/meta-archive?page=1&per=50
 ```
 Are.na 채널에 아카이브 추가
         ↓
-비정기적으로 API 호출 (수동)
+bash scripts/sync.sh              # API fetch → diff → meta-archive.json
         ↓
-기존 meta-archives.md 목록과 대조
+diff 리포트 검토 (신규·API drift·의심 제목)
         ↓
-신규 항목 → 적절한 그룹에 배치
+필요 시 scripts/arena_overrides.py · category 수동 수정
         ↓
-meta-archives.md 업데이트
+inventory-enriched.json 빌드 (sync에 포함, --no-build로 생략 가능)
+        ↓
+observe.html 에서 확인
+```
+
+### 반자동 원칙
+
+| 단계 | 자동 | 수동 |
+|------|------|------|
+| API fetch | ✓ | |
+| 신규 MA-ID 부여 | ✓ (`build-inventory.py`) | |
+| 기존 title/url/short/category | | 로컬 유지 |
+| 연결일·블록 유형 갱신 | ✓ | |
+| 봇 차단 오수집 보정 | | `arena_overrides.py` |
+| 1차 그룹 배치 (신규) | | `미분류·검토 필요` → 수정 |
+| YAML | | 비평 시작 시만 |
+
+### 실행
+
+```bash
+# fetch + diff + 저장 + inventory 빌드 (일반)
+bash scripts/sync.sh
+
+# diff만 (파일 미저장)
+bash scripts/sync.sh --dry-run
+
+# JSON만, 빌드 생략
+bash scripts/sync.sh --no-build
+```
+
+로컬 미리보기:
+
+```bash
+bash scripts/serve.sh    # inventory 빌드 + http://localhost:8765/observe.html
 ```
 
 ### 신규 항목 판별
 
-1. API 응답의 `contents` 배열에서 `class === "Link"`인 블록만 추출
-2. 각 블록의 `source.url`을 기존 `meta-archives.md` 테이블의 URL과 대조
-3. 기존 목록에 없는 URL이 신규 항목
+1. API 응답의 `contents` 배열에서 **모든 블록**을 검사 (`Link`뿐 아니라 `Image`, `Text` 포함)
+2. URL 추출: `Link`/`Text`는 `source.url` 또는 `content_html`의 `href`; `Image`는 외부 도메인 `source.url`
+3. 각 URL을 기존 `meta-archives.md` 또는 `data/arena/meta-archive.json`과 대조
+4. 기존 목록에 없는 URL이 신규 항목
 
 ### 그룹 배치
 
@@ -164,4 +211,4 @@ for block in data['contents']:
 
 ---
 
-*Last updated: 2026.03.01*
+*Last updated: 2026-06-22*

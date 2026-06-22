@@ -1,0 +1,73 @@
+inventory_id: "MA-066"
+slug: "discogs"
+title: "Discogs"
+title_alt: null
+url: "https://www.discogs.com/"
+description: "크라우드소싱 음반 메타데이터 데이터베이스이자 마켓플레이스. 카탈로그 구조는 강하나 거래가 중심."
+
+inventory:
+  arena_id: 44934418
+  arena_connected: "2026-04-01"
+  group: "대규모 통합 플랫폼"
+
+axes:
+  operator: corporate
+  unit: item
+  navigation: [taxonomy, search]
+  form_experiment: low
+  self_as_archive: implicit
+  access_regime: open
+  stack: custom
+  locale: multi
+
+boundary:
+  grade: C
+  reviewed_at: "2026-06-22"
+  note: "DB+marketplace. '아카이브 vs DB' 에세이 후보 — B로 격상 가능."
+
+critique:
+  status: none
+  post_slug: null
+
+year_started: 2000
+year_started_note: "음반 데이터베이스"
+year_ended: null
+
+operator:
+  name: "Discogs"
+  type: commercial
+  country: US
+
+tags: [music, database, marketplace, crowdsourcing, metadata, boundary]
+category: commercial
+language: [en]
+coverage: "Global music releases"
+
+tech:
+  platform: custom
+  metadata_standard: custom
+  api_available: true
+  bulk_download: null
+  navigation: "아티스트·레이블·릴리스 계층. 검색·필터·마켓 연동"
+
+access:
+  registration_required: partial
+  paywall: partial
+  license: "User-contributed; marketplace terms"
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: null
+  notes: "경계 사례. 메타데이터·크라우드소싱은 아카이브적, W3(거래) 강함"
+
+context:
+  social_aspect: "수집가·음악 팬 커뮤니티, 상업적 거래 생태계"
+  source: "사용자 기여 메타데이터"
+  hidden_source: "레코드 샵·컬렉터 문화"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "boundary grade C — 단독 비평보다 Europeana·Monoskop과 대비 시 유용"

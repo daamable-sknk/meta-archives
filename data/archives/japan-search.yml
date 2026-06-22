@@ -1,0 +1,68 @@
+inventory_id: "MA-031"
+slug: "japan-search"
+title: "Japan Search"
+title_alt: null
+url: "https://jpsearch.go.jp/"
+description: "일본의 박물관·도서관·아카이브 자료를 통합 검색하는 국가 문화정보 검색 플랫폼."
+
+inventory:
+  arena_id: 42503465
+  arena_connected: "2026-01-09"
+  group: "대규모 통합 플랫폼"
+
+axes:
+  operator: institution
+  unit: aggregate
+  navigation: search
+  form_experiment: low
+  self_as_archive: explicit
+  access_regime: open
+  stack: custom
+  locale: [JP, multi]
+
+critique:
+  status: planned
+  post_slug: null
+
+year_started: null
+year_started_note: "국가 통합 문화정보 검색 (jpsearch.go.jp)"
+year_ended: null
+
+operator:
+  name: "Japan Search (국가 주도)"
+  type: government
+  country: JP
+
+tags: [national portal, aggregation, Japan, federated search, GLAM]
+category: governmental
+language: [ja, en]
+coverage: "일본 국내 문화기관 자료 통합"
+
+tech:
+  platform: custom
+  metadata_standard: null
+  api_available: null
+  bulk_download: null
+  navigation: "연합 검색·필터. 제공 기관별 집계"
+
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: null
+  notes: "Europeana·Japan Search 비교 축 파일럿"
+
+context:
+  social_aspect: "국가 문화정보 인프라, 기관 간 메타데이터 집계"
+  source: "일본 국내 GLAM·아카이브 기관"
+  hidden_source: "통합 검색에 편입되지 않은 소규모 기록"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "대규모 통합 플랫폼 축 파일럿. europeana.yml과 대비 가능."

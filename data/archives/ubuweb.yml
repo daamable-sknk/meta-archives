@@ -1,0 +1,68 @@
+inventory_id: "MA-032"
+slug: "ubuweb"
+title: "UbuWeb"
+title_alt: null
+url: "https://ubu.com"
+description: "1996년부터 운영된 전위 예술 자료의 비제도적 온라인 아카이브. 접근과 순환을 보존·진본성보다 우선한다."
+
+inventory:
+  arena_id: 42587083
+  arena_connected: "2026-01-12"
+  group: "형식이 곧 내용인 아카이브"
+
+axes:
+  operator: individual
+  unit: item
+  navigation: associative
+  form_experiment: high
+  self_as_archive: explicit
+  access_regime: hidden
+  stack: static
+  locale: [EN, multi]
+
+critique:
+  status: published
+  post_slug: ubuweb
+
+year_started: 1996
+year_started_note: "Kenneth Goldsmith 설립"
+year_ended: null
+
+operator:
+  name: "Kenneth Goldsmith"
+  type: individual
+  country: US
+
+tags: [avant-garde, experimental film, sound art, rogue archive, folk law]
+category: experimental
+language: [en]
+coverage: "Global avant-garde and experimental art"
+
+tech:
+  platform: "Static HTML"
+  metadata_standard: null
+  api_available: false
+  bulk_download: false
+  navigation: "느슨한 카테고리 나열(Film, Sound, Papers 등). 검색·주석 부재"
+
+access:
+  registration_required: false
+  paywall: false
+  license: "비공식적 교육용·민속법적 운영"
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: 200
+  notes: "noindex 메타태그. 프론트페이지 ~4KB. 복제본·출처 불명 파일 다수"
+
+context:
+  social_aspect: "제도 밖 아카이브, 허락보다 용서, 접근 우선"
+  source: "절판·유통 단절 자료, 해적적 디지털화"
+  hidden_source: "대안 예술사, 언더그라운드 문화"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "data/posts/ubuweb.yml에서 이전. 8축 파일럿."

@@ -1,0 +1,68 @@
+inventory_id: "MA-036"
+slug: "low-tech-magazine"
+title: "LOW←TECH MAGAZINE — Archive"
+title_alt: "Low-Tech Magazine Archive"
+url: "https://solar.lowtechmagazine.com/archives/"
+description: "태양광으로 구동되는 저대역 서버에 호스팅된 잡지 아카이브. 지속가능성이 인프라와 이미지 형식에 체화된다."
+
+inventory:
+  arena_id: 43182813
+  arena_connected: "2026-02-01"
+  group: "형식이 곧 내용인 아카이브"
+
+axes:
+  operator: individual
+  unit: text
+  navigation: chronology
+  form_experiment: high
+  self_as_archive: explicit
+  access_regime: open
+  stack: custom
+  locale: [EN, multi]
+
+critique:
+  status: planned
+  post_slug: null
+
+year_started: 2007
+year_started_note: "Low-Tech Magazine 본지. 아카이브는 이후 solar 서브도메인"
+year_ended: null
+
+operator:
+  name: "Kris De Decker"
+  type: individual
+  country: BE
+
+tags: [sustainability, solar server, low-tech, dithering, form-as-content]
+category: experimental
+language: [en]
+coverage: "저기술·에너지·지속가능성 담론"
+
+tech:
+  platform: "Custom (solar-powered static/low-bandwidth stack)"
+  metadata_standard: null
+  api_available: false
+  bulk_download: false
+  navigation: "연대기적 아카이브 목록. 저해상도·디더링 이미지"
+
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: null
+  notes: "UbuWeb(B축)과 대비 비평 후보. HTTP 미확인(타임아웃)"
+
+context:
+  social_aspect: "기후·에너지 비판이 아카이브 운영 조건과 결합"
+  source: "잡지 기사 아카이브"
+  hidden_source: "고대역·클라우드 중심 웹 인프라에 대한 대안"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "형식=내용 축 파일럿. UbuWeb과 짝 비교 예정."

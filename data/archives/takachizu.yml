@@ -1,0 +1,68 @@
+inventory_id: "MA-014"
+slug: "takachizu"
+title: "Takachizu"
+title_alt: null
+url: "http://takachizu.org/"
+description: "로스앤젤레스 리틀 도쿄 커뮤니티가 장소와 기억을 모으는 참여형 지역 아카이브."
+
+inventory:
+  arena_id: 10833754
+  arena_connected: "2021-02-19"
+  group: "분류 체계가 독특한 아카이브"
+
+axes:
+  operator: community
+  unit: place
+  navigation: spatial
+  form_experiment: medium
+  self_as_archive: explicit
+  access_regime: open
+  stack: custom
+  locale: EN
+
+critique:
+  status: planned
+  post_slug: null
+
+year_started: null
+year_started_note: "Community archive for Little Tokyo"
+year_ended: null
+
+operator:
+  name: "Takachizu (community collective)"
+  type: organization
+  country: US
+
+tags: [community archive, Little Tokyo, place, memory, map]
+category: cultural
+language: [en]
+coverage: "Little Tokyo, Los Angeles"
+
+tech:
+  platform: custom
+  metadata_standard: null
+  api_available: null
+  bulk_download: null
+  navigation: "장소·지도 중심. 커뮤니티가 가치 있다고 판단한 것을 식별·반영"
+
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: null
+  notes: "분류=장소(C축) 파일럿. WWA taxonomy와 대비"
+
+context:
+  social_aspect: "이주·디아스포라 커뮤니티 기억, 참여형 수집"
+  source: "주민·커뮤니티 기여"
+  hidden_source: "도시 재개발 속 소멸 위기의 일상"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "장소·커뮤니티 축 파일럿."

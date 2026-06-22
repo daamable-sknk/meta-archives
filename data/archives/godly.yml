@@ -1,0 +1,72 @@
+inventory_id: "MA-069"
+slug: "godly"
+title: "Godly"
+title_alt: null
+url: "https://godly.website/"
+description: "웹 디자인 영감을 위한 hand-picked 큐레이션 사이트. 스크린샷·카테고리 브라우징 중심."
+
+inventory:
+  arena_id: 44963345
+  arena_connected: "2026-04-02"
+  group: "디자인 영감·레퍼런스 (경계)"
+
+axes:
+  operator: corporate
+  unit: item
+  navigation: taxonomy
+  form_experiment: medium
+  self_as_archive: denied
+  access_regime: open
+  stack: custom
+  locale: EN
+
+boundary:
+  grade: C
+  reviewed_at: "2026-06-22"
+  note: "inspiration showcase. 아카이브 비평 우선순위 외. Letterform과 비교 대상."
+
+critique:
+  status: none
+  post_slug: null
+
+year_started: null
+year_ended: null
+
+operator:
+  name: null
+  type: commercial
+  country: null
+
+tags: [web design, inspiration, curation, boundary]
+category: commercial
+language: [en]
+coverage: "Global web design showcase"
+
+tech:
+  platform: custom
+  metadata_standard: null
+  api_available: null
+  bulk_download: null
+  navigation: "카테고리·태그 브라우징. 스크린샷 갤러리"
+
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: null
+  notes: "경계 사례 파일럿. docs/plans/archive-boundary-criteria.md §5"
+
+context:
+  social_aspect: "디자이너 대상 레퍼런스 경제"
+  source: "외부 웹사이트 스크린샷·링크"
+  hidden_source: null
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "boundary grade C — 비평 대상 아님, 비교·에세이용"

@@ -1,0 +1,68 @@
+inventory_id: "MA-027"
+slug: "uk-government-web-archive"
+title: "UK Government Web Archive"
+title_alt: null
+url: "https://www.nationalarchives.gov.uk/webarchive/"
+description: "1996년부터 영국 중앙정부 웹 게시물을 수집·보존·공개하는 국가 웹 아카이브."
+
+inventory:
+  arena_id: 40781872
+  arena_connected: "2025-11-02"
+  group: "정부·공공 웹 아카이브"
+
+axes:
+  operator: institution
+  unit: aggregate
+  navigation: [search, chronology]
+  form_experiment: low
+  self_as_archive: explicit
+  access_regime: open
+  stack: web-crawler
+  locale: EN
+
+critique:
+  status: planned
+  post_slug: null
+
+year_started: 1996
+year_started_note: "The National Archives 운영"
+year_ended: null
+
+operator:
+  name: "The National Archives (UK)"
+  type: government
+  country: GB
+
+tags: [web archive, government, UK, provenance, time layers]
+category: governmental
+language: [en]
+coverage: "영국 중앙정부 웹 게시물 (1996–현재)"
+
+tech:
+  platform: "Web archive crawler / playback system"
+  metadata_standard: null
+  api_available: null
+  bulk_download: null
+  navigation: "시간·기관·URL 기반 검색. 스냅샷 재생"
+
+access:
+  registration_required: false
+  paywall: false
+  license: "Open Government Licence (콘텐츠별 상이)"
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: null
+  notes: "웹 시간 지층(H축) 대표 사례"
+
+context:
+  social_aspect: "정부 투명성·공공기록, 웹을 공식 기록으로"
+  source: "정부 부처·기관 웹사이트"
+  hidden_source: "삭제·개편된 정책 페이지의 잔존"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "OASIS와 짝을 이루는 웹 아카이브 축 파일럿."

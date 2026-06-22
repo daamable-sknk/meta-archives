@@ -25,7 +25,10 @@ meta-archives.xyz 프로젝트의 기획, 가이드, 참고자료를 모아둔 �
 
 프로젝트별 비평·연재 계획
 
-- **[meta-archives.md](plans/meta-archives.md)** — 비평 계획 (성격별 그룹 목록)
+- **[meta-archives.md](plans/meta-archives.md)** — 비평 계획 (Are.na 125개 동기화 목록)
+- **[meta-archive-inventory-review-2026-06-22.md](plans/meta-archive-inventory-review-2026-06-22.md)** — 채널 점검·평론 요소·8축 매핑
+- **[inventory-views.md](plans/inventory-views.md)** — 인벤토리 탐색 방법 (패싯·공백·교차표)
+- **[observe.html](../observe.html)** — 125개 관찰 목록 (패싯 UI)
 - **[records-and-society.md](plans/records-and-society.md)** — 〈웹 이후의 기록학〉 연재 계획 (연 6회)
 
 ---

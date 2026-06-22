@@ -1,0 +1,68 @@
+inventory_id: "MA-007"
+slug: "korea-queer-archive"
+title: "퀴어락 (Korea Queer Archive)"
+title_alt: "Queerarch"
+url: "https://queerarchive.org/"
+description: "한국 성소수자 역사·문화 기록을 수집·열람하는 공공 아카이브. Omeka 기반의 기관형 시민 아카이브."
+
+inventory:
+  arena_id: 38908148
+  arena_connected: "2025-08-20"
+  group: "분류 체계가 독특한 아카이브"
+
+axes:
+  operator: hybrid
+  unit: item
+  navigation: taxonomy
+  form_experiment: low
+  self_as_archive: explicit
+  access_regime: open
+  stack: Omeka
+  locale: [KR, multi]
+
+critique:
+  status: in_progress
+  post_slug: null
+
+year_started: 2009
+year_started_note: "한국성적소수자문화인권센터 기획·운영"
+year_ended: null
+
+operator:
+  name: "한국성적소수자문화인권센터"
+  type: organization
+  country: KR
+
+tags: [queer, LGBT, Omeka, community archive, Korea]
+category: cultural
+language: [ko, en]
+coverage: "한국 및 국외 성소수자 관련 도서·문서·영상"
+
+tech:
+  platform: Omeka
+  metadata_standard: "Dublin Core (Omeka 기본)"
+  api_available: null
+  bulk_download: null
+  navigation: "Item / Collection / Exhibit 구조. 온라인 카탈로그형 탐색"
+
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: 200
+  notes: "분리된 아카이브(Omeka 본체 + 외부 게시판) 논의의 한국 사례"
+
+context:
+  social_aspect: "성소수자 인권·문화 기록, 시민사회 주도 공공 아카이브"
+  source: "기증·수집 자료, 센터 보유 기록"
+  hidden_source: "한국 퀴어 역사의 제도 밖 기억"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "다음 비평 1순위. omeka-and-the-split-archive.md 초안과 연결."

@@ -1,0 +1,68 @@
+inventory_id: "MA-020"
+slug: "women-writing-architecture"
+title: "Women Writing Architecture"
+title_alt: "WWA"
+url: "https://womenwritingarchitecture.org/"
+description: "건축에 대해 여성이 쓴 글을 모은 개방형 주석 서지. 글은 taxonomy·주석·커뮤니티 실천의 관계 속에서만 접근된다."
+
+inventory:
+  arena_id: 40257972
+  arena_connected: "2025-10-12"
+  group: "분류 체계가 독특한 아카이브"
+
+axes:
+  operator: hybrid
+  unit: text
+  navigation: [taxonomy, search]
+  form_experiment: medium
+  self_as_archive: explicit
+  access_regime: open
+  stack: custom
+  locale: [EN, multi]
+
+critique:
+  status: published
+  post_slug: women-writing-architecture
+
+year_started: 2021
+year_started_note: "공개 존재 기준 추정"
+year_ended: null
+
+operator:
+  name: "Women Writing Architecture editorial collective"
+  type: organization
+  country: null
+
+tags: [women, architecture, bibliography, feminist, taxonomy, annotation]
+category: cultural
+language: [en]
+coverage: "Global — women writing about architecture"
+
+tech:
+  platform: custom
+  metadata_standard: custom
+  api_available: null
+  bulk_download: null
+  navigation: "Glossary / Type / Language 필터. People·Organisations는 taxonomy로만 연동"
+
+access:
+  registration_required: false
+  paywall: false
+  license: null
+
+observation:
+  observed_at: "2026-06-22"
+  status: active
+  http_code: 200
+  notes: "자동화 요청 시 403, 브라우저 접근 200 (2026-01 관찰 재확인)"
+
+context:
+  social_aspect: "페미니스트 집단 지식 생산, 커뮤니티 실천의 아카이브 언어화"
+  source: "공동체 큐레이션 서지·초대"
+  hidden_source: "학술 강의계획서, 페미니스트 건축 담론"
+
+meta:
+  created_at: "2026-06-22"
+  updated_at: "2026-06-22"
+  author: null
+  note: "data/posts/women-writing-architecture.yml에서 이전. 8축 파일럿."

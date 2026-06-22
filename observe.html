@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <title>관찰 목록 — meta-archives.xyz</title>
+  <meta name="description" content="Are.na meta-archive 채널의 디지털 아카이브 분포·필터 탐색.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="observe-page">
+  <header class="detail-header">
+    <a href="index.html" class="back">← meta-archives.xyz</a>
+    <h1>관찰 목록</h1>
+    <p class="tagline">Are.na meta-archive · <span id="title-count">…</span>개</p>
+  </header>
+
+  <div class="observe-load-error" id="load-error" hidden>
+    <p><strong>데이터를 불러오지 못했습니다.</strong></p>
+    <p>파일을 직접 열면(<code>file://</code>) JSON 요청이 차단됩니다. 터미널에서:</p>
+    <pre class="observe-cmd">bash scripts/serve.sh</pre>
+    <p>그다음 <a href="http://localhost:8765/observe.html">localhost:8765/observe.html</a></p>
+  </div>
+
+  <div id="app" hidden>
+    <div class="observe-stats" id="stats"></div>
+
+    <div class="observe-layout">
+      <aside class="observe-sidebar" aria-label="필터">
+        <nav class="observe-presets" aria-label="빠른 필터">
+          <button type="button" class="chip preset" data-preset="all">전체</button>
+          <button type="button" class="chip preset" data-preset="critique">비평 후보</button>
+          <button type="button" class="chip preset" data-preset="form-high">형식 실험</button>
+          <button type="button" class="chip preset" data-preset="korea">한국</button>
+        </nav>
+
+        <div class="observe-toolbar">
+          <input type="search" id="search" placeholder="ID·제목·URL" aria-label="검색" autocomplete="off">
+          <select id="sort" aria-label="정렬">
+            <option value="inventory_id">ID순</option>
+            <option value="title">제목순</option>
+            <option value="connected">수집일순</option>
+          </select>
+        </div>
+
+        <div class="observe-toggles">
+          <label><input type="checkbox" id="only-critique"> 비평</label>
+          <label><input type="checkbox" id="only-yaml"> YAML</label>
+          <button type="button" class="chip chip-ghost" id="clear-facets">초기화</button>
+        </div>
+
+        <p class="observe-active" id="active-filters" hidden></p>
+
+        <div class="observe-facets" id="facets"></div>
+
+        <details class="observe-panel observe-panel-sidebar">
+          <summary>교차표</summary>
+          <div class="observe-matrix-wrap">
+            <table id="matrix-table"></table>
+          </div>
+        </details>
+      </aside>
+
+      <main class="observe-main">
+        <p class="observe-result">
+          <span id="result-count">0 / 0</span>
+        </p>
+        <ul class="observe-list" id="list"></ul>
+        <p class="observe-empty" id="empty" hidden>조건에 맞는 항목이 없습니다.</p>
+      </main>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p class="footer-links">
+      <a href="about.html">About</a>
+      <a href="https://github.com/daamable-sknk/meta-archives/blob/main/docs/plans/inventory-views.md" target="_blank" rel="noopener">탐색 방법</a>
+      <a href="https://www.are.na/daehwan-jang/meta-archive" target="_blank" rel="noopener">Are.na</a>
+    </p>
+    <p class="footer-updated" id="built-at"></p>
+  </footer>
+
+  <script src="assets/js/observe.js"></script>
+</body>
+</html>
