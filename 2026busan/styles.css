@@ -692,6 +692,64 @@ a:hover {
 }
 
 /* ============================================================
+   MOBILE / PORTRAIT — 세로에서는 회전 안내, 가로에서는 PC와 동일 렌더링
+   모바일은 vw 기반 16:9 레이아웃이 가로일 때 PC와 같게 보이므로,
+   세로일 때만 "가로로 돌려주세요" 오버레이를 띄운다.
+   ============================================================ */
+/* 회전 안내 오버레이 — 기본 숨김, 세로 모바일에서만 노출 */
+.rotate-hint {
+    display: none;
+}
+
+/* 세로(portrait) + 터치 기반(모바일/태블릿)에서만 안내 표시.
+   데스크톱 세로 모니터는 hover 지원이 있어 제외된다. */
+@media (orientation: portrait) and (hover: none) and (pointer: coarse) {
+    .rotate-hint {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6vw;
+        padding: 10vw;
+        text-align: center;
+        background: #111;
+        color: #fff;
+    }
+    .rotate-hint__icon {
+        font-size: 22vw;
+        line-height: 1;
+        color: #fff;
+        animation: rotate-hint-spin 2.4s ease-in-out infinite;
+    }
+    .rotate-hint__title {
+        font-family: var(--font);
+        font-size: 6vw;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+    .rotate-hint__desc {
+        font-family: var(--font);
+        font-size: 4vw;
+        line-height: 1.6;
+        color: #bbb;
+        word-break: keep-all;
+    }
+}
+
+@keyframes rotate-hint-spin {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+}
+
+/* ============================================================
    PRINT
    ============================================================ */
 @media print {
