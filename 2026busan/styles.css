@@ -791,6 +791,32 @@ a:hover {
     }
 }
 
+/* 가로(landscape) + 터치 기기: 브라우저 UI에 가려진 하단을 세로 스크롤로 볼 수 있게 */
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+    .deck {
+        height: 100dvh;
+        max-height: 100dvh;
+    }
+
+    .slide {
+        max-height: 100dvh;
+        padding-bottom: calc(var(--pad) + env(safe-area-inset-bottom, 0px));
+    }
+
+    /* 활성 슬라이드만 세로 스크롤 — 좌우 스와이프(슬라이드 넘김)와 충돌 없음 */
+    .slide.active {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: contain;
+    }
+
+    .slide.active .slide-body {
+        overflow: visible;
+        flex: 1 0 auto;
+        min-height: 0;
+    }
+}
+
 /* ============================================================
    PRINT
    ============================================================ */
