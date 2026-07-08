@@ -1,0 +1,61 @@
+<section class="slide" id="s11">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        03 &nbsp;|&nbsp; <strong>검색 경험의 (재)구성</strong>
+                    </p>
+                    <h2 class="slide-title">검색어를 알아야 검색할 수 있다</h2>
+                </header>
+                <div class="slide-body">
+                    <div class="two-col" style="align-items: start; gap: 2vw;">
+                        <div style="display: flex; flex-direction: column; gap: 0.8vw;">
+                            <blockquote>
+                                키워드 검색은 사용자가 검색어를 직접 입력하는 구조다. 무엇을 알고 싶은지는 있지만, 그것을 시스템이 색인한 언어로 표현할 수 있어야 한다. <strong>그 언어를 모르면 검색은 시작되지 않는다.</strong>
+                            </blockquote>
+                            <p>
+                                <strong>어휘 불일치 문제(vocabulary problem)</strong>란 사용자가 쓰는 언어와 시스템이 색인한 언어가 일치하지 않는 현상이다. Furnas 외(1987)는 같은 대상을 같은 단어로 지칭할 확률이 <strong>20% 미만</strong>임을 실증했다. Blair &amp; Maron(1985)은 사용자들이 75%를 찾았다고 믿었지만 실제 재현율은 <strong>20% 미만</strong>이었음을 보였다. 입력한 검색어와 문서 안의 표현이 달랐기 때문이다.
+                            </p>
+                            <table class="table--compare">
+                                <thead>
+                                    <tr>
+                                        <th>사용자의 자연어</th>
+                                        <th>시스템 안의 표현 / 색인어 후보</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>"청년 주거 문제"</td>
+                                        <td>주거실태조사, 1인 가구, 청년가구, 임대차, 주거취약계층, 공공임대</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"고령화"</td>
+                                        <td>노령인구, 노인복지, 저출산·고령화 대응, 초고령사회</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"서울 인구가 줄어드나?"</td>
+                                        <td>인구변화, 인구밀도, 생활인구, 인구이동, 장래인구추계</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                            <img
+                                src="assets/index-without-thought.png"
+                                alt="사용자가 머릿속 개념을 검색창에 입력하면 여러 파편화된 기호로 분산되어 색인 서버로 흩어지는 구조. 사람과 검색창 사이에 균열이 있다."
+                                style="
+                                    width: 80%;
+                                    max-height: 70%;
+                                    object-fit: contain;
+                                    object-position: top center;
+                                    mix-blend-mode: multiply;
+                                "
+                            />
+                            <p class="fig-caption" style="flex-shrink: 0; margin-top: 0.4vw; text-align: center; font-size: 0.72vw;">
+                                <strong style="font-style: normal;">AI 생성 이미지</strong> (ChatGPT)<br>
+                                사용자의 의도와 색인 언어 사이의 간극 / 어휘 불일치 문제 시각화
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- [1] Furnas et al. (1987). CACM 30(11), 964–971. https://doi.org/10.1145/32206.32212 -->
+                <!-- [2] Blair & Maron (1985). CACM 28(3), 289–299. https://doi.org/10.1145/3166.3197 -->
+            </section>

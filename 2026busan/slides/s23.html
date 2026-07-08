@@ -1,0 +1,78 @@
+<section class="slide" id="s23">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        05 &nbsp;|&nbsp; <strong>AI 통합검색 구현</strong>
+                    </p>
+                    <h2 class="slide-title">AI 통합검색 화면</h2>
+                </header>
+                <div class="slide-body">
+                    <div class="two-col" style="align-items: stretch;">
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            "
+                        >
+                            <div
+                                style="
+                                    height: calc(100vh - 20vw);
+                                    width: 100%;
+                                    overflow-y: auto;
+                                    border: 1px solid var(--rule);
+                                "
+                            >
+                                <img
+                                    src="assets/si-search-ai.png"
+                                    alt="서울연구데이터서비스 AI 통합검색 결과 화면. AI 답변과 인용 출처 [1][2], 패싯 필터, 브레드크럼이 함께 보인다."
+                                    style="width: 100%; height: auto; display: block;"
+                                />
+                            </div>
+                            <p
+                                class="fig-caption"
+                                style="text-align: center; margin-top: 0.4vw;"
+                            >
+                                서울연구데이터서비스 통합검색 구성(안)
+                            </p>
+                        </div>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.4vw;
+                            "
+                        >
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">AI / 키워드 탭 분리</p>
+                                <p style="font-size: var(--fs-xs);">목적에 따라 검색 방식을 선택한다. 키워드 검색은 기존 방식, AI 검색은 자연어 질문 기반 탐색이다.</p>
+                            </div>
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">
+                                    5개
+                                    <span
+                                        class="term"
+                                        data-def="검색 결과를 여러 속성 기준으로 좁혀나가는 UI. 도서관 목록의 주제·언어·연도 필터와 같은 원리"
+                                        >패싯 필터</span
+                                    >
+                                </p>
+                                <p style="font-size: var(--fs-xs);">ITEM타입 · 간행물 · 주제분류 · 시기분류 · 공공누리. §4에서 설계한 택소노미가 실제 필터로 작동한다.</p>
+                            </div>
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">AI 인용 출처</p>
+                                <p style="font-size: var(--fs-xs);">답변의 근거가 된 원문으로 직접 연결한다. AI 응답을 내부 문서에 고정하고, 사용자가 근거를 검증할 수 있게 한다.</p>
+                            </div>
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">
+                                    브레드크럼(Breadcrumb)
+                                </p>
+                                <p style="font-size: var(--fs-xs);">ITEM 타입 뱃지와 서비스 경로를 함께 표시한다. 자료가 어떤 맥락에 놓여 있는지 보여준다.</p>
+                            </div>
+                            <div class="card" style="border-left: 3px solid var(--accent);">
+                                <p style="font-size: var(--fs-xs); color: var(--muted); margin: 0;">
+                                    답변 자체가 목적이 아니다. AI 검색의 목적은 신뢰할 수 있는 원자료로 가는 경로를 만드는 것이다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

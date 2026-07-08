@@ -1,0 +1,81 @@
+<section class="slide" id="s12">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        03 &nbsp;|&nbsp; <strong>검색 경험의 (재)구성</strong>
+                    </p>
+                    <h2 class="slide-title">보이는 것과 찾을 수 있는 것</h2>
+                </header>
+                <div class="slide-body" style="gap: 1.2vw;">
+                    <p>서울연구데이터서비스는 연구 결과물을 웹에서 보여주는 것을 먼저 해결해야 했다. 콘텐츠는 그 목적에 맞게 게시됐고, 자연스럽게 쌓였다. 검색은 그 뒤를 따라가야 하는 과제였다.</p>
+                    <div class="two-col" style="align-items: start; gap: 2vw;">
+                        <div>
+                            <h4 style="margin-bottom: 0.6vw;">화면에는 있지만 검색되지 않는 콘텐츠</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>유형</th>
+                                        <th>게시 방식</th>
+                                        <th>색인에 포함되지 않는 이유</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Quarto / R 기반 HTML 리포트</td>
+                                        <td>iframe 삽입</td>
+                                        <td>JavaScript로 동적 렌더링 → 수집 시점에 본문이 비어 있음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PDF 첨부파일</td>
+                                        <td>파일 첨부</td>
+                                        <td>파일 내용을 텍스트로 추출해 색인에 넣는 과정이 별도로 필요</td>
+                                    </tr>
+                                    <tr>
+                                        <td>경관기록사진 (36,000장+)</td>
+                                        <td>이미지 업로드</td>
+                                        <td>이미지 자체는 텍스트가 없음 → 메타데이터가 있어야 검색 가능</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.6vw;">하나의 연구, 실제 구조 <a href="https://data.si.re.kr/node/65450" target="_blank" style="font-weight: normal; font-size: var(--fs-xs); color: var(--muted);">↗ 서울도시기본계획 모니터링 2024</a></h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>구성 요소</th>
+                                        <th>게시 방식</th>
+                                        <th>색인</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>메인 허브 페이지</td>
+                                        <td>레이아웃 빌더</td>
+                                        <td>○</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도시진단 리포트</td>
+                                        <td>외부 HTML → iframe</td>
+                                        <td style="color: var(--muted);">✕</td>
+                                    </tr>
+                                    <tr>
+                                        <td>세부 분석 9편</td>
+                                        <td>각각 독립 노드</td>
+                                        <td>○</td>
+                                    </tr>
+                                    <tr>
+                                        <td>소개·아카이브</td>
+                                        <td>각각 독립 노드</td>
+                                        <td>○</td>
+                                    </tr>
+                                    <tr>
+                                        <td>과거 연도 보고서</td>
+                                        <td>PDF 파일 첨부</td>
+                                        <td style="color: var(--muted);">✕</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>

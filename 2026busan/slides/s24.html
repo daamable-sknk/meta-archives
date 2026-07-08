@@ -1,0 +1,69 @@
+<section class="slide" id="s24">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        05 &nbsp;|&nbsp; <strong>AI 통합검색 구현</strong>
+                    </p>
+                    <h2 class="slide-title">사진 메타데이터 AI 생성</h2>
+                </header>
+                <div class="slide-body">
+                    <div class="two-col" style="align-items: stretch;">
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            "
+                        >
+                            <div
+                                style="
+                                    height: calc(100vh - 20vw);
+                                    width: 100%;
+                                    overflow-y: auto;
+                                    border: 1px solid var(--rule);
+                                "
+                            >
+                                <img
+                                    src="assets/si-search-photo.png"
+                                    alt="「사진으로 본 서울」 AI 생성 디스크립션과 통합검색 결과 화면"
+                                    style="width: 100%; height: auto; display: block;"
+                                />
+                            </div>
+                            <p
+                                class="fig-caption"
+                                style="text-align: center; margin-top: 0.4vw;"
+                            >
+                                서울연구데이터서비스 「사진으로 본 서울」
+                            </p>
+                        </div>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.4vw;
+                            "
+                        >
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">① 문제 · 텍스트 없는 자료</p>
+                                <p style="font-size: var(--fs-xs);">경관기록사진 3만 장+. 촬영정보·형식 중심의 메타데이터는 있었지만, 장면의 주제·내용으로는 검색되지 않았다.</p>
+                            </div>
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">② AI 메타데이터 생성</p>
+                                <p style="font-size: var(--fs-xs);">AI가 이미지를 분석해 장면·주제를 담은 <strong>디스크립션 문단</strong>과 <strong>키워드 태그</strong>를 생성한다.</p>
+                            </div>
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">③ 색인 · 통합검색 편입</p>
+                                <p style="font-size: var(--fs-xs);">생성된 설명을 <span class="term" data-def="4개 ES 인덱스(si·photo·static_html·documents) 중 사진 전용 인덱스">photo 인덱스</span>에 색인한다. 사진이 문서·통계 자료와 같은 검색 결과에 함께 노출된다.</p>
+                            </div>
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">④ AI 생성 명시</p>
+                                <p style="font-size: var(--fs-xs);">사진 화면에 "AI 분석 정보 · 자동 생성됨"을 표기한다. 설명의 출처를 드러내고, 이용자가 AI 기술임을 알 수 있게 한다.</p>
+                            </div>
+                            <div class="card" style="border-left: 3px solid var(--accent);">
+                                <p style="font-size: var(--fs-xs); color: var(--muted); margin: 0;">
+                                    검색 가능한 데이터가 되려면 먼저 설명 가능한 데이터가 되어야 한다. AI가 기술한 내용을 검색에 편입하고, 그것이 AI 생성물임을 밝힌 것이 이 작업의 핵심이다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

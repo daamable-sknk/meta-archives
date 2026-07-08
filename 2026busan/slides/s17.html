@@ -1,0 +1,83 @@
+<section class="slide" id="s17">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        04 &nbsp;|&nbsp;
+                        <strong>정보구조 재설계</strong>
+                    </p>
+                    <h2 class="slide-title">분류 체계 재정비</h2>
+                </header>
+                <div class="slide-body">
+                    <div
+                            style="
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 1.2vw;
+                                flex: 1;
+                            "
+                    >
+                        <div
+                            class="card"
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.5vw;
+                            "
+                        >
+                            <p class="card-label">① 택소노미(Taxonomy): 통제어휘 재구성</p>
+                            <p>
+                                택소노미(Taxonomy)는 '계층적 분류 체계'를 뜻하는 학술적 개념이다.<br />Drupal CMS에서는 <strong>어휘집(vocabulary)</strong>과 <strong>용어(term)</strong>를 설계하는 분류 모듈 이름으로 사용된다.
+                            </p>
+                            <p>
+                                택소노미는 콘텐츠타입 필드로 사용되지만, <strong>외부에서 독립적으로 관리</strong>되므로 여러 콘텐츠타입이 공통 어휘를 함께 사용할 수 있으며 각 항목의 변경도 용이하다. 또한, 패싯(facet) 필드에 직접적으로 사용할 수 있다.
+                            </p>
+                            <p>
+                                이번 프로젝트에는 <strong>주제분류·시기분류</strong> 2개 필드를 택소노미로 구성하고, 모든 콘텐츠타입 필드에 포함했다.
+                            </p>
+                            <p style="font-size: var(--fs-xs);">
+                                주제분류 18개: 인구가구 · 주택 · 교통 · 환경 등
+                            </p>
+                            <p style="font-size: var(--fs-xs);">
+                                시기분류 4개: 1990년대 이전 · 2000년대 · 2010년대 · 2020년대
+                            </p>
+                        </div>
+                        <div
+                            class="card"
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.5vw;
+                            "
+                        >
+                             <p class="card-label">② GNB 대메뉴 재편</p>
+                             <p>
+                                 성격이 다른 콘텐츠들이 하나의 대메뉴 아래 묶여 있어 사용자의 <strong>진입점이 좁았다.</strong><br>
+                                 각 콘텐츠의 <strong>의미적·내용적 구분</strong>을 기준으로 <strong>대메뉴를 분리해 재구성했다.</strong>
+                             </p>
+                             <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.3vw 0.8vw; font-size: var(--fs-xs); background: var(--card-bg); padding: 0.5vw 0.8vw; border-radius: 3px; line-height: 1.7;">
+                                 <div style="color: var(--muted);">AS-IS</div>
+                                 <div></div>
+                                 <div style="color: var(--muted);">TO-BE</div>
+                                 <div>데이터로 본 서울<br>
+                                     <span style="padding-left: 0.8em; color: var(--muted);">├ 조사데이터</span><br>
+                                     <span style="padding-left: 0.8em; color: var(--muted);">├ 모니터링 리포트</span><br>
+                                     <span style="padding-left: 0.8em; color: var(--muted);">└ 근현대유산 등</span><br>
+                                     사진으로 본 서울<br>
+                                     이용안내
+                                 </div>
+                                 <div style="display: flex; align-items: center; color: var(--muted);">→</div>
+                                 <div>모니터링 서울<br>
+                                     데이터로 본 서울<br>
+                                     조사데이터<br>
+                                     사진으로 본 서울
+                                 </div>
+                             </div>
+                             <p>
+                                 <strong>콘텐츠타입 재정의의 결과</strong>가 메뉴 구조에 반영된 것이다.
+                                 유형별로 <strong>독립된 진입점</strong>이 생기면서 사용자는 원하는 콘텐츠 종류를 <strong>대메뉴 수준에서 바로 선택</strong>할 수 있게 됐다.
+                             </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- [1] Drupal의 Taxonomy는 taxonomy(분류학)에서 차용. 사용자가 자유롭게 태그를 붙이는 folksonomy와 구별된다. -->
+            </section>

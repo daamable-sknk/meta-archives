@@ -1,0 +1,85 @@
+<section class="slide" id="s16">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        04 &nbsp;|&nbsp;
+                        <strong>정보구조 재설계</strong>
+                    </p>
+                    <h2 class="slide-title">콘텐츠타입 재설계</h2>
+                </header>
+                <div class="slide-body">
+                     <p style="font-size: var(--fs-sm);">
+                         <span class="term term-below" data-def="콘텐츠 관리 시스템(CMS)에서 콘텐츠의 유형을 정의하는 틀. 유형마다 다른 필드 구성을 가진다. 보고서 유형에는 PDF 첨부 필드, 사진 유형에는 이미지 파일 필드가 붙는 식이다. 서울연구데이터서비스는 Drupal CMS 기반으로 운영된다."><strong>콘텐츠타입</strong></span>은 아이템의 메타데이터를 구성하는 엔티티 타입이다. 아이템을 재구성한다는 것은 결국 각 콘텐츠타입의 필드를 다시 정리하고 정의하는 일이다.
+                     </p>
+                    <div class="two-col" style="align-items: stretch; flex: 1;">
+                        <!-- 왼쪽: 표 + 수치 -->
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.8vw;
+                            "
+                        >
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <thead>
+                                    <tr>
+                                        <th style="padding: 0.45vw 0.7vw; background: #f0f0f0; font-size: var(--fs-xs); font-weight: 600; text-align: left; width: 26%;">구분</th>
+                                        <th style="padding: 0.45vw 0.7vw; background: #f0f0f0; font-size: var(--fs-xs); font-weight: 600; text-align: left;">기존</th>
+                                        <th style="padding: 0.45vw 0.7vw; background: #f0f0f0; font-size: var(--fs-xs); font-weight: 600; text-align: left;">재설계 후</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs); color: var(--muted);">콘텐츠 유형 수</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);">15개 (일부 미사용)</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);"><strong>5개</strong> 핵심 유형</td>
+                                    </tr>
+                                    <tr style="background: #fafafa;">
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs); color: var(--muted);">필드 구성</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);">유형마다 제각각</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);">고유 필드 유지 + 공통 <strong>8개</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs); color: var(--muted);">기술 기준</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);">유형별로 달라 통일 없음</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);"><strong>8개</strong> 공통 필드로 통일</td>
+                                    </tr>
+                                    <tr style="background: #fafafa;">
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs); color: var(--muted);">통합검색 패싯</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);">공통 축 없음</td>
+                                        <td style="padding: 0.6vw 0.7vw; border-top: 1px solid #e0e0e0; font-size: var(--fs-xs);"><strong>5개</strong> 공통 패싯</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div style="display: flex; flex-direction: column; gap: 0.4vw;">
+                                <p style="font-size: var(--fs-sm);">통합검색에서 모든 유형의 아이템을 한 번에 검색하려면, 각 콘텐츠타입의 개체적 특성을 기술하는 고유 필드만으로는 부족하다. 
+                                    <strong>유형을 가로질러 공통으로 적용할 수 있는 메타 요소</strong>가 있어야 <strong>패싯(facet)</strong> 검색이 가능해진다. 이 공통 요소가 그 역할을 한다.</p>
+                            </div>
+                        </div>
+                        <!-- 오른쪽: 이미지만 -->
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: flex-start;
+                                gap: 0.5vw;
+                            "
+                        >
+                            <img
+                                src="assets/contents-type-reframe.png"
+                                alt="제각각이던 콘텐츠타입의 필드를 공통 필드로 규격화해 통합검색 패싯으로 모으는 과정"
+                                style="
+                                    width: 72%;
+                                    height: auto;
+                                    display: block;
+                                    mix-blend-mode: multiply;
+                                "
+                            />
+                            <div class="fig-caption" style="text-align: center;">
+                                유형마다 달랐던 필드 구성을 공통 구조로 규격화해 통합검색 패싯으로 모으는 과정<br>
+                                <strong>AI 생성 이미지</strong> (ChatGPT)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

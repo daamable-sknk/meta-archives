@@ -1,0 +1,91 @@
+<section class="slide" id="s20">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        05 &nbsp;|&nbsp; <strong>AI 통합검색 구현</strong>
+                    </p>
+                    <h2 class="slide-title">LLM은 어떻게 작동하는가</h2>
+                </header>
+                <div class="slide-body">
+                    <div class="two-col">
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.6vw;
+                            "
+                        >
+                            <div>
+                                <h4>언어 모델(Language Model)</h4>
+                                <p style="font-size: var(--fs-sm)">
+                                    이미 사용된 언어의 패턴을 학습하여,
+                                    단어와 단어 사이에 어떤 관계가 있는지를
+                                    수없이 관찰하고, 그 구조를 수치
+                                    벡터(좌표)로 변환하는 것을 말한다.
+                                </p>
+                                <p style="font-size: var(--fs-sm)">
+                                    "사느냐 죽느냐 그것이 ___"에서
+                                    "문제로다"를 예측하는 것도
+                                    의미를 이해해서가 아니다.
+                                </p>
+                            </div>
+                            <p style="font-size: var(--fs-sm)">
+                                <strong>즉, LLM이 하는 일은 언어를 이해하여 그럴듯한 답을 내놓는 것이 아니라, 구조화된 언어의 패턴 속 확률을 예측하는 것이다.</strong>
+                            </p>
+                            <div>
+                                <h4>대형(Large)</h4>
+                                <p style="font-size: var(--fs-sm)">
+                                    파라미터 수가 수천억 개 이상이 되어
+                                    그 규모가 임계점을 넘어서면, 패턴 인식이
+                                    질적으로 달라진다. 더 많이 아는 것이
+                                    아니라, 할 수 있는 것이 달라진다.
+                                    문맥 파악, 유추, 요약이 가능해지는 것은
+                                    그 이후다.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 0.7vw;
+                            "
+                        >
+                            <div>
+                                <h4>정보검색과의 연결</h4>
+                                <p style="font-size: var(--fs-sm)">
+                                    전통적 정보검색이 색인어의 일치를 찾는
+                                    체계라면, LLM은 단어들 사이의 관계를
+                                    학습한 <strong>의미 공간</strong> 위에서 작동한다.
+                                    예컨대, "청년 주거 문제"라고 검색해도
+                                    "1인 가구", "주거실태조사"로 색인된
+                                    자료는 찾을 수 없는 문제를, LLM은
+                                     <strong>의미적 거리 계산</strong><sup>*</sup>으로
+                                     넘어설 수 있다.
+                                </p>
+                                <p style="margin-top: 0.5vw; font-size: var(--fs-sm)">
+                                    LLM은 사실을 아는 것이 아니라
+                                    <strong>그럴듯한 문장을 만드는 것</strong>이다.
+                                    이 말은, 근거 없이도 자신 있게 틀린
+                                    답을 내놓을 수 있다는 것이다. 이것이
+                                      <strong>할루시네이션</strong><sup>**</sup>의
+                                     근본 원인이고,
+                                     <strong>RAG</strong><sup>***</sup>가
+                                    필요한 이유다.
+                                </p>
+                                <p style="margin-top: 0.5vw; font-size: var(--fs-sm)">
+                                    따라서 연구데이터서비스에서 LLM을
+                                    쓰려면 반드시 해결해야 할 문제가 생긴다.
+                                    <strong>어떻게 답변의 근거를 내부 자료에
+                                    고정할 것인가.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-top: 1px solid #ccc; margin-top: 0.8vw; padding-top: 0.3vw; font-size: var(--fs-xs); color: var(--muted);">
+                        <sup>*</sup> 벡터 공간에서 단어 간 의미적 유사도를 거리로 계산하는 방식<br>
+                        <sup>**</sup> 할루시네이션(Hallucination): LLM이 사실 근거 없이 자신 있게 틀린 정보를 생성하는 현상<br>
+                        <sup>***</sup> RAG(Retrieval-Augmented Generation): 답변 생성 전 관련 문서를 검색해 근거로 삼는 방식
+                    </div>
+                </div>
+            </section>

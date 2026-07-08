@@ -1,0 +1,72 @@
+<section class="slide" id="s22">
+                <header class="slide-header">
+                    <p class="breadcrumb">
+                        05 &nbsp;|&nbsp; <strong>AI 통합검색 구현</strong>
+                    </p>
+                    <h2 class="slide-title">제약 조건과 기술 선택</h2>
+                </header>
+                <div class="slide-body">
+                    <p style="font-size: var(--fs-sm); margin-bottom: 1vw;">
+                        AI를 <span
+                            class="term"
+                            data-def="클라우드가 아닌 기관 자체 서버에서 운영하는 방식"
+                            >온프레미스</span
+                        >에서 구동하려면 고성능 GPU 서버가 필요하다. 하지만 이 인프라는 기능 개선 사업의 범위를 넘어섰다. 그래서 우리는 가진 것 위에서 작동하는 AI 검색을 선택했다.
+                    </p>
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            gap: 1.2vw;
+                            align-items: stretch;
+                        "
+                    >
+                        <div class="card" style="display: flex; flex-direction: column; gap: 0.5vw;">
+                            <p class="card-label" style="margin-bottom: 0;">① 검색층</p>
+                            <p style="font-size: var(--fs-base); font-weight: 700; line-height: 1.3;">가진 것을 지켰다</p>
+                            <p style="font-size: var(--fs-sm); line-height: 1.5;">
+                                기존 Elasticsearch 검색 구조를 유지했다. Nori 형태소 분석, 유의어 사전, 4개 인덱스 동시 검색을 활용하고, Apache Tika와 PageIndex로 본문 추출 범위를 확장했다.
+                            </p>
+                            <p style="font-size: var(--fs-xs); margin-top: auto;">
+                                <span style="color: var(--muted);">비용</span> 추가 인프라 비용 없음
+                            </p>
+                        </div>
+                        <div class="card" style="display: flex; flex-direction: column; gap: 0.5vw;">
+                            <p class="card-label" style="margin-bottom: 0;">② 생성층</p>
+                            <p style="font-size: var(--fs-base); font-weight: 700; line-height: 1.3;">빌려 썼다</p>
+                            <p style="font-size: var(--fs-sm); line-height: 1.5;">
+                                자체 GPU 서버 대신 OpenAI GPT-4o API를 사용했다. LLM은 답을 처음부터 만들어내는 것이 아니라, 사용자 질의 확장과 검색 결과 해석에 사용했다.
+                            </p>
+                            <p style="font-size: var(--fs-xs); margin-top: auto;">
+                                <span style="color: var(--muted);">비용</span> 호출량 기반 과금
+                            </p>
+                        </div>
+                        <div class="card" style="display: flex; flex-direction: column; gap: 0.5vw;">
+                            <p class="card-label" style="margin-bottom: 0;">③ 운영층</p>
+                            <p style="font-size: var(--fs-base); font-weight: 700; line-height: 1.3;">통제했다</p>
+                            <p style="font-size: var(--fs-sm); line-height: 1.5;">
+                                API 키 노출과 비용 증가를 막기 위해 Drupal 서버를 경유하는 LLM Proxy 구조를 두었다. Rate Limit과 일일 예산 상한을 설정해 운영 비용을 통제했다.
+                            </p>
+                            <p style="font-size: var(--fs-xs); margin-top: auto;">
+                                <span style="color: var(--muted);">비용 상한</span> $20/일
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        style="
+                            margin-top: 1vw;
+                            padding: 0.9vw 1.2vw;
+                            background: var(--card-bg);
+                            border-left: 0.25vw solid var(--accent);
+                            border-radius: var(--radius);
+                        "
+                    >
+                        <p style="font-size: var(--fs-sm); line-height: 1.55;">
+                            이것은 제약의 목록이 아니라 <strong>1단계 구성안</strong>이다. 기존 검색 구조 위에 최소한의 LLM 레이어를 얹어 작동하는 RAG를 만들었다. 다음 단계는 <span class="term" data-def="텍스트를 수치 벡터로 변환해 의미적 유사도로 검색하는 방식">벡터 임베딩</span> 기반 의미 검색이다. 확보된 AI 메타데이터와 문서 데이터를 벡터화하면, LLM 호출 없이도 의미 검색이 가능해진다.
+                        </p>
+                        <p style="font-size: var(--fs-base); font-weight: 700; line-height: 1.4; margin-top: 0.6vw;">
+                            모델을 소유하지 않아도, 검색 구조를 통제하면 AI 검색은 구현할 수 있다.
+                        </p>
+                    </div>
+                </div>
+            </section>
