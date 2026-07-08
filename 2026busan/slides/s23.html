@@ -6,17 +6,20 @@
                     <h2 class="slide-title">AI 통합검색 화면</h2>
                 </header>
                 <div class="slide-body">
-                    <div class="two-col" style="align-items: stretch;">
+                    <div class="two-col" style="align-items: stretch; grid-template-rows: 100%; min-height: 0;">
                         <div
                             style="
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+                                min-height: 0;
+                                overflow: hidden;
                             "
                         >
                             <div
                                 style="
-                                    height: calc(100vh - 20vw);
+                                    flex: 1 1 0;
+                                    min-height: 0;
                                     width: 100%;
                                     overflow-y: auto;
                                     border: 1px solid var(--rule);
@@ -30,9 +33,9 @@
                             </div>
                             <p
                                 class="fig-caption"
-                                style="text-align: center; margin-top: 0.4vw;"
+                                style="text-align: center; margin-top: 0.4vw; flex-shrink: 0;"
                             >
-                                서울연구데이터서비스 통합검색 구성(안)
+                                서울연구데이터서비스 AI 통합검색
                             </p>
                         </div>
                         <div
@@ -40,6 +43,8 @@
                                 display: flex;
                                 flex-direction: column;
                                 gap: 0.4vw;
+                                min-height: 0;
+                                overflow-y: auto;
                             "
                         >
                             <div class="card" style="padding: 0.5vw 0.8vw;">
@@ -56,6 +61,10 @@
                                     >
                                 </p>
                                 <p style="font-size: var(--fs-xs);">ITEM타입 · 간행물 · 주제분류 · 시기분류 · 공공누리. §4에서 설계한 택소노미가 실제 필터로 작동한다.</p>
+                            </div>
+                            <div class="card" style="padding: 0.5vw 0.8vw;">
+                                <p class="card-label" style="margin-bottom: 0.1vw;">결과 부족 시 AI 대체 검색어</p>
+                                <p style="font-size: var(--fs-xs);">결과가 적으면 AI가 유사 검색어를 추출해 재검색·제시한다. 확장 키워드 생성 프롬프트는 관리자가 직접 튜닝한다.</p>
                             </div>
                             <div class="card" style="padding: 0.5vw 0.8vw;">
                                 <p class="card-label" style="margin-bottom: 0.1vw;">AI 인용 출처</p>

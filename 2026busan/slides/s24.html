@@ -6,17 +6,20 @@
                     <h2 class="slide-title">사진 메타데이터 AI 생성</h2>
                 </header>
                 <div class="slide-body">
-                    <div class="two-col" style="align-items: stretch;">
+                    <div class="two-col" style="align-items: stretch; grid-template-rows: 100%; min-height: 0;">
                         <div
                             style="
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+                                min-height: 0;
+                                overflow: hidden;
                             "
                         >
                             <div
                                 style="
-                                    height: calc(100vh - 20vw);
+                                    flex: 1 1 0;
+                                    min-height: 0;
                                     width: 100%;
                                     overflow-y: auto;
                                     border: 1px solid var(--rule);
@@ -30,7 +33,7 @@
                             </div>
                             <p
                                 class="fig-caption"
-                                style="text-align: center; margin-top: 0.4vw;"
+                                style="text-align: center; margin-top: 0.4vw; flex-shrink: 0;"
                             >
                                 서울연구데이터서비스 「사진으로 본 서울」
                             </p>
@@ -40,6 +43,8 @@
                                 display: flex;
                                 flex-direction: column;
                                 gap: 0.4vw;
+                                min-height: 0;
+                                overflow-y: auto;
                             "
                         >
                             <div class="card" style="padding: 0.5vw 0.8vw;">
