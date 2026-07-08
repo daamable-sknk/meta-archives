@@ -65,44 +65,36 @@
                                     text-align: center;
                                     display: flex;
                                     flex-direction: column;
-                                    gap: 1.2vw;
+                                    gap: 0.35vw;
+                                    width: 100%;
+                                    max-width: 22vw;
+                                    margin: 0 auto;
                                 "
                             >
-                                <div class="card" style="padding: 1vw 1.5vw">
-                                    <p
-                                        style="
-                                            font-size: var(--fs-xs);
-                                            color: var(--muted);
-                                        "
-                                    >
-                                    기존 검색도구 (정적)
-                                    </p>
-                                    <p>"컬렉션 안내 문서를 읽어보세요"</p>
+                                <div style="padding: 0.35vw 0.65vw; border: 1px solid #e0e0e0; border-radius: 2px; background: #fafafa; text-align: left;">
+                                    <p style="font-size: var(--fs-xs); color: var(--muted); margin: 0 0 0.15vw;">검색어 입력</p>
+                                    <p style="margin: 0; font-size: var(--fs-xs);">"청년 주거"</p>
                                 </div>
-                                <p style="color: var(--muted-light)">↓</p>
+                                <p style="color: var(--muted-light); margin: 0; font-size: var(--fs-xs); line-height: 1;">↓</p>
+                                <div class="card" style="padding: 0.45vw 0.7vw; text-align: left;">
+                                    <p style="font-size: var(--fs-xs); color: var(--muted); margin: 0 0 0.2vw;">기존 검색</p>
+                                    <p style="margin: 0; font-size: var(--fs-xs); line-height: 1.45;">
+                                        형태소 분석 → <strong>청년</strong> + <strong>주거</strong><br />
+                                        색인 DB에서 키워드 매칭<br />
+                                        <span style="color: var(--muted);">→ 검색어(단어)가 포함된 문서</span>
+                                    </p>
+                                </div>
+                                <p style="color: var(--muted-light); margin: 0; font-size: var(--fs-xs); line-height: 1;">↓</p>
                                 <div
                                     class="card"
-                                    style="
-                                        padding: 1vw 1.5vw;
-                                        border: 1.5px solid var(--accent);
-                                    "
+                                    style="padding: 0.45vw 0.7vw; border: 1.5px solid var(--accent); text-align: left;"
                                 >
-                                    <p
-                                        style="
-                                            font-size: var(--fs-xs);
-                                            color: var(--muted);
-                                        "
-                                    >
-                                        AI 검색 (검색도구의 확장)
-                                    </p>
-                                    <p>
-                                        "서울 청년 주거 연구가 있나요?"<br /><span
-                                            style="
-                                                color: var(--muted);
-                                                font-size: var(--fs-xs);
-                                            "
-                                            >→ "이런 자료들이 있습니다"</span
-                                        >
+                                    <p style="font-size: var(--fs-xs); color: var(--muted); margin: 0 0 0.2vw;">AI 검색</p>
+                                    <p style="margin: 0; font-size: var(--fs-xs); line-height: 1.45;">
+                                        검색어의 <strong>의도·맥락</strong> 분석<br />
+                                        <span style="color: var(--muted);">「청년 주거 문제」를 찾는 질문</span><br />
+                                        → <strong>청년가구 · 1인가구 · 주거실태 · 임대차</strong><br />
+                                        <span style="color: var(--muted);">연관 주제·자료로 확장</span>
                                     </p>
                                 </div>
                             </div>
