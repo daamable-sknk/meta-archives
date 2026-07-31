@@ -4,6 +4,29 @@ meta-archives.xyz 프로젝트의 작업 내역을 기록합니다.
 
 ---
 
+## 2026-07-31
+
+### 「기록을 볼 권리, 기록과의 거리를 조절할 권리」 에세이 작성 및 발행
+
+**새 콘텐츠**
+- 에세이 작성: `content/posts/the-right-to-distance.md`
+- 메타데이터 작성: `data/posts/the-right-to-distance.yml`
+- HTML 빌드: `posts/the-right-to-distance/index.html`
+- 이미지 추가: `assets/images/prov-bulletin-board.jpg`, `assets/images/prov-upset-by-archives-poster.jpg`
+- `index.html`에 에세이 항목 추가
+
+**글 구조 (5개 섹션 + 각주 7개)**
+1. "읽고 있는 기록 때문에 힘드신가요?" — 멜버른 PROV 게시판의 가족사 리서처 명함과 vicarious trauma 안내
+2. 기록은 사람을 흔들 수 있다 — Stolen Generations·Acknowledgement of Country·Laurent & Wright(2021)
+3. 접근성의 강조가 놓치는 거리 — 열어 주는 접근성 / 노출의 속도
+4. 거리를 설계하는 웹 — Tufts content warning·Mukurtu·기획으로서의 거리 UX
+5. 만남의 조건을 설계하는 사람 — 만남과 조우, 조건의 설계
+
+**문서 업데이트**
+- `index.html` footer 날짜 갱신 (2026.05.28 → 2026.07.31)
+
+---
+
 ## 2026-05-28
 
 ### 「분류라는 예정된 실패」 에세이 작성 및 발행
