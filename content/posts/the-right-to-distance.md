@@ -6,12 +6,12 @@
 
 한쪽에는 조상과 가족사, 군사 기록을 대신 찾아 주는 리서처들의 명함이 빼곡했다. *Unlock the Door to Your Past.* 과거로 가는 문을 열어 주겠다는 약속. 그 아래에는 지역 역사 모임의 행사 안내도 있었다.
 
-![기록관 게시판에 붙은 리서처 명함과 행사 안내. 아래쪽에 Beyond Blue 안내가 보인다.](../../assets/images/prov-bulletin-board.png)
+![기록관 게시판에 붙은 리서처 명함과 행사 안내. 아래쪽에 Beyond Blue 안내가 보인다.](../../assets/images/prov-bulletin-board.jpg)
 *PROV 열람실 게시판. 가족사·군사 기록을 찾아 주는 리서처 명함과 행사 안내 사이로, 아래쪽에 정신건강 지원(Beyond Blue) 안내가 보인다.*
 
 같은 게시판 옆면에는 다른 안내가 붙어 있었다.
 
-![「Are you feeling upset by the archives you're reading?」라고 적힌 기록관 안내 포스터.](../../assets/images/prov-upset-by-archives-poster.png)
+![「Are you feeling upset by the archives you're reading?」라고 적힌 기록관 안내 포스터.](../../assets/images/prov-upset-by-archives-poster.jpg)
 *같은 게시판의 다른 면. 읽고 있는 기록 때문에 마음이 힘드신가요? 기록에서 잠시 물러나는 방법을 안내한다.*[^0]
 
 > Are you feeling upset by the archives you're reading?
