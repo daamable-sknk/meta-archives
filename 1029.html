@@ -81,7 +81,6 @@
     .pager select { font: inherit; font-size: 0.8rem; }
     .empty, .error { color: var(--muted); padding: 1.5rem 0.5rem; }
     footer.page-foot { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); }
-    .dl-hint { font-size: 0.75rem; color: var(--muted); margin: -0.35rem 0 0.75rem; }
 
     /* modal */
     .modal-backdrop {
@@ -114,6 +113,18 @@
     }
     .modal-body p { margin: 0.4rem 0; color: var(--muted); }
     .modal-body p.lead { color: var(--text); }
+    .modal-actions {
+      display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;
+    }
+    .modal-actions button, .modal-actions a {
+      font: inherit; font-size: 0.85rem; text-align: left;
+      border: 1px solid #ccc; background: #fff; color: var(--text);
+      padding: 0.65rem 0.75rem; cursor: pointer; text-decoration: none;
+    }
+    .modal-actions button:hover, .modal-actions a:hover { background: #f5f5f5; }
+    .modal-actions button:disabled { opacity: 0.4; cursor: default; }
+    .modal-actions .opt-title { display: block; font-weight: 600; margin-bottom: 0.15rem; }
+    .modal-actions .opt-desc { display: block; font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
   </style>
 </head>
 <body>
@@ -131,11 +142,9 @@
     <div class="bar-actions">
       <input class="search" id="q" type="search" placeholder="제목·매체 검색" autocomplete="off">
       <button type="button" id="btn-rules">수집 규칙</button>
-      <button type="button" id="btn-csv-filtered" title="지금 화면에 걸린 기간·검색 결과만">현재 결과 CSV</button>
-      <a id="btn-xlsx-all" href="https://daamable-sknk.github.io/1029-news/data/1029-articles.xlsx" title="필터와 무관하게 전체 파일">전체 엑셀 · 약 9MB</a>
+      <button type="button" id="btn-download">엑셀 다운로드</button>
     </div>
   </div>
-  <p class="dl-hint" id="dl-hint">내려받기: 작업용은「현재 결과」, 보관용은「전체 엑셀」.</p>
 
   <div class="date-range" aria-label="기간">
     <label>발행일 <input type="date" id="date-from"></label>
@@ -227,9 +236,31 @@
         <h3>이 화면에서</h3>
         <ul>
           <li>발행일로 기간을 좁히거나, 제목·매체로 검색할 수 있습니다</li>
-          <li>기간·검색으로 목록을 줄인 뒤 <strong>현재 결과 CSV</strong>로 받는 걸 권합니다</li>
-          <li><strong>전체 엑셀</strong>은 약 9만 건·9MB라, 엑셀에서 열면 무거울 수 있습니다 (보관·검색용)</li>
+          <li><strong>엑셀 다운로드</strong>를 누르면 안내가 열립니다. 작업할 때는 기간을 줄인 뒤「지금 화면 결과」를, 전체 보관이 필요할 때만「전체 목록」을 고르면 됩니다</li>
         </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="download-modal" hidden role="presentation">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="download-title">
+      <div class="modal-head">
+        <h2 id="download-title">엑셀 다운로드</h2>
+        <button type="button" class="modal-close" id="download-close" aria-label="닫기">×</button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">목록이 약 9만 건이라, 한꺼번에 받으면 엑셀·스프레드시트가 느려질 수 있습니다.</p>
+        <p id="download-status">지금 화면에 걸린 결과: —</p>
+        <div class="modal-actions">
+          <button type="button" id="dl-filtered">
+            <span class="opt-title" id="dl-filtered-title">지금 화면 결과 받기 (CSV)</span>
+            <span class="opt-desc">기간·검색으로 줄인 목록만 받습니다. 일상 작업용으로 권합니다.</span>
+          </button>
+          <a id="dl-all" href="#">
+            <span class="opt-title">전체 목록 받기 (엑셀 · 약 9MB)</span>
+            <span class="opt-desc">필터와 관계없이 전량입니다. 보관·검색용으로만 쓰는 걸 권합니다.</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -283,18 +314,6 @@
       document.getElementById('page-label').textContent = `${page} / ${pages}`;
       document.getElementById('prev').disabled = page <= 1;
       document.getElementById('next').disabled = page >= pages;
-      const csvBtn = document.getElementById('btn-csv-filtered');
-      if (csvBtn) {
-        csvBtn.textContent = `현재 결과 CSV (${total.toLocaleString('ko-KR')}건)`;
-        csvBtn.disabled = total === 0;
-      }
-      const hint = document.getElementById('dl-hint');
-      if (hint) {
-        const narrowed = total < items.length;
-        hint.textContent = narrowed
-          ? `지금 ${total.toLocaleString('ko-KR')}건이 걸려 있습니다. 이만큼만 CSV로 받을 수 있어요.`
-          : '필터를 걸기 전이라 「현재 결과」도 전체와 같습니다. 기간·검색으로 줄인 뒤 받는 걸 권합니다.';
-      }
 
       const tbody = document.getElementById('tbody');
       const empty = document.getElementById('empty');
@@ -372,9 +391,8 @@
       a.download = `1029-articles-filtered-${stamp}-${list.length}건.csv`;
       a.click();
       URL.revokeObjectURL(a.href);
+      closeDownload();
     }
-
-    document.getElementById('btn-csv-filtered').addEventListener('click', downloadFilteredCsv);
 
     document.getElementById('q').addEventListener('input', (e) => {
       search = e.target.value;
@@ -406,6 +424,8 @@
     });
 
     const rulesModal = document.getElementById('rules-modal');
+    const downloadModal = document.getElementById('download-modal');
+
     function openRules() {
       rulesModal.hidden = false;
       document.getElementById('rules-close').focus();
@@ -413,17 +433,47 @@
     function closeRules() {
       rulesModal.hidden = true;
     }
+    function openDownload() {
+      const n = filtered().length;
+      const all = items.length;
+      const status = document.getElementById('download-status');
+      const title = document.getElementById('dl-filtered-title');
+      const filteredBtn = document.getElementById('dl-filtered');
+      if (status) {
+        status.textContent = n < all
+          ? `지금 화면에 걸린 결과: ${n.toLocaleString('ko-KR')}건 (전체 ${all.toLocaleString('ko-KR')}건 중)`
+          : `지금 필터가 없어 화면 결과도 전체(${all.toLocaleString('ko-KR')}건)와 같습니다. 가능하면 기간을 줄인 뒤 받으세요.`;
+      }
+      if (title) title.textContent = `지금 화면 결과 받기 (CSV · ${n.toLocaleString('ko-KR')}건)`;
+      if (filteredBtn) filteredBtn.disabled = n === 0;
+      downloadModal.hidden = false;
+      document.getElementById('download-close').focus();
+    }
+    function closeDownload() {
+      downloadModal.hidden = true;
+    }
+
     document.getElementById('btn-rules').addEventListener('click', openRules);
     document.getElementById('rules-close').addEventListener('click', closeRules);
     rulesModal.addEventListener('click', (e) => {
       if (e.target === rulesModal) closeRules();
     });
+    document.getElementById('btn-download').addEventListener('click', openDownload);
+    document.getElementById('download-close').addEventListener('click', closeDownload);
+    downloadModal.addEventListener('click', (e) => {
+      if (e.target === downloadModal) closeDownload();
+    });
+    document.getElementById('dl-filtered').addEventListener('click', downloadFilteredCsv);
+    document.getElementById('dl-all').addEventListener('click', () => { closeDownload(); });
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !rulesModal.hidden) closeRules();
+      if (e.key !== 'Escape') return;
+      if (!downloadModal.hidden) closeDownload();
+      else if (!rulesModal.hidden) closeRules();
     });
 
     async function boot() {
-      const xlsx = document.getElementById('btn-xlsx-all');
+      const xlsx = document.getElementById('dl-all');
       if (xlsx) xlsx.href = XLSX_URL;
       try {
         const res = await fetch(DATA_URL);
