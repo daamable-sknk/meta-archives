@@ -104,6 +104,17 @@
     .pager button:disabled { opacity: 0.4; cursor: default; }
     .pager select { font: inherit; font-size: 0.8rem; }
     .empty, .error { color: var(--muted); padding: 1.5rem 0.5rem; }
+    .loading {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.75rem; padding: 3rem 0.5rem; color: var(--muted); font-size: 0.85rem;
+    }
+    .loading[hidden] { display: none; }
+    .spinner {
+      width: 1.5rem; height: 1.5rem;
+      border: 2px solid #ddd; border-top-color: #111; border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
     footer.page-foot { margin-top: 2rem; }
     footer.page-foot a {
       display: inline-flex; align-items: center; gap: 0.4rem;
@@ -201,6 +212,10 @@
         <tbody id="tbody"></tbody>
       </table>
     </div>
+    <p class="loading" id="loading" role="status" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      목록을 불러오는 중…
+    </p>
     <p class="empty" id="empty" hidden>표시할 행이 없습니다.</p>
 
     <div class="pager" id="pager">
@@ -508,16 +523,25 @@
     async function boot() {
       const xlsx = document.getElementById('dl-all');
       if (xlsx) xlsx.href = XLSX_URL;
+      const loading = document.getElementById('loading');
+      const empty = document.getElementById('empty');
+      const sheetWrap = document.querySelector('.sheet-wrap');
+      const pager = document.getElementById('pager');
+      if (sheetWrap) sheetWrap.hidden = true;
+      if (pager) pager.hidden = true;
       try {
         const res = await fetch(DATA_URL);
         const data = await res.json();
         items = data.items || [];
         document.getElementById('total-count').textContent = data.meta?.total_count ?? items.length;
         document.getElementById('last-updated').textContent = fmt(data.meta?.last_updated);
+        if (loading) loading.hidden = true;
+        if (sheetWrap) sheetWrap.hidden = false;
+        if (pager) pager.hidden = false;
         render();
       } catch (err) {
         console.error(err);
-        const empty = document.getElementById('empty');
+        if (loading) loading.hidden = true;
         empty.hidden = false;
         empty.className = 'error';
         empty.textContent = '기사 목록 데이터를 불러오지 못했습니다.';
