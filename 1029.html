@@ -18,15 +18,18 @@
   <meta property="og:description" content="이태원 참사 이후 특조위·특별법·공공기록 관련 언론 기사 목록. 검색·기간 필터 후 엑셀로 내려받을 수 있습니다.">
   <meta property="og:url" content="https://meta-archives.xyz/1029.html">
   <meta property="og:locale" content="ko_KR">
-  <meta property="og:image" content="https://meta-archives.xyz/assets/og-1029.png">
+  <meta property="og:image" content="https://meta-archives.xyz/assets/og-1029.jpg">
+  <meta property="og:image:secure_url" content="https://meta-archives.xyz/assets/og-1029.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="1029 공공기록 관련 기사 목록">
+  <link rel="image_src" href="https://meta-archives.xyz/assets/og-1029.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="1029 공공기록 관련 기사 목록">
   <meta name="twitter:description" content="이태원 참사 이후 특조위·특별법·공공기록 관련 언론 기사 목록.">
-  <meta name="twitter:image" content="https://meta-archives.xyz/assets/og-1029.png">
+  <meta name="twitter:image" content="https://meta-archives.xyz/assets/og-1029.jpg">
 
   <meta name="theme-color" content="#111111">
   <meta name="color-scheme" content="light">
@@ -178,7 +181,7 @@
     <div>
       <strong id="shown-count">0</strong> / <span id="total-count">0</span>건
       <span aria-hidden="true"> · </span>
-      갱신 <span id="last-updated">—</span>
+      최신 갱신 <span id="last-updated">—</span>
     </div>
     <div class="bar-actions">
       <input class="search" id="q" type="search" placeholder="제목·매체 검색" autocomplete="off">
@@ -261,7 +264,7 @@
         <h3>어디서 가져오나요</h3>
         <ul>
           <li><strong>빅카인즈</strong>: 참사 직후부터 쌓인 과거 기사를 한꺼번에 받아 넣었습니다</li>
-          <li><strong>Google 뉴스 · 네이버 뉴스</strong>: 그 이후 새로 나오는 기사를 계속 찾습니다</li>
+          <li><strong>Google 뉴스 · 네이버 뉴스</strong>: 매일 오전 10시(한국 시간)에 새로 나온 기사를 자동으로 찾아 넣습니다</li>
         </ul>
 
         <h3>어떤 말로 찾나요</h3>
@@ -329,6 +332,23 @@
     function fmt(iso) {
       if (!iso) return '';
       return String(iso).slice(0, 10);
+    }
+
+    function fmtDateTimeKst(iso) {
+      if (!iso) return '—';
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return String(iso).replace('T', ' ').slice(0, 16);
+      const parts = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+      }).formatToParts(d);
+      const get = (t) => parts.find((p) => p.type === t)?.value || '';
+      return `${get('year')}-${get('month')}-${get('day')} ${get('hour')}:${get('minute')}`;
     }
 
     function filtered() {
@@ -534,7 +554,7 @@
         const data = await res.json();
         items = data.items || [];
         document.getElementById('total-count').textContent = data.meta?.total_count ?? items.length;
-        document.getElementById('last-updated').textContent = fmt(data.meta?.last_updated);
+        document.getElementById('last-updated').textContent = fmtDateTimeKst(data.meta?.last_updated);
         if (loading) loading.hidden = true;
         if (sheetWrap) sheetWrap.hidden = false;
         if (pager) pager.hidden = false;
