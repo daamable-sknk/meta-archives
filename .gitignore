@@ -1,3 +1,10 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# 1029 언론 스크랩은 daamable-sknk/1029-news 로 이전 — 여기엔 올리지 않음
+data/1029-articles.json
+data/1029-articles.xlsx
+scripts/1029_*
+scripts/requirements-1029.txt
+.github/workflows/1029-collect.yml
