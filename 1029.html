@@ -2,13 +2,445 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=https://daamable-sknk.github.io/1029-news/">
-  <link rel="canonical" href="https://daamable-sknk.github.io/1029-news/">
-  <title>1029 기사 목록 — 이전됨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1029 공공기록 관련 기사 목록</title>
+  <meta name="description" content="1029 이태원 참사 공공기록 관련 언론 기사 목록">
+  <link rel="canonical" href="https://meta-archives.xyz/1029.html">
+  <style>
+    :root { --bg: #fff; --text: #111; --muted: #666; --border: #111; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem; line-height: 1.6; color: var(--text); background: var(--bg);
+      max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 4rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1 { font-size: 1rem; font-weight: 600; }
+    a { color: var(--text); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page-kicker { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.25rem; }
+    .bar {
+      display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem;
+      align-items: center; justify-content: space-between;
+      margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--muted);
+    }
+    .bar strong { color: var(--text); font-weight: 600; }
+    .bar-actions { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+    .bar-actions a, .bar-actions button, .pager button {
+      font: inherit; font-size: 0.8rem;
+      border: 1px solid #ccc; background: #fff; color: var(--text);
+      padding: 0.2rem 0.55rem; cursor: pointer; text-decoration: none;
+    }
+    .bar-actions a:hover, .bar-actions button:hover,
+    .pager button:hover:not(:disabled) { background: #f5f5f5; }
+    .search {
+      font: inherit; font-size: 0.85rem; border: 1px solid #ccc;
+      padding: 0.25rem 0.5rem; min-width: 12rem; flex: 1; max-width: 20rem;
+    }
+    .date-range {
+      display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem;
+      align-items: center; margin-bottom: 0.75rem; font-size: 0.8rem; color: var(--muted);
+    }
+    .date-range input[type="date"] {
+      font: inherit; font-size: 0.8rem; border: 1px solid #ccc; padding: 0.2rem 0.35rem;
+    }
+    .date-range button {
+      font: inherit; font-size: 0.8rem; border: 1px solid #ccc; background: #fff;
+      padding: 0.2rem 0.5rem; cursor: pointer;
+    }
+    .sheet-wrap { overflow-x: auto; border: 1px solid #ccc; }
+    table.sheet {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.8rem; line-height: 1.35;
+    }
+    table.sheet th, table.sheet td {
+      border-bottom: 1px solid #e5e5e5; border-right: 1px solid #eee;
+      padding: 0.35rem 0.5rem; vertical-align: top; text-align: left;
+    }
+    table.sheet th {
+      background: #f3f3f3; font-weight: 600; white-space: nowrap;
+      position: sticky; top: 0; z-index: 1;
+    }
+    table.sheet tr:nth-child(even) td { background: #fafafa; }
+    table.sheet tr:hover td { background: #f0f4f8; }
+    table.sheet .col-date { white-space: nowrap; width: 6.5rem; }
+    table.sheet .col-author { width: 6rem; }
+    table.sheet .col-pub { width: 6.5rem; }
+    table.sheet .col-url { width: 4.5rem; white-space: nowrap; }
+    table.sheet .col-note { width: 8rem; }
+    table.sheet .col-q { width: 3.2rem; color: #888; white-space: nowrap; }
+    table.sheet a { color: var(--text); }
+    table.sheet a.url { color: #336; }
+    .pager {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+      justify-content: space-between; margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted);
+    }
+    .pager .pages { display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center; }
+    .pager button:disabled { opacity: 0.4; cursor: default; }
+    .pager select { font: inherit; font-size: 0.8rem; }
+    .empty, .error { color: var(--muted); padding: 1.5rem 0.5rem; }
+    footer.page-foot { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); }
+    .dl-hint { font-size: 0.75rem; color: var(--muted); margin: -0.35rem 0 0.75rem; }
+
+    /* modal */
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(0,0,0,.35);
+      display: flex; align-items: center; justify-content: center;
+      padding: 1.25rem; z-index: 100; 
+    }
+    .modal-backdrop[hidden] { display: none; }
+    .modal {
+      background: #fff; max-width: 36rem; width: 100%; max-height: min(85vh, 40rem);
+      overflow: auto; border: 1px solid var(--border); padding: 1.25rem 1.35rem 1.5rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    }
+    .modal-head {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 1rem; margin-bottom: 1rem;
+    }
+    .modal-head h2 { font-size: 1.1rem; font-weight: 600; margin: 0; }
+    .modal-close {
+      font: inherit; font-size: 1.25rem; line-height: 1; border: none;
+      background: transparent; cursor: pointer; color: var(--muted); padding: 0 0.15rem;
+    }
+    .modal-body { font-size: 0.875rem; line-height: 1.55; color: var(--text); }
+    .modal-body h3 { font-size: 0.9rem; margin: 1.1rem 0 0.4rem; font-weight: 600; }
+    .modal-body h3:first-child { margin-top: 0; }
+    .modal-body ul, .modal-body ol { margin: 0.35rem 0 0.5rem 1.2rem; padding: 0; }
+    .modal-body li { margin: 0.2rem 0; }
+    .modal-body code {
+      font-size: 0.8em; background: #f3f3f3; padding: 0.05rem 0.3rem;
+    }
+    .modal-body p { margin: 0.4rem 0; color: var(--muted); }
+    .modal-body p.lead { color: var(--text); }
+  </style>
 </head>
 <body>
-  <p>1029 언론 기사 목록은
-    <a href="https://daamable-sknk.github.io/1029-news/">daamable-sknk.github.io/1029-news</a>
-    로 옮겼습니다.</p>
+  <p class="page-kicker"><a href="index.html">meta-archives.xyz</a> / 1029</p>
+  <header>
+    <h1>1029 공공기록 관련 기사 목록</h1>
+  </header>
+
+  <div class="bar">
+    <div>
+      <strong id="shown-count">0</strong> / <span id="total-count">0</span>건
+      <span aria-hidden="true"> · </span>
+      갱신 <span id="last-updated">—</span>
+    </div>
+    <div class="bar-actions">
+      <input class="search" id="q" type="search" placeholder="제목·매체 검색" autocomplete="off">
+      <button type="button" id="btn-rules">수집 규칙</button>
+      <button type="button" id="btn-csv-filtered" title="지금 화면에 걸린 기간·검색 결과만">현재 결과 CSV</button>
+      <a id="btn-xlsx-all" href="https://daamable-sknk.github.io/1029-news/data/1029-articles.xlsx" title="필터와 무관하게 전체 파일">전체 엑셀 · 약 9MB</a>
+    </div>
+  </div>
+  <p class="dl-hint" id="dl-hint">내려받기: 작업용은「현재 결과」, 보관용은「전체 엑셀」.</p>
+
+  <div class="date-range" aria-label="기간">
+    <label>발행일 <input type="date" id="date-from"></label>
+    <span>~</span>
+    <label><input type="date" id="date-to"></label>
+    <button type="button" id="date-clear">기간 지우기</button>
+  </div>
+
+  <main>
+    <div class="sheet-wrap">
+      <table class="sheet" id="sheet">
+        <thead>
+          <tr>
+            <th>기사제목</th>
+            <th class="col-date">발행날짜</th>
+            <th class="col-author">기자명</th>
+            <th class="col-pub">발행처</th>
+            <th class="col-url">url</th>
+            <th class="col-note">비고</th>
+            <th class="col-date">작성일</th>
+            <th class="col-author">작성자</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="empty" hidden>표시할 행이 없습니다.</p>
+
+    <div class="pager" id="pager">
+      <div class="pages">
+        <button type="button" id="prev">이전</button>
+        <span id="page-label">1 / 1</span>
+        <button type="button" id="next">다음</button>
+      </div>
+      <label>
+        페이지당
+        <select id="page-size">
+          <option value="25">25</option>
+          <option value="50" selected>50</option>
+          <option value="100">100</option>
+        </select>
+      </label>
+    </div>
+  </main>
+
+  <footer class="page-foot">
+    <p>목록 화면은 여기(meta-archives) · 기사 데이터·수집은 <a href="https://github.com/daamable-sknk/1029-news">1029-news</a></p>
+  </footer>
+
+  <div class="modal-backdrop" id="rules-modal" hidden role="presentation">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="rules-title">
+      <div class="modal-head">
+        <h2 id="rules-title">수집 규칙</h2>
+        <button type="button" class="modal-close" id="rules-close" aria-label="닫기">×</button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">이 목록은 이태원 참사·특조위·공공기록과 관련된 언론 기사를 모아 둔 것입니다. 연구팀이 엑셀로 내려받아 골라 쓰고, <strong>비고</strong>에 메모를 남길 수 있게 했습니다.</p>
+
+        <h3>무엇을 모으나요</h3>
+        <ul>
+          <li>참사일(<strong>2022년 10월 29일</strong>) 이후 기사</li>
+          <li>제목·날짜·기자·매체·원문 링크만 둡니다. 기사 본문은 저장하지 않습니다</li>
+          <li>같은 기사(같은 주소)는 한 번만 넣습니다</li>
+        </ul>
+
+        <h3>어디서 가져오나요</h3>
+        <ul>
+          <li><strong>빅카인즈</strong>: 참사 직후부터 쌓인 과거 기사를 한꺼번에 받아 넣었습니다</li>
+          <li><strong>Google 뉴스 · 네이버 뉴스</strong>: 그 이후 새로 나오는 기사를 계속 찾습니다</li>
+        </ul>
+
+        <h3>어떤 말로 찾나요</h3>
+        <ul>
+          <li>이태원 참사, 10·29 이태원</li>
+          <li>이태원 특조위, 특별조사</li>
+          <li>이태원특별법</li>
+          <li>기록물, 회의록, 폐기, 국가기록원, 중대본 등 (참사·특조위와 함께 검색)</li>
+        </ul>
+        <p>검색이 넓어서 관련 없어 보이는 기사가 섞일 수 있습니다. 쓸 기사와 버릴 기사는 연구팀이 고르면 됩니다.</p>
+
+        <h3>엑셀·칸 설명</h3>
+        <ul>
+          <li>칸 구성: 기사제목 · 발행날짜 · 기자명 · 발행처 · url · 비고 · 작성일 · 작성자</li>
+          <li><strong>기자명</strong>: 빅카인즈에서 온 기사는 채워져 있을 수 있고, Google·네이버에서 온 기사는 비어 있는 경우가 많습니다</li>
+          <li><strong>작성일</strong>: 이 목록에 넣은 날 (기사가 처음 난 날이 아닙니다)</li>
+          <li><strong>비고 · 작성자</strong>: 비워 둡니다. 연구팀이 엑셀에서 채웁니다</li>
+        </ul>
+
+        <h3>이 화면에서</h3>
+        <ul>
+          <li>발행일로 기간을 좁히거나, 제목·매체로 검색할 수 있습니다</li>
+          <li>기간·검색으로 목록을 줄인 뒤 <strong>현재 결과 CSV</strong>로 받는 걸 권합니다</li>
+          <li><strong>전체 엑셀</strong>은 약 9만 건·9MB라, 엑셀에서 열면 무거울 수 있습니다 (보관·검색용)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const DATA_BASE = (location.hostname === '127.0.0.1' || location.hostname === 'localhost')
+      ? 'data/'
+      : 'https://daamable-sknk.github.io/1029-news/data/';
+    const DATA_URL = DATA_BASE + '1029-articles.json';
+    const XLSX_URL = DATA_BASE + '1029-articles.xlsx';
+    let items = [];
+    let search = '';
+    let dateFrom = '';
+    let dateTo = '';
+    let page = 1;
+    let pageSize = 50;
+
+    function fmt(iso) {
+      if (!iso) return '';
+      return String(iso).slice(0, 10);
+    }
+
+    function filtered() {
+      let list = items;
+      if (dateFrom) {
+        list = list.filter(i => fmt(i.published_at) >= dateFrom);
+      }
+      if (dateTo) {
+        list = list.filter(i => fmt(i.published_at) && fmt(i.published_at) <= dateTo);
+      }
+      const s = search.trim().toLowerCase();
+      if (s) {
+        list = list.filter(i => {
+          const blob = [i.title, i.publisher, i.author, i.url].join(' ').toLowerCase();
+          return blob.includes(s);
+        });
+      }
+      return list;
+    }
+
+    function render() {
+      const list = filtered();
+      const total = list.length;
+      const pages = Math.max(1, Math.ceil(total / pageSize));
+      if (page > pages) page = pages;
+      if (page < 1) page = 1;
+      const start = (page - 1) * pageSize;
+      const slice = list.slice(start, start + pageSize);
+
+      document.getElementById('shown-count').textContent = total;
+      document.getElementById('page-label').textContent = `${page} / ${pages}`;
+      document.getElementById('prev').disabled = page <= 1;
+      document.getElementById('next').disabled = page >= pages;
+      const csvBtn = document.getElementById('btn-csv-filtered');
+      if (csvBtn) {
+        csvBtn.textContent = `현재 결과 CSV (${total.toLocaleString('ko-KR')}건)`;
+        csvBtn.disabled = total === 0;
+      }
+      const hint = document.getElementById('dl-hint');
+      if (hint) {
+        const narrowed = total < items.length;
+        hint.textContent = narrowed
+          ? `지금 ${total.toLocaleString('ko-KR')}건이 걸려 있습니다. 이만큼만 CSV로 받을 수 있어요.`
+          : '필터를 걸기 전이라 「현재 결과」도 전체와 같습니다. 기간·검색으로 줄인 뒤 받는 걸 권합니다.';
+      }
+
+      const tbody = document.getElementById('tbody');
+      const empty = document.getElementById('empty');
+      tbody.innerHTML = '';
+      if (!slice.length) {
+        empty.hidden = false;
+        return;
+      }
+      empty.hidden = true;
+      for (const it of slice) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${escapeHtml(it.title || '')}</td>
+          <td class="col-date">${fmt(it.published_at)}</td>
+          <td class="col-author">${escapeHtml(it.author || '')}</td>
+          <td class="col-pub">${escapeHtml(it.publisher || '')}</td>
+          <td class="col-url">${it.url ? `<a class="url" href="${escapeAttr(it.url)}" target="_blank" rel="noopener">열기</a>` : ''}</td>
+          <td class="col-note"></td>
+          <td class="col-date">${fmt(it.collected_at)}</td>
+          <td class="col-author"></td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+    function escapeAttr(s) {
+      return escapeHtml(s).replace(/'/g, '&#39;');
+    }
+
+    function csvCell(v) {
+      const s = String(v ?? '');
+      if (/[",\n\r]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
+      return s;
+    }
+
+    function downloadFilteredCsv() {
+      const list = filtered();
+      if (!list.length) {
+        alert('받을 결과가 없습니다. 기간·검색을 확인해 주세요.');
+        return;
+      }
+      if (list.length >= 30000) {
+        const ok = confirm(
+          `지금 ${list.length.toLocaleString('ko-KR')}건입니다.\n` +
+          '파일이 커져 엑셀·시트가 느려질 수 있습니다. 그래도 받을까요?\n\n' +
+          '(기간을 더 줄인 뒤 받는 걸 권합니다.)'
+        );
+        if (!ok) return;
+      }
+      const header = ['기사제목', '발행날짜', '기자명', '발행처', 'url', '비고', '작성일', '작성자'];
+      const lines = [header.join(',')];
+      for (const it of list) {
+        lines.push([
+          csvCell(it.title),
+          csvCell(fmt(it.published_at)),
+          csvCell(it.author),
+          csvCell(it.publisher),
+          csvCell(it.url),
+          '',
+          csvCell(fmt(it.collected_at)),
+          '',
+        ].join(','));
+      }
+      const blob = new Blob(['\uFEFF' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
+      const a = document.createElement('a');
+      const stamp = new Date().toISOString().slice(0, 10);
+      a.href = URL.createObjectURL(blob);
+      a.download = `1029-articles-filtered-${stamp}-${list.length}건.csv`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    document.getElementById('btn-csv-filtered').addEventListener('click', downloadFilteredCsv);
+
+    document.getElementById('q').addEventListener('input', (e) => {
+      search = e.target.value;
+      page = 1;
+      render();
+    });
+    function onDateChange() {
+      dateFrom = document.getElementById('date-from').value || '';
+      dateTo = document.getElementById('date-to').value || '';
+      page = 1;
+      render();
+    }
+    document.getElementById('date-from').addEventListener('change', onDateChange);
+    document.getElementById('date-to').addEventListener('change', onDateChange);
+    document.getElementById('date-clear').addEventListener('click', () => {
+      document.getElementById('date-from').value = '';
+      document.getElementById('date-to').value = '';
+      dateFrom = '';
+      dateTo = '';
+      page = 1;
+      render();
+    });
+    document.getElementById('prev').addEventListener('click', () => { page -= 1; render(); });
+    document.getElementById('next').addEventListener('click', () => { page += 1; render(); });
+    document.getElementById('page-size').addEventListener('change', (e) => {
+      pageSize = Number(e.target.value) || 50;
+      page = 1;
+      render();
+    });
+
+    const rulesModal = document.getElementById('rules-modal');
+    function openRules() {
+      rulesModal.hidden = false;
+      document.getElementById('rules-close').focus();
+    }
+    function closeRules() {
+      rulesModal.hidden = true;
+    }
+    document.getElementById('btn-rules').addEventListener('click', openRules);
+    document.getElementById('rules-close').addEventListener('click', closeRules);
+    rulesModal.addEventListener('click', (e) => {
+      if (e.target === rulesModal) closeRules();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !rulesModal.hidden) closeRules();
+    });
+
+    async function boot() {
+      const xlsx = document.getElementById('btn-xlsx-all');
+      if (xlsx) xlsx.href = XLSX_URL;
+      try {
+        const res = await fetch(DATA_URL);
+        const data = await res.json();
+        items = data.items || [];
+        document.getElementById('total-count').textContent = data.meta?.total_count ?? items.length;
+        document.getElementById('last-updated').textContent = fmt(data.meta?.last_updated);
+        render();
+      } catch (err) {
+        console.error(err);
+        const empty = document.getElementById('empty');
+        empty.hidden = false;
+        empty.className = 'error';
+        empty.textContent = '기사 목록 데이터를 불러오지 못했습니다.';
+      }
+    }
+    boot();
+  </script>
 </body>
 </html>
