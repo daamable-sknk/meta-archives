@@ -1,17 +1,17 @@
 {
   "built_at": "2026-06-22",
-  "total": 125,
+  "total": 145,
   "manual_yaml_count": 10,
   "facet_counts": {
     "group": {
       "디자인·시각 아카이브": 6,
       "예술가 출판·독립 플랫폼": 8,
-      "페미니스트·사회운동·대안 아카이브": 14,
+      "페미니스트·사회운동·대안 아카이브": 18,
       "분류 체계가 독특한 아카이브": 15,
-      "기관 아카이브": 25,
-      "개인 아카이브·포트폴리오": 9,
-      "한국 공공·지역·역사 아카이브": 8,
-      "형식이 곧 내용인 아카이브": 17,
+      "기관 아카이브": 32,
+      "개인 아카이브·포트폴리오": 10,
+      "한국 공공·지역·역사 아카이브": 14,
+      "형식이 곧 내용인 아카이브": 19,
       "정부·공공 웹 아카이브": 7,
       "대규모 통합 플랫폼": 8,
       "잡지·미디어 아카이브": 1,
@@ -19,51 +19,51 @@
       "디자인 영감·레퍼런스 (경계)": 3
     },
     "boundary": {
-      "B": 115,
+      "B": 135,
       "D": 3,
       "A": 2,
       "C": 5
     },
     "critique": {
-      "none": 116,
+      "none": 136,
       "in_progress": 1,
       "published": 3,
       "planned": 5
     },
     "block_class": {
-      "Link": 110,
+      "Link": 129,
       "Text": 7,
-      "Image": 8
+      "Image": 9
     },
     "operator": {
-      "hybrid": 42,
-      "community": 16,
-      "institution": 51,
-      "individual": 11,
+      "hybrid": 44,
+      "community": 20,
+      "institution": 64,
+      "individual": 12,
       "corporate": 5
     },
     "unit": {
-      "item": 92,
+      "item": 112,
       "text": 12,
       "place": 4,
       "aggregate": 17
     },
     "form_experiment": {
-      "low": 73,
-      "medium": 35,
-      "high": 17
+      "low": 87,
+      "medium": 39,
+      "high": 19
     },
     "self_as_archive": {
-      "explicit": 112,
-      "implicit": 10,
+      "explicit": 131,
+      "implicit": 11,
       "denied": 3
     },
     "access_regime": {
-      "open": 124,
+      "open": 144,
       "hidden": 1
     },
     "stack": {
-      "unknown": 109,
+      "unknown": 129,
       "Omeka": 1,
       "custom": 7,
       "web-crawler": 6,
@@ -73,19 +73,19 @@
     "navigation": {
       "taxonomy": 22,
       "chronology": 20,
-      "search": 86,
+      "search": 106,
       "spatial": 3,
       "associative": 3
     },
     "locale": {
-      "EN": 70,
-      "KR": 38,
+      "EN": 78,
+      "KR": 49,
       "multi": 6,
       "AU": 3,
       "EU": 6,
-      "JP": 4,
+      "JP": 5,
       "CH": 3,
-      "GB": 2
+      "GB": 3
     }
   },
   "gaps": [
@@ -4248,6 +4248,647 @@
       "boundary": {
         "grade": "A",
         "note": "디지털 도서관"
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-126",
+      "arena_id": 47290955,
+      "slug": "tapedeck-org",
+      "title": "Tape Deck — analog audio tape cassette nostalgia",
+      "url": "https://tapedeck.org/",
+      "short": "tapedeck.org",
+      "group": "형식이 곧 내용인 아카이브",
+      "block_class": "Link",
+      "connected": "2026-06-25",
+      "axes": {
+        "operator": "hybrid",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "high",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-127",
+      "arena_id": 47420945,
+      "slug": "wb-peoplepower21-org",
+      "title": "세상을 바꾸는 - 공익제보 아카이브",
+      "url": "https://wb.peoplepower21.org/",
+      "short": "공익제보 아카이브",
+      "group": "페미니스트·사회운동·대안 아카이브",
+      "block_class": "Link",
+      "connected": "2026-06-30",
+      "axes": {
+        "operator": "community",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "medium",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-128",
+      "arena_id": 47545967,
+      "slug": "openarchives-mow-or-kr",
+      "title": "국립세계문자박물관 아카이브",
+      "url": "https://openarchives.mow.or.kr/",
+      "short": "openarchives.mow.or.kr",
+      "group": "한국 공공·지역·역사 아카이브",
+      "block_class": "Image",
+      "connected": "2026-07-03",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-129",
+      "arena_id": 47648988,
+      "slug": "mtarchive-kr",
+      "title": "한국산악아카이브",
+      "url": "https://mtarchive.kr/",
+      "short": "mtarchive.kr",
+      "group": "한국 공공·지역·역사 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-07",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-130",
+      "arena_id": 47693126,
+      "slug": "data-si-re-kr",
+      "title": "서울연구데이터서비스",
+      "url": "https://data.si.re.kr/",
+      "short": "data.si.re.kr",
+      "group": "한국 공공·지역·역사 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-08",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-131",
+      "arena_id": 47882415,
+      "slug": "digital-khs-go-kr",
+      "title": "국가유산 디지털 서비스",
+      "url": "https://digital.khs.go.kr/",
+      "short": "digital.khs.go.kr",
+      "group": "한국 공공·지역·역사 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-14",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-132",
+      "arena_id": 47963474,
+      "slug": "marathon-library-northeastern-edu",
+      "title": "Our Marathon",
+      "url": "https://marathon.library.northeastern.edu/",
+      "short": "marathon.library.northeastern.edu",
+      "group": "기관 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-16",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-133",
+      "arena_id": 47963638,
+      "slug": "kn-ndl-go-jp",
+      "title": "국립국회도서관 동일본대지진자료실",
+      "url": "https://kn.ndl.go.jp/en",
+      "short": "National Diet Library Great East Japan Earthquake Archive",
+      "group": "기관 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-16",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "JP",
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-134",
+      "arena_id": 47963887,
+      "slug": "topographie-de",
+      "title": "Topographie des Terrors (테러의 지형)",
+      "url": "https://www.topographie.de/en/",
+      "short": "topographie.de",
+      "group": "기관 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-16",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-135",
+      "arena_id": 47968199,
+      "slug": "sabsommer-com",
+      "title": "Sabrina Sommer",
+      "url": "https://sabsommer.com/",
+      "short": "sabsommer.com",
+      "group": "개인 아카이브·포트폴리오",
+      "block_class": "Link",
+      "connected": "2026-07-16",
+      "axes": {
+        "operator": "individual",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "implicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-136",
+      "arena_id": 48127690,
+      "slug": "lib-washington-edu",
+      "title": "Labor Archives of Washington (LAW)",
+      "url": "https://www.lib.washington.edu/specialcollections/collections/law",
+      "short": "lib.uw.edu/.../labor-archives-of-washington",
+      "group": "기관 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-22",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-137",
+      "arena_id": 48127707,
+      "slug": "demos-archives-or-kr",
+      "title": "성공회대학교 민주자료관",
+      "url": "http://www.demos-archives.or.kr/",
+      "short": "demos-archives.or.kr",
+      "group": "페미니스트·사회운동·대안 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-22",
+      "axes": {
+        "operator": "community",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "medium",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-138",
+      "arena_id": 48128343,
+      "slug": "klux625archive-com",
+      "title": "klux625archive",
+      "url": "https://klux625archive.com/",
+      "short": "klux625archive.com",
+      "group": "한국 공공·지역·역사 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-22",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-139",
+      "arena_id": 48162584,
+      "slug": "bundesarchiv-de",
+      "title": "Stasi Records Archive (Bundesarchiv)",
+      "url": "https://www.bundesarchiv.de/en/stasi-records-archive/tasks-and-structure/",
+      "short": "bundesarchiv.de/stasi-records-archive",
+      "group": "기관 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-23",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-140",
+      "arena_id": 48189875,
+      "slug": "sound-effects-bbcrewind-co-uk",
+      "title": "BBC Sound Effects",
+      "url": "https://sound-effects.bbcrewind.co.uk/",
+      "short": "sound-effects.bbcrewind.co.uk",
+      "group": "기관 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-24",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "GB"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-141",
+      "arena_id": 48282006,
+      "slug": "digital-khs-go-kr",
+      "title": "국가유산 디지털 서비스",
+      "url": "https://digital.khs.go.kr/",
+      "short": "khs.go.kr",
+      "group": "한국 공공·지역·역사 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-28",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-142",
+      "arena_id": 48344994,
+      "slug": "voices-library-iit-edu",
+      "title": "Voices of the Holocaust",
+      "url": "https://voices.library.iit.edu/",
+      "short": "voices.library.iit.edu",
+      "group": "기관 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-30",
+      "axes": {
+        "operator": "institution",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "low",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-143",
+      "arena_id": 48449002,
+      "slug": "12sunsets-getty-edu",
+      "title": "12 Sunsets: Exploring Ed Ruscha's Archive",
+      "url": "https://12sunsets.getty.edu/",
+      "short": "12sunsets.getty.edu",
+      "group": "형식이 곧 내용인 아카이브",
+      "block_class": "Link",
+      "connected": "2026-07-31",
+      "axes": {
+        "operator": "hybrid",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "high",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-144",
+      "arena_id": 49473147,
+      "slug": "archive-krwu-or-kr",
+      "title": "전국철도노동조합 아카이브",
+      "url": "https://archive.krwu.or.kr/",
+      "short": "전국철도노동조합 아카이브",
+      "group": "페미니스트·사회운동·대안 아카이브",
+      "block_class": "Link",
+      "connected": "2026-08-13",
+      "axes": {
+        "operator": "community",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "medium",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "KR"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
+      },
+      "critique": {
+        "status": "none",
+        "post_slug": null
+      },
+      "has_manual_yaml": false
+    },
+    {
+      "inventory_id": "MA-145",
+      "arena_id": 49498701,
+      "slug": "cyberfeminismindex-com",
+      "title": "Cyberfeminism Index",
+      "url": "https://cyberfeminismindex.com/",
+      "short": "cyberfeminismindex.com",
+      "group": "페미니스트·사회운동·대안 아카이브",
+      "block_class": "Link",
+      "connected": "2026-08-14",
+      "axes": {
+        "operator": "community",
+        "unit": "item",
+        "navigation": "search",
+        "form_experiment": "medium",
+        "self_as_archive": "explicit",
+        "access_regime": "open",
+        "stack": "unknown",
+        "locale": [
+          "EN"
+        ]
+      },
+      "boundary": {
+        "grade": "B",
+        "note": null
       },
       "critique": {
         "status": "none",

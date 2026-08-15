@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-22",
+  "synced_at": "2026-08-15",
   "channel": "meta-archive",
-  "channel_length": 125,
+  "channel_length": 145,
   "block_types": {
-    "Link": 110,
-    "Image": 8,
-    "Text": 7
+    "Link": 129,
+    "Text": 7,
+    "Image": 9
   },
   "items": [
     {
@@ -1382,6 +1382,226 @@
       "status": "",
       "category": "대규모 통합 플랫폼",
       "note": "Are.na Link 블록"
+    },
+    {
+      "id": 47290955,
+      "title": "Tape Deck — analog audio tape cassette nostalgia",
+      "url": "https://tapedeck.org/",
+      "short": "tapedeck.org",
+      "class": "Link",
+      "connected": "2026-06-25",
+      "status": "",
+      "category": "형식이 곧 내용인 아카이브",
+      "note": "analog audio tape cassette nostalgia - tapedeck.org is a project to showcase the amazing beauty and weirdness found in the designs of the common audio tape cassette"
+    },
+    {
+      "id": 47420945,
+      "title": "세상을 바꾸는 - 공익제보 아카이브",
+      "url": "https://wb.peoplepower21.org/",
+      "short": "공익제보 아카이브",
+      "class": "Link",
+      "connected": "2026-06-30",
+      "status": "",
+      "category": "페미니스트·사회운동·대안 아카이브",
+      "note": "공익제보 아카이브는 참여연대 공익제보지원센터에서 운영하는 공익제보 데이터베이스로, 우리 사회를 더 나은 곳으로 이끈 공익제보 사건들과 공익제보자들을 기록합니다."
+    },
+    {
+      "id": 47545967,
+      "title": "국립세계문자박물관 아카이브",
+      "url": "https://openarchives.mow.or.kr/",
+      "short": "openarchives.mow.or.kr",
+      "class": "Image",
+      "connected": "2026-07-03",
+      "status": "",
+      "category": "한국 공공·지역·역사 아카이브",
+      "note": ""
+    },
+    {
+      "id": 47648988,
+      "title": "한국산악아카이브",
+      "url": "https://mtarchive.kr/",
+      "short": "mtarchive.kr",
+      "class": "Link",
+      "connected": "2026-07-07",
+      "status": "",
+      "category": "한국 공공·지역·역사 아카이브",
+      "note": ""
+    },
+    {
+      "id": 47693126,
+      "title": "서울연구데이터서비스",
+      "url": "https://data.si.re.kr/",
+      "short": "data.si.re.kr",
+      "class": "Link",
+      "connected": "2026-07-08",
+      "status": "",
+      "category": "한국 공공·지역·역사 아카이브",
+      "note": "사용자 참여형 데이터 시각화 콘텐츠"
+    },
+    {
+      "id": 47882415,
+      "title": "국가유산 디지털 서비스",
+      "url": "https://digital.khs.go.kr/",
+      "short": "digital.khs.go.kr",
+      "class": "Link",
+      "connected": "2026-07-14",
+      "status": "",
+      "category": "한국 공공·지역·역사 아카이브",
+      "note": "국가유산청 디지털 서비스. Are.na에 동일 URL 블록이 하나 더 있음(MA-141)."
+    },
+    {
+      "id": 47963474,
+      "title": "Our Marathon",
+      "url": "https://marathon.library.northeastern.edu/",
+      "short": "marathon.library.northeastern.edu",
+      "class": "Link",
+      "connected": "2026-07-16",
+      "status": "",
+      "category": "기관 아카이브",
+      "note": "Our Marathon is a crowdsourced archive of pictures, videos, stories, and social media related to the Boston Marathon; the bombing on April 15, 2013; the subsequent search, capture, and trial of the in"
+    },
+    {
+      "id": 47963638,
+      "title": "국립국회도서관 동일본대지진자료실",
+      "url": "https://kn.ndl.go.jp/en",
+      "short": "National Diet Library Great East Japan Earthquake Archive",
+      "class": "Link",
+      "connected": "2026-07-16",
+      "status": "",
+      "category": "기관 아카이브",
+      "note": "国立国会図書館東日本大震災アーカイブでは、東日本大震災に関連する音声・動画、写真、ウェブ情報等を包括的に検索できます。"
+    },
+    {
+      "id": 47963887,
+      "title": "Topographie des Terrors (테러의 지형)",
+      "url": "https://www.topographie.de/en/",
+      "short": "topographie.de",
+      "class": "Link",
+      "connected": "2026-07-16",
+      "status": "",
+      "category": "기관 아카이브",
+      "note": "Wir verwenden Cookies. Einige sind notwendig für die Funktion der Webseite, andere helfen uns, die Webseite zu verbessern. Um unseren eigenen Ansprüchen beim Datenschutz gerecht zu werden, erfassen wi"
+    },
+    {
+      "id": 47968199,
+      "title": "Sabrina Sommer",
+      "url": "https://sabsommer.com/",
+      "short": "sabsommer.com",
+      "class": "Link",
+      "connected": "2026-07-16",
+      "status": "",
+      "category": "개인 아카이브·포트폴리오",
+      "note": "Sabrina Sommer is an art director, graphic designer, type designer, and digital expressionist living and working in Brooklyn, NY."
+    },
+    {
+      "id": 48127690,
+      "title": "Labor Archives of Washington (LAW)",
+      "url": "https://www.lib.washington.edu/specialcollections/collections/law",
+      "short": "lib.uw.edu/.../labor-archives-of-washington",
+      "class": "Link",
+      "connected": "2026-07-22",
+      "status": "",
+      "category": "기관 아카이브",
+      "note": "Labor Archives of Washington (LAW) Preserving the Voices of Labor Discover the past, empower the present, and shape the future with the Labor Archives of Washington. A unit of the Special Collections "
+    },
+    {
+      "id": 48127707,
+      "title": "성공회대학교 민주자료관",
+      "url": "http://www.demos-archives.or.kr/",
+      "short": "demos-archives.or.kr",
+      "class": "Link",
+      "connected": "2026-07-22",
+      "status": "미확인",
+      "category": "페미니스트·사회운동·대안 아카이브",
+      "note": "Are.na Link 블록 — 봇 차단(「Please prove that you are human」). 실제 사이트 존재 여부는 수동 확인 필요."
+    },
+    {
+      "id": 48128343,
+      "title": "klux625archive",
+      "url": "https://klux625archive.com/",
+      "short": "klux625archive.com",
+      "class": "Link",
+      "connected": "2026-07-22",
+      "status": "",
+      "category": "한국 공공·지역·역사 아카이브",
+      "note": "「기억을 잇고, 우정을 잇다」— 제목·성격 추가 확인 권장."
+    },
+    {
+      "id": 48162584,
+      "title": "Stasi Records Archive (Bundesarchiv)",
+      "url": "https://www.bundesarchiv.de/en/stasi-records-archive/tasks-and-structure/",
+      "short": "bundesarchiv.de/stasi-records-archive",
+      "class": "Link",
+      "connected": "2026-07-23",
+      "status": "",
+      "category": "기관 아카이브",
+      "note": "Tasks and Structure"
+    },
+    {
+      "id": 48189875,
+      "title": "BBC Sound Effects",
+      "url": "https://sound-effects.bbcrewind.co.uk/",
+      "short": "sound-effects.bbcrewind.co.uk",
+      "class": "Link",
+      "connected": "2026-07-24",
+      "status": "",
+      "category": "기관 아카이브",
+      "note": "BBC Sound Effects"
+    },
+    {
+      "id": 48282006,
+      "title": "국가유산 디지털 서비스",
+      "url": "https://digital.khs.go.kr/",
+      "short": "khs.go.kr",
+      "class": "Link",
+      "connected": "2026-07-28",
+      "status": "",
+      "category": "한국 공공·지역·역사 아카이브",
+      "note": "국가유산청 디지털 서비스. MA-131과 동일 URL(Are.na 중복 블록)."
+    },
+    {
+      "id": 48344994,
+      "title": "Voices of the Holocaust",
+      "url": "https://voices.library.iit.edu/",
+      "short": "voices.library.iit.edu",
+      "class": "Link",
+      "connected": "2026-07-30",
+      "status": "",
+      "category": "기관 아카이브",
+      "note": "Explore the archive"
+    },
+    {
+      "id": 48449002,
+      "title": "12 Sunsets: Exploring Ed Ruscha's Archive",
+      "url": "https://12sunsets.getty.edu/",
+      "short": "12sunsets.getty.edu",
+      "class": "Link",
+      "connected": "2026-07-31",
+      "status": "",
+      "category": "형식이 곧 내용인 아카이브",
+      "note": "Sunset Blvd &amp; North Fairfax Avenue, LA, 1985, as photographed by Ed Ruscha and archived by the Getty."
+    },
+    {
+      "id": 49473147,
+      "title": "전국철도노동조합 아카이브",
+      "url": "https://archive.krwu.or.kr/",
+      "short": "전국철도노동조합 아카이브",
+      "class": "Link",
+      "connected": "2026-08-13",
+      "status": "",
+      "category": "페미니스트·사회운동·대안 아카이브",
+      "note": "전국철도노동조합 아카이브"
+    },
+    {
+      "id": 49498701,
+      "title": "Cyberfeminism Index",
+      "url": "https://cyberfeminismindex.com/",
+      "short": "cyberfeminismindex.com",
+      "class": "Link",
+      "connected": "2026-08-14",
+      "status": "",
+      "category": "페미니스트·사회운동·대안 아카이브",
+      "note": ""
     }
   ]
 }

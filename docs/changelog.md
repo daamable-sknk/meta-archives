@@ -4,6 +4,19 @@ meta-archives.xyz 프로젝트의 작업 내역을 기록합니다.
 
 ---
 
+## 2026-08-15
+
+### 관찰 목록 Are.na 동기화 (125 → 145)
+
+**동기화**
+- `bash scripts/sync.sh` / `python3 scripts/sync-arena.py` — Are.na meta-archive 채널 145블록 반영
+- `data/arena/meta-archive.json`, `inventory-enriched.json`, `id-registry.json` 갱신 (MA-126~MA-145)
+- 신규 20개 1차 그룹 배치·제목·URL 정리 (국가유산 디지털 서비스 중복 블록 유지, Stasi·LAW·12 Sunsets URL 정리)
+- `docs/plans/meta-archives.md` 전체 목록·동기화 현황 갱신
+- `scripts/sync.sh` 빈 배열(`set -u`) 오류 수정
+
+---
+
 ## 2026-07-31
 
 ### 「기록을 볼 권리, 기록과의 거리를 조절할 권리」 에세이 작성 및 발행

@@ -18,4 +18,8 @@ ARGS=()
 [[ "$DRY" == "1" ]] && ARGS+=(--dry-run)
 [[ "$NO_BUILD" == "1" ]] && ARGS+=(--no-build)
 
-python3 scripts/sync-arena.py "${ARGS[@]}"
+if [[ ${#ARGS[@]} -gt 0 ]]; then
+  python3 scripts/sync-arena.py "${ARGS[@]}"
+else
+  python3 scripts/sync-arena.py
+fi
